@@ -56,11 +56,14 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
         android:contentDescription="@string/choice_patient"
         android:src="@drawable/pasien"
+        app:layout_constraintBottom_toTopOf="@+id/txtPasien"
         app:layout_constraintEnd_toStartOf="@+id/choiceGuidelineVertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/choiceGuidelineHorizontal" />
+        app:layout_constraintTop_toTopOf="@+id/choiceGuidelineHorizontal"
+        app:layout_constraintVertical_chainStyle="spread_inside"/>
 
     <ImageView
         android:id="@+id/imgKlinik"
@@ -69,11 +72,14 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
         android:contentDescription="@string/choice_clinic"
         android:src="@drawable/klinik"
+        app:layout_constraintBottom_toTopOf="@+id/txtKlinik"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/choiceGuidelineVertical"
-        app:layout_constraintTop_toTopOf="@+id/choiceGuidelineHorizontal" />
+        app:layout_constraintTop_toTopOf="@+id/choiceGuidelineHorizontal"
+        app:layout_constraintVertical_chainStyle="spread_inside"/>
 
     <TextView
         android:id="@+id/txtPasien"
@@ -82,8 +88,10 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="56dp"
         android:text="@string/choice_patient"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/choiceGuidelineVertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgPasien" />
@@ -95,10 +103,24 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="56dp"
         android:text="@string/choice_clinic"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/choiceGuidelineVertical"
         app:layout_constraintTop_toBottomOf="@+id/imgKlinik" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupPasien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imgPasien, txtPasien"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupKlinik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imgKlinik, txtKlinik"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
