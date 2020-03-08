@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Klinik Kita</string>
+    <string name="choice_patient">Pasien</string>
+    <string name="choice_staff">Staf</string>
+</resources>
