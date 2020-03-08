@@ -8,16 +8,16 @@
 
     <ImageView
         android:id="@+id/appLogo"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
+        android:layout_width="192dp"
+        android:layout_height="192dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="32dp"
+        android:contentDescription="@string/app_name"
         android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/app_name" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/appTitle"
@@ -28,17 +28,77 @@
         android:layout_marginEnd="32dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="@string/app_name"
+        android:textColor="#bb0a1e"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appLogo"/>
+        app:layout_constraintTop_toBottomOf="@+id/appLogo" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/choiceGuideline"
+        android:id="@+id/choiceGuidelineHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4"/>
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/choiceGuidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/imgPasien"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/choice_patient"
+        android:src="@drawable/pasien"
+        app:layout_constraintEnd_toStartOf="@+id/choiceGuidelineVertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/choiceGuidelineHorizontal" />
+
+    <ImageView
+        android:id="@+id/imgKlinik"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/choice_clinic"
+        android:src="@drawable/klinik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/choiceGuidelineVertical"
+        app:layout_constraintTop_toTopOf="@+id/choiceGuidelineHorizontal" />
+
+    <TextView
+        android:id="@+id/txtPasien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/choice_patient"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/choiceGuidelineVertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPasien" />
+
+    <TextView
+        android:id="@+id/txtKlinik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/choice_clinic"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/choiceGuidelineVertical"
+        app:layout_constraintTop_toBottomOf="@+id/imgKlinik" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
