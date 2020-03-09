@@ -14,5 +14,16 @@ class LoginPasienActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_pasien)
+
+        btnMasuk = findViewById(R.id.btnLoginPasien)
+        txtDaftar = findViewById(R.id.txtDaftarPasien)
+
+        btnMasuk.setOnClickListener {
+            Toast.makeText(this, R.string.test, Toast.LENGTH_SHORT).show()
+        }
+
+        txtDaftar.setOnClickListener {
+            Toast.makeText(this, R.string.test, Toast.LENGTH_SHORT).show()
+        }
     }
 }
