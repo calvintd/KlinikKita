@@ -2,4 +2,6 @@
     <string name="app_name">Klinik Kita</string>
     <string name="choice_patient">Pasien</string>
     <string name="choice_clinic">Klinik</string>
+
+    <string name="test">Test!</string>
 </resources>
