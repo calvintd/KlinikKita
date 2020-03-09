@@ -1,7 +1,19 @@
 <resources>
+    <!-- halaman pilihan -->
     <string name="app_name">Klinik Kita</string>
     <string name="choice_patient">Pasien</string>
     <string name="choice_clinic">Klinik</string>
+
+    <!-- halaman login pasien -->
+    <string name="patient_login_title">Login Pasien</string>
+    <string name="patient_login_phone">Nomor HP</string>
+    <string name="patient_login_password">Kata sandi</string>
+    <string name="patient_login_remember">Ingat:</string>
+    <string name="patient_login_mistake">Nomor HP atau kata sandi yang Anda masukkan salah atau tidak terdaftar.</string>
+    <string name="patient_login_button">Masuk</string>
+    <string name="patient_login_register">Daftar sebagai pasien</string>
+    <string name="patient_login_register_desc">Daftarkan diri Anda untuk mendapatkan pelayanan dari berbagai klinik yang tergabung dalam
+        keluarga besar Klinik Kita!</string>
 
     <string name="test">Test!</string>
 </resources>

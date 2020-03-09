@@ -1,9 +1,10 @@
-package id.calvintd.klinikkita
+package id.calvintd.klinikkita.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
+import id.calvintd.klinikkita.R
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var imgPasien: ImageView
