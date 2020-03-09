@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         imgKlinik.setOnClickListener {
-            Toast.makeText(this, R.string.test, Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, LoginKlinikActivity::class.java))
         }
     }
 }

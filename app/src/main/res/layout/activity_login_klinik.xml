@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.LoginPasienActivity">
+    tools:context=".activity.LoginKlinikActivity">
 
     <ImageView
-        android:id="@+id/imgPasienLogin"
+        android:id="@+id/imgKlinikLogin"
         android:layout_width="128dp"
         android:layout_height="128dp"
         android:layout_marginStart="32dp"
@@ -17,26 +17,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pasien" />
+        app:srcCompat="@drawable/klinik" />
 
     <TextView
-        android:id="@+id/txtPasienLogin"
+        android:id="@+id/txtKlinikLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="sans-serif-condensed-light"
-        android:text="@string/patient_login_title"
+        android:text="@string/clinic_login_title"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgPasienLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/imgKlinikLogin" />
 
     <EditText
-        android:id="@+id/nomorPonselPasien"
+        android:id="@+id/nomorPonselKlinik"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -49,10 +49,10 @@
         android:maxLength="12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPasienLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/txtKlinikLogin" />
 
     <EditText
-        android:id="@+id/kataSandiPasien"
+        android:id="@+id/kataSandiKlinik"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -64,10 +64,10 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nomorPonselPasien" />
+        app:layout_constraintTop_toBottomOf="@+id/nomorPonselKlinik" />
 
     <TextView
-        android:id="@+id/txtKesalahanPasien"
+        android:id="@+id/txtKesalahanKlinik"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -78,28 +78,28 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guidelineIngatPasien" />
+        app:layout_constraintTop_toBottomOf="@+id/guidelineIngatKlinik" />
 
     <TextView
-        android:id="@+id/txtDaftarPasien"
+        android:id="@+id/txtDaftarKlinik"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:clickable="false"
-        android:text="@string/patient_login_register"
+        android:text="@string/clinic_login_register"
         android:textAllCaps="true"
-        android:textColor="#4CAF50"
+        android:textColor="#BC467D"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLoginPasien" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLoginKlinik" />
 
     <Button
-        android:id="@+id/btnLoginPasien"
+        android:id="@+id/btnLoginKlinik"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -112,23 +112,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtKesalahanPasien" />
+        app:layout_constraintTop_toBottomOf="@+id/txtKesalahanKlinik" />
 
     <TextView
-        android:id="@+id/txtDeskripsiDaftarPasien"
+        android:id="@+id/txtDeskripsiDaftarKlinik"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/patient_login_register_desc"
+        android:text="@string/clinic_login_register_desc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDaftarPasien" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDaftarKlinik" />
 
     <TextView
-        android:id="@+id/txtIngatPasien"
+        android:id="@+id/txtIngatKlinik"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -136,12 +136,12 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/key_remember"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/cbIngatNomorHPPasien"
+        app:layout_constraintEnd_toStartOf="@+id/cbIngatNomorHPKlinik"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kataSandiPasien" />
+        app:layout_constraintTop_toBottomOf="@+id/kataSandiKlinik" />
 
     <CheckBox
-        android:id="@+id/cbIngatNomorHPPasien"
+        android:id="@+id/cbIngatNomorHPKlinik"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -149,12 +149,12 @@
         android:fontFamily="sans-serif-condensed-light"
         android:text="@string/key_phone"
         android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/cbIngatPasswordPasien"
-        app:layout_constraintStart_toEndOf="@+id/txtIngatPasien"
-        app:layout_constraintTop_toBottomOf="@+id/kataSandiPasien" />
+        app:layout_constraintEnd_toStartOf="@+id/cbIngatPasswordKlinik"
+        app:layout_constraintStart_toEndOf="@+id/txtIngatKlinik"
+        app:layout_constraintTop_toBottomOf="@+id/kataSandiKlinik" />
 
     <CheckBox
-        android:id="@+id/cbIngatPasswordPasien"
+        android:id="@+id/cbIngatPasswordKlinik"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -163,11 +163,11 @@
         android:text="@string/key_password"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cbIngatNomorHPPasien"
-        app:layout_constraintTop_toBottomOf="@+id/kataSandiPasien" />
+        app:layout_constraintStart_toEndOf="@+id/cbIngatNomorHPKlinik"
+        app:layout_constraintTop_toBottomOf="@+id/kataSandiKlinik" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineIngatPasien"
+        android:id="@+id/guidelineIngatKlinik"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"

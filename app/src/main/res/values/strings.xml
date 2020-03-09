@@ -6,14 +6,20 @@
 
     <!-- halaman login pasien -->
     <string name="patient_login_title">Login Pasien</string>
-    <string name="patient_login_phone">Nomor HP</string>
-    <string name="patient_login_password">Kata sandi</string>
-    <string name="patient_login_remember">Ingat:</string>
-    <string name="patient_login_mistake">Nomor HP atau kata sandi yang Anda masukkan salah atau tidak terdaftar.</string>
-    <string name="patient_login_button">Masuk</string>
     <string name="patient_login_register">Daftar sebagai pasien</string>
     <string name="patient_login_register_desc">Daftarkan diri Anda untuk mendapatkan pelayanan dari berbagai klinik yang tergabung dalam
         keluarga besar Klinik Kita!</string>
+    
+    <!-- halaman login klinik -->
+    <string name="clinic_login_title">Login Klinik</string>
+    <string name="clinic_login_register">Daftarkan klinik Anda</string>
+    <string name="clinic_login_register_desc">Daftarkanlah klinik Anda dan jadilah bagian dari jaringan Klinik Kita!</string>
 
+    <!-- key words -->
+    <string name="key_phone">Nomor HP</string>
+    <string name="key_password">Kata sandi</string>
+    <string name="key_remember">Ingat:</string>
+    <string name="key_button">Masuk</string>
+    <string name="key_mistake">Nomor HP atau kata sandi yang Anda masukkan salah atau tidak terdaftar.</string>
     <string name="test">Test!</string>
 </resources>
