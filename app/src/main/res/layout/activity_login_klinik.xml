@@ -107,7 +107,7 @@
         android:layout_marginEnd="32dp"
         android:background="#E4DEEF"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/key_button"
+        android:text="@string/key_login_button"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

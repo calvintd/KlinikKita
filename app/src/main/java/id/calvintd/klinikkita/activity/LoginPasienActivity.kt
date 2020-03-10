@@ -1,5 +1,6 @@
 package id.calvintd.klinikkita.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -23,7 +24,7 @@ class LoginPasienActivity : AppCompatActivity() {
         }
 
         txtDaftar.setOnClickListener {
-            Toast.makeText(this, R.string.test, Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, DaftarPasienActivity::class.java))
         }
     }
 }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.LoginKlinikActivity"></activity>
+        <activity android:name=".activity.DaftarPasienActivity"></activity>
+        <activity android:name=".activity.LoginKlinikActivity" />
         <activity android:name=".activity.LoginPasienActivity" />
         <activity android:name=".activity.LoginActivity">
             <intent-filter>
