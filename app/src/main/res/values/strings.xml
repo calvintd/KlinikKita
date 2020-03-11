@@ -26,6 +26,7 @@
     <!-- halaman daftar klinik -->
     <string name="clinic_register_title">Pendaftaran Klinik</string>
     <string name="clinic_name">Nama klinik</string>
+    <string name="clinic_empty_name">Nama klinik tidak boleh kosong!</string>
     <string name="clinic_register_existing_phone">Nomor HP yang Anda masukkan telah terdaftar sebagai klinik!</string>
 
     <!-- key words & phrases -->
