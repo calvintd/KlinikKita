@@ -108,11 +108,11 @@ class DaftarPasienActivity : AppCompatActivity() {
                     txtKesalahanUlangKataSandi.visibility = View.GONE
                 }
             }
-            
+
             if(!cbPersetujuan.isChecked) {
                 tersetujui = false
                 txtKesalahanPersetujuan.visibility = View.VISIBLE
-                txtKesalahanPersetujuan.text = resources.getString(R.string.key_privacy_policy_unchecked)
+                txtKesalahanPersetujuan.text = resources.getString(R.string.patient_privacy_policy_unchecked)
             } else {
                 txtKesalahanPersetujuan.visibility = View.GONE
             }

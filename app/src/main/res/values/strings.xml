@@ -16,18 +16,28 @@
     <string name="clinic_login_register_desc">Daftarkanlah klinik Anda dan jadilah bagian dari jaringan Klinik Kita!</string>
 
     <!-- halaman daftar pasien -->
+    <string name="key_full_name_example">Contoh: Calvin Tandra</string>
+    <string name="key_nickname_example">Contoh: Calvin</string>
     <string name="patient_register_title">Pendaftaran Pasien</string>
     <string name="patient_full_name">Nama lengkap</string>
     <string name="patient_empty_full_name">Nama lengkap pasien tidak boleh kosong!</string>
     <string name="patient_nickname">Nama panggilan</string>
     <string name="patient_empty_nickname">Nama panggilan pasien tidak boleh kosong!</string>
     <string name="patient_register_existing_phone">Nomor HP yang Anda masukkan telah terdaftar sebagai pasien!</string>
+    <string name="patient_privacy_policy">Saya setuju bahwa data saya akan dipergunakan sebagai informasi pasien bagi seluruh klinik yang tergabung dalam jaringan
+    Klinik Kita.</string>
+    <string name="patient_privacy_policy_unchecked">Anda belum menyetujui pernyataan mengenai data Anda!</string>
 
     <!-- halaman daftar klinik -->
+    <string name="key_clinic_name_example">Contoh: Klinik Sehat Abadi</string>
     <string name="clinic_register_title">Pendaftaran Klinik</string>
     <string name="clinic_name">Nama klinik</string>
     <string name="clinic_empty_name">Nama klinik tidak boleh kosong!</string>
     <string name="clinic_register_existing_phone">Nomor HP yang Anda masukkan telah terdaftar sebagai klinik!</string>
+    <string name="clinic_terms_of_use">Saya setuju bahwa data yang saya pergunakan merupakan data milik bersama keluarga besar jaringan Klinik Kita. Saya tidak
+    akan merusak ataupun menyalahgunakan data Klinik Kita, dan bersedia bertanggung jawab bila di kemudian hari terjadi hal-hal yang tidak diinginkan dikarenakan
+    kedua tindakan tersebut.</string>
+    <string name="clinic_terms_of_use_unchecked">Anda belum menyetujui persyaratan penggunaan layanan Klinik Kita!</string>
 
     <!-- key words & phrases -->
     <string name="key_address">Alamat</string>
@@ -46,16 +56,10 @@
     <string name="key_login_button">Masuk</string>
     <string name="key_register_button">Daftar</string>
     <string name="key_login_mistake">Nomor HP atau kata sandi yang Anda masukkan salah atau tidak terdaftar!</string>
-    <string name="key_full_name_example">Contoh: Calvin Tandra</string>
-    <string name="key_nickname_example">Contoh: Calvin</string>
-    <string name="key_clinic_name_example">Contoh: Klinik Sehat Abadi</string>
-    <string name="key_address_example">Format: "Nama dan nomor jalan, kelurahan/desa, kecamatan" | Contoh: Jl. Jend. Sudirman no. 999, Tengah, Delta Pawan</string>
+    <string name="key_address_example">Format: Nama dan nomor jalan, kelurahan/desa, kecamatan | Contoh: Jl. Jend. Sudirman no. 999, Tengah, Delta Pawan</string>
     <string name="key_city_example">Contoh: Ketapang</string>
     <string name="key_phone_example">10–12 digit | Contoh: 081234567890</string>
     <string name="key_phone_wrong_formatting">Nomor HP Anda harus diawali dengan 08!</string>
-    <string name="key_privacy_policy">Saya setuju bahwa data saya akan dipergunakan sebagai informasi pasien bagi seluruh klinik yang tergabung dalam jaringan
-    Klinik Kita.</string>
-    <string name="key_privacy_policy_unchecked">Anda belum menyetujui pernyataan mengenai data Anda!</string>
 
     <string name="test">Test!</string>
 </resources>
