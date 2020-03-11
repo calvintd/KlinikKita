@@ -18,7 +18,9 @@
     <!-- halaman daftar pasien -->
     <string name="patient_register_title">Pendaftaran Pasien</string>
     <string name="patient_full_name">Nama lengkap</string>
+    <string name="patient_empty_full_name">Nama lengkap pasien tidak boleh kosong!</string>
     <string name="patient_nickname">Nama panggilan</string>
+    <string name="patient_empty_nickname">Nama panggilan pasien tidak boleh kosong!</string>
     <string name="patient_register_existing_phone">Nomor HP yang Anda masukkan telah terdaftar sebagai pasien!</string>
 
     <!-- halaman daftar klinik -->
@@ -28,8 +30,14 @@
 
     <!-- key words & phrases -->
     <string name="key_address">Alamat</string>
+    <string name="key_empty_address">Alamat tidak boleh kosong!</string>
     <string name="key_phone">Nomor HP</string>
+    <string name="key_empty_phone">Nomor HP tidak boleh kosong!</string>
     <string name="key_password">Kata sandi</string>
+    <string name="key_empty_password">Kata sandi tidak boleh kosong!</string>
+    <string name="key_repeat_password">Ulang kata sandi</string>
+    <string name="key_empty_repeat_password">Pengulangan kata sandi harus diisi!</string>
+    <string name="key_wrong_repeat_password">Kata sandi yang dimasukkan tidak sama!</string>
     <string name="key_remember">Ingat:</string>
     <string name="key_login_button">Masuk</string>
     <string name="key_register_button">Daftar</string>

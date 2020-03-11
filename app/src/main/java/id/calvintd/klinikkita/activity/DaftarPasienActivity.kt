@@ -19,7 +19,7 @@ class DaftarPasienActivity : AppCompatActivity() {
         setContentView(R.layout.activity_daftar_pasien)
 
         edtNomorHP = findViewById(R.id.edtNomorHPPasien)
-        txtKesalahan = findViewById(R.id.txtKesalahanDaftarPasien)
+        txtKesalahan = findViewById(R.id.txtKesalahanNomorHPDaftarPasien)
         btnDaftar = findViewById(R.id.btnDaftarPasien)
 
         btnDaftar.setOnClickListener {
