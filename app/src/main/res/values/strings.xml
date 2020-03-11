@@ -31,8 +31,11 @@
     <!-- key words & phrases -->
     <string name="key_address">Alamat</string>
     <string name="key_empty_address">Alamat tidak boleh kosong!</string>
+    <string name="key_city">Kota</string>
+    <string name="key_empty_city">Kota tidak boleh kosong!</string>
     <string name="key_phone">Nomor HP</string>
     <string name="key_empty_phone">Nomor HP tidak boleh kosong!</string>
+    <string name="key_phone_too_short">Nomor HP harus memiliki 10–12 digit!</string>
     <string name="key_password">Kata sandi</string>
     <string name="key_empty_password">Kata sandi tidak boleh kosong!</string>
     <string name="key_repeat_password">Ulang kata sandi</string>
@@ -41,13 +44,17 @@
     <string name="key_remember">Ingat:</string>
     <string name="key_login_button">Masuk</string>
     <string name="key_register_button">Daftar</string>
-    <string name="key_mistake">Nomor HP atau kata sandi yang Anda masukkan salah atau tidak terdaftar!</string>
+    <string name="key_login_mistake">Nomor HP atau kata sandi yang Anda masukkan salah atau tidak terdaftar!</string>
     <string name="key_full_name_example">Contoh: Calvin Tandra</string>
     <string name="key_nickname_example">Contoh: Calvin</string>
     <string name="key_clinic_name_example">Contoh: Klinik Sehat Abadi</string>
-    <string name="key_address_example">Format: "Nama dan nomor jalan, kelurahan/desa, kecamatan, kota" | Contoh: Jl. Jend. Sudirman no. 999, Tengah, Delta Pawan, Ketapang</string>
-    <string name="key_phone_example">Contoh: 081234567890</string>
+    <string name="key_address_example">Format: "Nama dan nomor jalan, kelurahan/desa, kecamatan" | Contoh: Jl. Jend. Sudirman no. 999, Tengah, Delta Pawan</string>
+    <string name="key_city_example">Contoh: Ketapang</string>
+    <string name="key_phone_example">10–12 digit | Contoh: 081234567890</string>
     <string name="key_phone_wrong_formatting">Nomor HP Anda harus diawali dengan 08!</string>
+    <string name="key_privacy_policy">Saya setuju bahwa data saya akan dipergunakan sebagai informasi pasien bagi seluruh klinik yang tergabung dalam jaringan
+    Klinik Kita.</string>
+    <string name="key_privacy_policy_unchecked">Anda belum menyetujui pernyataan mengenai data Anda!</string>
 
     <string name="test">Test!</string>
 </resources>

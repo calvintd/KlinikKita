@@ -65,7 +65,7 @@
                 app:layout_constraintTop_toBottomOf="@id/txtNamaLengkapPasien" />
 
             <TextView
-                android:id="@+id/txtKesalahanNamaLengkapDaftarPasien"
+                android:id="@+id/txtKesalahanNamaLengkapPasien"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -93,7 +93,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtKesalahanNamaLengkapDaftarPasien" />
+                app:layout_constraintTop_toBottomOf="@+id/txtKesalahanNamaLengkapPasien" />
 
             <EditText
                 android:id="@+id/edtNamaPanggilanPasien"
@@ -111,7 +111,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtNamaPanggilanPasien" />
 
             <TextView
-                android:id="@+id/txtKesalahanNamaPanggilanDaftarPasien"
+                android:id="@+id/txtKesalahanNamaPanggilanPasien"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -139,7 +139,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtKesalahanNamaPanggilanDaftarPasien" />
+                app:layout_constraintTop_toBottomOf="@+id/txtKesalahanNamaPanggilanPasien" />
 
             <EditText
                 android:id="@+id/edtAlamatPasien"
@@ -152,13 +152,12 @@
                 android:gravity="start|top"
                 android:hint="@string/key_address_example"
                 android:inputType="textMultiLine"
-                android:lines="4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtAlamatPasien" />
 
             <TextView
-                android:id="@+id/txtKesalahanAlamatDaftarPasien"
+                android:id="@+id/txtKesalahanAlamatPasien"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -171,6 +170,52 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edtAlamatPasien" />
+
+            <TextView
+                android:id="@+id/txtKotaPasien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="@string/key_city"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtKesalahanAlamatPasien" />
+
+            <EditText
+                android:id="@+id/edtKotaPasien"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/key_city_example"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtKotaPasien" />
+
+            <TextView
+                android:id="@+id/txtKesalahanKotaPasien"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/key_empty_city"
+                android:textColor="#EF1212"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtKotaPasien" />
 
             <TextView
                 android:id="@+id/txtNomorHPPasien"
@@ -186,7 +231,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtKesalahanAlamatDaftarPasien" />
+                app:layout_constraintTop_toBottomOf="@+id/txtKesalahanKotaPasien" />
 
             <EditText
                 android:id="@+id/edtNomorHPPasien"
@@ -204,7 +249,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtNomorHPPasien" />
 
             <TextView
-                android:id="@+id/txtKesalahanNomorHPDaftarPasien"
+                android:id="@+id/txtKesalahanNomorHPPasien"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -232,7 +277,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtKesalahanNomorHPDaftarPasien" />
+                app:layout_constraintTop_toBottomOf="@+id/txtKesalahanNomorHPPasien" />
 
             <EditText
                 android:id="@+id/edtKataSandiPasien"
@@ -298,15 +343,40 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginBottom="8dp"
                 android:text="@string/key_empty_repeat_password"
                 android:textColor="#EF1212"
                 android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edtUlangKataSandiPasien" />
+
+            <CheckBox
+                android:id="@+id/cbPersetujuanPasien"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/key_privacy_policy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtKesalahanUlangKataSandiPasien" />
+
+            <TextView
+                android:id="@+id/txtKesalahanPersetujuanPasien"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/key_privacy_policy_unchecked"
+                android:textColor="#EF1212"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbPersetujuanPasien" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
