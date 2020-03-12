@@ -3,7 +3,11 @@ package id.calvintd.klinikkita.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.CheckBox
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.itemmodel.database.Pasien
 import id.calvintd.klinikkita.itemmodel.internal.Kolom
@@ -55,6 +59,15 @@ class DaftarPasienActivity : AppCompatActivity(), PendaftaranView {
         val kataSandi = edtKataSandi.text.toString()
         val kataSandiUlang = edtUlangKataSandi.text.toString()
 
+        val dataPasien = Pasien(
+            namaLengkap = namaLengkap,
+            namaPanggilan = namaPanggilan,
+            alamat = alamat,
+            kota = kota,
+            nomorHP = nomorHP,
+            password = kataSandi
+        )
+
         // TextView kesalahan
         txtKesalahanNamaLengkap = findViewById(R.id.txtKesalahanNamaLengkapPasien)
         txtKesalahanNamaPanggilan = findViewById(R.id.txtKesalahanNamaPanggilanPasien)
@@ -66,34 +79,49 @@ class DaftarPasienActivity : AppCompatActivity(), PendaftaranView {
         txtKesalahanPersetujuan = findViewById(R.id.txtKesalahanPersetujuanPasien)
 
         val daftarKolom = listOf(
-            Kolom(namaLengkap, txtKesalahanNamaLengkap, resources.getString(R.string.patient_empty_full_name)),
-            Kolom(namaPanggilan, txtKesalahanNamaPanggilan, resources.getString(R.string.patient_empty_nickname)),
+            Kolom(
+                namaLengkap,
+                txtKesalahanNamaLengkap,
+                resources.getString(R.string.patient_empty_full_name)
+            ),
+            Kolom(
+                namaPanggilan,
+                txtKesalahanNamaPanggilan,
+                resources.getString(R.string.patient_empty_nickname)
+            ),
             Kolom(alamat, txtKesalahanAlamat, resources.getString(R.string.key_empty_address)),
             Kolom(kota, txtKesalahanKota, resources.getString(R.string.key_empty_city)),
             Kolom(nomorHP, txtKesalahanNomorHP, resources.getString(R.string.key_empty_phone)),
-            Kolom(kataSandi, txtKesalahanKataSandi, resources.getString(R.string.key_empty_password)),
-            Kolom(kataSandiUlang, txtKesalahanUlangKataSandi, resources.getString(R.string.key_empty_repeat_password))
+            Kolom(
+                kataSandi,
+                txtKesalahanKataSandi,
+                resources.getString(R.string.key_empty_password)
+            ),
+            Kolom(
+                kataSandiUlang,
+                txtKesalahanUlangKataSandi,
+                resources.getString(R.string.key_empty_repeat_password)
+            )
         )
 
         cbPersetujuan = findViewById(R.id.cbPersetujuanPasien)
 
         btnDaftar = findViewById(R.id.btnDaftarPasien)
 
-        val dataPasien = Pasien(
-            namaLengkap = namaLengkap, namaPanggilan = namaPanggilan, alamat = alamat, kota = kota, nomorHP = nomorHP, password = kataSandi
-        )
-
         val presenter = DaftarPasienPresenter(this, dataPasien)
 
         btnDaftar.setOnClickListener {
             val persetujuan = cbPersetujuan.isChecked
 
-            if(presenter.cekFormulir(daftarKolom = daftarKolom,
-                txtNomorHP = txtKesalahanNomorHP,
-                kataSandiUlang = kataSandiUlang,
-                txtKataSandiUlang = txtKesalahanUlangKataSandi,
-                persetujuan = persetujuan,
-                txtPersetujuan = txtKesalahanPersetujuan)) {
+            if (presenter.cekFormulir(
+                    daftarKolom = daftarKolom,
+                    txtNomorHP = txtKesalahanNomorHP,
+                    kataSandiUlang = kataSandiUlang,
+                    txtKataSandiUlang = txtKesalahanUlangKataSandi,
+                    persetujuan = persetujuan,
+                    txtPersetujuan = txtKesalahanPersetujuan
+                )
+            ) {
                 Toast.makeText(this, R.string.test, Toast.LENGTH_SHORT).show()
             }
         }
@@ -112,7 +140,10 @@ class DaftarPasienActivity : AppCompatActivity(), PendaftaranView {
     }
 
     override fun nomorHPTerdaftar(teksKesalahan: TextView) {
-        setelTeksKesalahan(teksKesalahan, resources.getString(R.string.patient_register_existing_phone))
+        setelTeksKesalahan(
+            teksKesalahan,
+            resources.getString(R.string.patient_register_existing_phone)
+        )
     }
 
     override fun passwordUlangSalah(teksKesalahan: TextView) {
@@ -120,7 +151,10 @@ class DaftarPasienActivity : AppCompatActivity(), PendaftaranView {
     }
 
     override fun persetujuanDitolak(teksKesalahan: TextView) {
-        setelTeksKesalahan(teksKesalahan, resources.getString(R.string.patient_privacy_policy_unchecked))
+        setelTeksKesalahan(
+            teksKesalahan,
+            resources.getString(R.string.patient_privacy_policy_unchecked)
+        )
     }
 
     override fun setelTeksKesalahan(teksKesalahan: TextView, teks: String) {

@@ -1,7 +1,5 @@
 package id.calvintd.klinikkita.util
 
-import android.widget.TextView
-import id.calvintd.klinikkita.itemmodel.database.Pasien
 import id.calvintd.klinikkita.itemmodel.internal.Kolom
 
 object CekFormulirPendaftaran {
