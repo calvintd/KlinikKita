@@ -36,6 +36,8 @@ class DaftarKlinikActivity : AppCompatActivity(), PendaftaranView {
 
     private lateinit var btnDaftar: Button
 
+    private lateinit var presenter: DaftarKlinikPresenter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_daftar_klinik)
@@ -48,21 +50,6 @@ class DaftarKlinikActivity : AppCompatActivity(), PendaftaranView {
         edtKataSandi = findViewById(R.id.edtKataSandiKlinik)
         edtUlangKataSandi = findViewById(R.id.edtUlangKataSandiKlinik)
 
-        val namaKlinik = edtNamaKlinik.text.toString()
-        val alamat = edtAlamat.text.toString()
-        val kota = edtKota.text.toString()
-        val nomorHP = edtNomorHP.text.toString()
-        val kataSandi = edtKataSandi.text.toString()
-        val kataSandiUlang = edtUlangKataSandi.text.toString()
-
-        val dataKlinik = Klinik(
-            namaKlinik = namaKlinik,
-            alamat = alamat,
-            kota = kota,
-            nomorHP = nomorHP,
-            password = kataSandi
-        )
-
         // TextView kesalahan
         txtKesalahanNamaKlinik = findViewById(R.id.txtKesalahanNamaKlinik)
         txtKesalahanAlamat = findViewById(R.id.txtKesalahanAlamatKlinik)
@@ -72,35 +59,49 @@ class DaftarKlinikActivity : AppCompatActivity(), PendaftaranView {
         txtKesalahanUlangKataSandi = findViewById(R.id.txtKesalahanUlangKataSandiKlinik)
         txtKesalahanPersetujuan = findViewById(R.id.txtKesalahanPersetujuanKlinik)
 
-        val daftarKolom = listOf(
-            Kolom(
-                namaKlinik,
-                txtKesalahanNamaKlinik,
-                resources.getString(R.string.clinic_empty_name)
-            ),
-            Kolom(alamat, txtKesalahanAlamat, resources.getString(R.string.key_empty_address)),
-            Kolom(kota, txtKesalahanKota, resources.getString(R.string.key_empty_city)),
-            Kolom(nomorHP, txtKesalahanNomorHP, resources.getString(R.string.key_empty_phone)),
-            Kolom(
-                kataSandi,
-                txtKesalahanKataSandi,
-                resources.getString(R.string.key_empty_password)
-            ),
-            Kolom(
-                kataSandiUlang,
-                txtKesalahanUlangKataSandi,
-                resources.getString(R.string.key_empty_repeat_password)
-            )
-        )
-
         cbPersetujuan = findViewById(R.id.cbPersetujuanKlinik)
 
         btnDaftar = findViewById(R.id.btnDaftarPasien)
 
-        val presenter = DaftarKlinikPresenter(this, dataKlinik)
-
         btnDaftar.setOnClickListener {
+            val namaKlinik = edtNamaKlinik.text.toString()
+            val alamat = edtAlamat.text.toString()
+            val kota = edtKota.text.toString()
+            val nomorHP = edtNomorHP.text.toString()
+            val kataSandi = edtKataSandi.text.toString()
+            val kataSandiUlang = edtUlangKataSandi.text.toString()
             val persetujuan = cbPersetujuan.isChecked
+
+            val daftarKolom = listOf(
+                Kolom(
+                    namaKlinik,
+                    txtKesalahanNamaKlinik,
+                    resources.getString(R.string.clinic_empty_name)
+                ),
+                Kolom(alamat, txtKesalahanAlamat, resources.getString(R.string.key_empty_address)),
+                Kolom(kota, txtKesalahanKota, resources.getString(R.string.key_empty_city)),
+                Kolom(nomorHP, txtKesalahanNomorHP, resources.getString(R.string.key_empty_phone)),
+                Kolom(
+                    kataSandi,
+                    txtKesalahanKataSandi,
+                    resources.getString(R.string.key_empty_password)
+                ),
+                Kolom(
+                    kataSandiUlang,
+                    txtKesalahanUlangKataSandi,
+                    resources.getString(R.string.key_empty_repeat_password)
+                )
+            )
+
+            val dataKlinik = Klinik(
+                namaKlinik = namaKlinik,
+                alamat = alamat,
+                kota = kota,
+                nomorHP = nomorHP,
+                password = kataSandi
+            )
+
+            presenter = DaftarKlinikPresenter(this, dataKlinik)
 
             if (presenter.cekFormulir(
                     daftarKolom = daftarKolom,
