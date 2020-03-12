@@ -1,16 +1,18 @@
 package id.calvintd.klinikkita.util
 
-import android.view.View
 import android.widget.TextView
-import id.calvintd.klinikkita.R
+import id.calvintd.klinikkita.itemmodel.database.Pasien
 import id.calvintd.klinikkita.itemmodel.internal.Kolom
 
 object CekFormulirPendaftaran {
-    fun kolomTerisi(kolom: Kolom) : Boolean {
-        val terisi: Boolean
-        val isiKolom = kolom.isiKolom
+    fun kolomTerisi(daftarKolom: List<Kolom>) : Boolean {
+        var terisi = true
 
-        terisi = isiKolom.text.isNotEmpty()
+        for(kolom in daftarKolom) {
+            if (kolom.isiKolom.isEmpty()) {
+                if (terisi) terisi = false
+            }
+        }
 
         return terisi
     }

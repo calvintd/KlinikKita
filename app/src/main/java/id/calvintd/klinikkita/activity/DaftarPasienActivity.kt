@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import id.calvintd.klinikkita.R
+import id.calvintd.klinikkita.itemmodel.database.Pasien
 import id.calvintd.klinikkita.itemmodel.internal.Kolom
 import id.calvintd.klinikkita.presenter.DaftarPasienPresenter
 import id.calvintd.klinikkita.view.PendaftaranView
@@ -46,6 +47,14 @@ class DaftarPasienActivity : AppCompatActivity(), PendaftaranView {
         edtKataSandi = findViewById(R.id.edtKataSandiPasien)
         edtUlangKataSandi = findViewById(R.id.edtUlangKataSandiPasien)
 
+        val namaLengkap = edtNamaLengkap.text.toString()
+        val namaPanggilan = edtNamaPanggilan.text.toString()
+        val alamat = edtAlamat.text.toString()
+        val kota = edtKota.text.toString()
+        val nomorHP = edtNomorHP.text.toString()
+        val kataSandi = edtKataSandi.text.toString()
+        val kataSandiUlang = edtUlangKataSandi.text.toString()
+
         // TextView kesalahan
         txtKesalahanNamaLengkap = findViewById(R.id.txtKesalahanNamaLengkapPasien)
         txtKesalahanNamaPanggilan = findViewById(R.id.txtKesalahanNamaPanggilanPasien)
@@ -57,33 +66,32 @@ class DaftarPasienActivity : AppCompatActivity(), PendaftaranView {
         txtKesalahanPersetujuan = findViewById(R.id.txtKesalahanPersetujuanPasien)
 
         val daftarKolom = listOf(
-            Kolom(edtNamaLengkap, txtKesalahanNamaLengkap, resources.getString(R.string.patient_empty_full_name)),
-            Kolom(edtNamaPanggilan, txtKesalahanNamaPanggilan, resources.getString(R.string.patient_empty_nickname)),
-            Kolom(edtAlamat, txtKesalahanAlamat, resources.getString(R.string.key_empty_address)),
-            Kolom(edtKota, txtKesalahanKota, resources.getString(R.string.key_empty_city)),
-            Kolom(edtNomorHP, txtKesalahanNomorHP, resources.getString(R.string.key_empty_phone)),
-            Kolom(edtKataSandi, txtKesalahanKataSandi, resources.getString(R.string.key_empty_password)),
-            Kolom(edtUlangKataSandi, txtKesalahanUlangKataSandi, resources.getString(R.string.key_empty_repeat_password))
+            Kolom(namaLengkap, txtKesalahanNamaLengkap, resources.getString(R.string.patient_empty_full_name)),
+            Kolom(namaPanggilan, txtKesalahanNamaPanggilan, resources.getString(R.string.patient_empty_nickname)),
+            Kolom(alamat, txtKesalahanAlamat, resources.getString(R.string.key_empty_address)),
+            Kolom(kota, txtKesalahanKota, resources.getString(R.string.key_empty_city)),
+            Kolom(nomorHP, txtKesalahanNomorHP, resources.getString(R.string.key_empty_phone)),
+            Kolom(kataSandi, txtKesalahanKataSandi, resources.getString(R.string.key_empty_password)),
+            Kolom(kataSandiUlang, txtKesalahanUlangKataSandi, resources.getString(R.string.key_empty_repeat_password))
         )
 
         cbPersetujuan = findViewById(R.id.cbPersetujuanPasien)
 
         btnDaftar = findViewById(R.id.btnDaftarPasien)
 
-        val presenter = DaftarPasienPresenter(this)
+        val dataPasien = Pasien(
+            namaLengkap = namaLengkap, namaPanggilan = namaPanggilan, alamat = alamat, kota = kota, nomorHP = nomorHP, password = kataSandi
+        )
+
+        val presenter = DaftarPasienPresenter(this, dataPasien)
 
         btnDaftar.setOnClickListener {
-            val nomorHP = edtNomorHP.text.toString()
-            val password = edtKataSandi.text.toString()
-            val passwordUlang = edtUlangKataSandi.text.toString()
             val persetujuan = cbPersetujuan.isChecked
 
             if(presenter.cekFormulir(daftarKolom = daftarKolom,
-                nomorHP = nomorHP,
                 txtNomorHP = txtKesalahanNomorHP,
-                password = password,
-                passwordUlang = passwordUlang,
-                txtPasswordUlang = txtKesalahanUlangKataSandi,
+                kataSandiUlang = kataSandiUlang,
+                txtKataSandiUlang = txtKesalahanUlangKataSandi,
                 persetujuan = persetujuan,
                 txtPersetujuan = txtKesalahanPersetujuan)) {
                 Toast.makeText(this, R.string.test, Toast.LENGTH_SHORT).show()
