@@ -6,9 +6,10 @@ import android.view.View
 import android.widget.*
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.itemmodel.internal.Kolom
-import id.calvintd.klinikkita.util.CekFormulirPendaftaran
+import id.calvintd.klinikkita.presenter.DaftarPasienPresenter
+import id.calvintd.klinikkita.view.PendaftaranView
 
-class DaftarPasienActivity : AppCompatActivity() {
+class DaftarPasienActivity : AppCompatActivity(), PendaftaranView {
     // EditText
     private lateinit var edtNamaLengkap: EditText
     private lateinit var edtNamaPanggilan: EditText
@@ -69,55 +70,57 @@ class DaftarPasienActivity : AppCompatActivity() {
 
         btnDaftar = findViewById(R.id.btnDaftarPasien)
 
-        val cek = CekFormulirPendaftaran
+        val presenter = DaftarPasienPresenter(this)
 
         btnDaftar.setOnClickListener {
             val nomorHP = edtNomorHP.text.toString()
-            var terisi = true
-            var terformat = true
-            var sesuai_panjang = true
-            var terulang = true
-            var tersetujui = true
+            val password = edtKataSandi.text.toString()
+            val passwordUlang = edtUlangKataSandi.text.toString()
+            val persetujuan = cbPersetujuan.isChecked
 
-            for (kolom in daftarKolom) {
-                if (!cek.kolomTerisi(kolom)) terisi = false
+            if(presenter.cekFormulir(daftarKolom = daftarKolom,
+                nomorHP = nomorHP,
+                txtNomorHP = txtKesalahanNomorHP,
+                password = password,
+                passwordUlang = passwordUlang,
+                txtPasswordUlang = txtKesalahanUlangKataSandi,
+                persetujuan = persetujuan,
+                txtPersetujuan = txtKesalahanPersetujuan)) {
+                Toast.makeText(this, R.string.test, Toast.LENGTH_SHORT).show()
             }
-
-            if(edtNomorHP.text.isNotEmpty()) {
-                if (!cek.formatNomorHP(nomorHP)) {
-                    terformat = false
-                    txtKesalahanNomorHP.visibility = View.VISIBLE
-                    txtKesalahanNomorHP.text =
-                        resources.getString(R.string.key_phone_wrong_formatting)
-                } else if(!cek.panjangNomorHP(nomorHP)) {
-                    sesuai_panjang = false
-                    txtKesalahanNomorHP.visibility = View.VISIBLE
-                    txtKesalahanNomorHP.text = resources.getString(R.string.key_phone_too_short)
-                } else {
-                    txtKesalahanNomorHP.visibility = View.GONE
-                }
-            }
-
-            if(edtUlangKataSandi.text.isNotEmpty()) {
-                if (!cek.ulangKataSandi(edtKataSandi, edtUlangKataSandi)) {
-                    terulang = false
-                    txtKesalahanUlangKataSandi.visibility = View.VISIBLE
-                    txtKesalahanUlangKataSandi.text =
-                        resources.getString(R.string.key_wrong_repeat_password)
-                } else {
-                    txtKesalahanUlangKataSandi.visibility = View.GONE
-                }
-            }
-
-            if(!cbPersetujuan.isChecked) {
-                tersetujui = false
-                txtKesalahanPersetujuan.visibility = View.VISIBLE
-                txtKesalahanPersetujuan.text = resources.getString(R.string.patient_privacy_policy_unchecked)
-            } else {
-                txtKesalahanPersetujuan.visibility = View.GONE
-            }
-
-            if(terisi && terformat && sesuai_panjang && terulang && tersetujui) Toast.makeText(this, R.string.test, Toast.LENGTH_SHORT).show()
         }
+    }
+
+    override fun kolomKosong(teksKesalahan: TextView, teks: String) {
+        setelTeksKesalahan(teksKesalahan, teks)
+    }
+
+    override fun nomorHPSalahFormat(teksKesalahan: TextView) {
+        setelTeksKesalahan(teksKesalahan, resources.getString(R.string.key_phone_wrong_formatting))
+    }
+
+    override fun nomorHPTerlaluPendek(teksKesalahan: TextView) {
+        setelTeksKesalahan(teksKesalahan, resources.getString(R.string.key_phone_too_short))
+    }
+
+    override fun nomorHPTerdaftar(teksKesalahan: TextView) {
+        setelTeksKesalahan(teksKesalahan, resources.getString(R.string.patient_register_existing_phone))
+    }
+
+    override fun passwordUlangSalah(teksKesalahan: TextView) {
+        setelTeksKesalahan(teksKesalahan, resources.getString(R.string.key_wrong_repeat_password))
+    }
+
+    override fun persetujuanDitolak(teksKesalahan: TextView) {
+        setelTeksKesalahan(teksKesalahan, resources.getString(R.string.patient_privacy_policy_unchecked))
+    }
+
+    override fun setelTeksKesalahan(teksKesalahan: TextView, teks: String) {
+        teksKesalahan.visibility = View.VISIBLE
+        teksKesalahan.text = teks
+    }
+
+    override fun sembunyikanTeksKesalahan(teksKesalahan: TextView) {
+        teksKesalahan.visibility = View.GONE
     }
 }
