@@ -6,7 +6,7 @@ import id.calvintd.klinikkita.util.CekFormulirPendaftaran
 import id.calvintd.klinikkita.view.PendaftaranView
 
 class PendaftaranPresenter(private val pendaftaranView: PendaftaranView) {
-    val cek = CekFormulirPendaftaran
+    private val cek = CekFormulirPendaftaran
 
     fun verifikasiData(
         daftarKolom: List<Kolom>,

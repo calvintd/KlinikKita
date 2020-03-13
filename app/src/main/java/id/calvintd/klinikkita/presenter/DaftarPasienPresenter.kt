@@ -6,8 +6,8 @@ import id.calvintd.klinikkita.itemmodel.internal.Kolom
 import id.calvintd.klinikkita.view.PendaftaranView
 
 class DaftarPasienPresenter(
-    private val pendaftaranView: PendaftaranView,
-    private val dataPasien: Pasien
+    pendaftaranView: PendaftaranView,
+    dataPasien: Pasien
 ) {
     val nomorHP = dataPasien.nomorHP
     val kataSandi = dataPasien.password
