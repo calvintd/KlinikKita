@@ -103,17 +103,14 @@ class DaftarKlinikActivity : AppCompatActivity(), PendaftaranView {
 
             presenter = DaftarKlinikPresenter(this, dataKlinik)
 
-            if (presenter.cekFormulir(
-                    daftarKolom = daftarKolom,
-                    txtNomorHP = txtKesalahanNomorHP,
-                    kataSandiUlang = kataSandiUlang,
-                    txtKataSandiUlang = txtKesalahanUlangKataSandi,
-                    persetujuan = persetujuan,
-                    txtPersetujuan = txtKesalahanPersetujuan
-                )
-            ) {
-                Toast.makeText(this, R.string.test, Toast.LENGTH_SHORT).show()
-            }
+            presenter.cekFormulir(
+                daftarKolom = daftarKolom,
+                txtNomorHP = txtKesalahanNomorHP,
+                kataSandiUlang = kataSandiUlang,
+                txtKataSandiUlang = txtKesalahanUlangKataSandi,
+                persetujuan = persetujuan,
+                txtPersetujuan = txtKesalahanPersetujuan
+            )
         }
     }
 

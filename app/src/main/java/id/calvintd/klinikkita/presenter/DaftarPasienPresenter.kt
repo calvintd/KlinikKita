@@ -6,7 +6,7 @@ import id.calvintd.klinikkita.itemmodel.internal.Kolom
 import id.calvintd.klinikkita.view.PendaftaranView
 
 class DaftarPasienPresenter(
-    pendaftaranView: PendaftaranView,
+    private val pendaftaranView: PendaftaranView,
     dataPasien: Pasien
 ) {
     val nomorHP = dataPasien.nomorHP
@@ -20,9 +20,7 @@ class DaftarPasienPresenter(
         txtKataSandiUlang: TextView,
         persetujuan: Boolean,
         txtPersetujuan: TextView
-    ): Boolean {
-        var sukses = false
-
+    ) {
         val terverifikasi = pendaftaranPresenter.verifikasiData(
             daftarKolom,
             nomorHP,
@@ -35,9 +33,13 @@ class DaftarPasienPresenter(
         )
         var bukanDuplikat = true
 
-        if (terverifikasi && bukanDuplikat) sukses = true
+        if (terverifikasi) {
+            if (!bukanDuplikat) {
+                pendaftaranView.nomorHPTerdaftar(txtNomorHP)
+            } else {
 
-        return sukses
+            }
+        }
     }
 
     fun cekDuplikatNomorHPPasien() {
