@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "301144838068",
+    "firebase_url": "https://klinik-kita-df255.firebaseio.com",
+    "project_id": "klinik-kita-df255",
+    "storage_bucket": "klinik-kita-df255.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301144838068:android:d538c70aaf8754639bece1",
+        "android_client_info": {
+          "package_name": "id.calvintd.klinikkita"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301144838068-jgejboqejfsbilog6qskcfgmmh2pcvce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaCYshFz7AbwdWf5V4-M1UVxu0K58TIfs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301144838068-jgejboqejfsbilog6qskcfgmmh2pcvce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

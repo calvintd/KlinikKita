@@ -61,7 +61,7 @@ class DaftarKlinikActivity : AppCompatActivity(), PendaftaranView {
 
         cbPersetujuan = findViewById(R.id.cbPersetujuanKlinik)
 
-        btnDaftar = findViewById(R.id.btnDaftarPasien)
+        btnDaftar = findViewById(R.id.btnDaftarKlinik)
 
         btnDaftar.setOnClickListener {
             val namaKlinik = edtNamaKlinik.text.toString()
