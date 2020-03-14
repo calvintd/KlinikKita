@@ -60,6 +60,7 @@
     <string name="key_city_example">Contoh: Ketapang</string>
     <string name="key_phone_example">10–12 digit | Contoh: 081234567890</string>
     <string name="key_phone_wrong_formatting">Nomor HP Anda harus diawali dengan 08!</string>
+    <string name="key_successful_registration">Pendaftaran sukses! Silahkan masuk ke dalam akun Anda melalui halaman login.</string>
 
     <string name="test">Test!</string>
 </resources>

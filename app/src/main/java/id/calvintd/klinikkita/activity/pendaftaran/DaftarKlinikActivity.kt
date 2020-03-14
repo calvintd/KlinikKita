@@ -1,5 +1,6 @@
-package id.calvintd.klinikkita.activity
+package id.calvintd.klinikkita.activity.pendaftaran
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -9,9 +10,10 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import id.calvintd.klinikkita.R
+import id.calvintd.klinikkita.activity.login.LoginActivity
 import id.calvintd.klinikkita.itemmodel.database.Klinik
 import id.calvintd.klinikkita.itemmodel.internal.Kolom
-import id.calvintd.klinikkita.presenter.DaftarKlinikPresenter
+import id.calvintd.klinikkita.presenter.pendaftaran.DaftarKlinikPresenter
 import id.calvintd.klinikkita.view.PendaftaranView
 
 class DaftarKlinikActivity : AppCompatActivity(), PendaftaranView {
@@ -101,7 +103,11 @@ class DaftarKlinikActivity : AppCompatActivity(), PendaftaranView {
                 password = kataSandi
             )
 
-            presenter = DaftarKlinikPresenter(this, dataKlinik)
+            presenter =
+                DaftarKlinikPresenter(
+                    this,
+                    dataKlinik
+                )
 
             presenter.cekFormulir(
                 daftarKolom = daftarKolom,
@@ -151,5 +157,11 @@ class DaftarKlinikActivity : AppCompatActivity(), PendaftaranView {
 
     override fun sembunyikanTeksKesalahan(teksKesalahan: TextView) {
         teksKesalahan.visibility = View.GONE
+    }
+
+    override fun pendaftaranSukses() {
+        Toast.makeText(this, R.string.key_successful_registration, Toast.LENGTH_LONG).show()
+        startActivity(Intent(this, LoginActivity::class.java)
+            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
     }
 }

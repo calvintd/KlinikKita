@@ -1,4 +1,4 @@
-package id.calvintd.klinikkita.activity
+package id.calvintd.klinikkita.activity.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,24 +7,25 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import id.calvintd.klinikkita.R
+import id.calvintd.klinikkita.activity.pendaftaran.DaftarKlinikActivity
 
-class LoginPasienActivity : AppCompatActivity() {
+class LoginKlinikActivity : AppCompatActivity() {
     private lateinit var btnMasuk: Button
     private lateinit var txtDaftar: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login_pasien)
+        setContentView(R.layout.activity_login_klinik)
 
-        btnMasuk = findViewById(R.id.btnLoginPasien)
-        txtDaftar = findViewById(R.id.txtDaftarPasien)
+        btnMasuk = findViewById(R.id.btnLoginKlinik)
+        txtDaftar = findViewById(R.id.txtDaftarKlinik)
 
         btnMasuk.setOnClickListener {
             Toast.makeText(this, R.string.test, Toast.LENGTH_SHORT).show()
         }
 
         txtDaftar.setOnClickListener {
-            startActivity(Intent(this, DaftarPasienActivity::class.java))
+            startActivity(Intent(this, DaftarKlinikActivity::class.java))
         }
     }
 }

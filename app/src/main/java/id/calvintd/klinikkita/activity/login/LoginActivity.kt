@@ -1,10 +1,9 @@
-package id.calvintd.klinikkita.activity
+package id.calvintd.klinikkita.activity.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.Toast
 import id.calvintd.klinikkita.R
 
 class LoginActivity : AppCompatActivity() {

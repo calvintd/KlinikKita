@@ -1,6 +1,10 @@
-package id.calvintd.klinikkita.presenter
+package id.calvintd.klinikkita.presenter.pendaftaran
 
 import android.widget.TextView
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ValueEventListener
 import id.calvintd.klinikkita.itemmodel.internal.Kolom
 import id.calvintd.klinikkita.util.CekFormulirPendaftaran
 import id.calvintd.klinikkita.view.PendaftaranView
@@ -66,6 +70,24 @@ class PendaftaranPresenter(private val pendaftaranView: PendaftaranView) {
         if (terisi && terformat && sesuaiPanjang && terulang && persetujuan) terverifikasi = true
 
         return terverifikasi
+    }
+
+    fun verifikasiHP(reference: DatabaseReference, tipe: String, nomorHP: String): Boolean {
+        var duplikat = false
+        reference.addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (snapshot in dataSnapshot.child(tipe).children) {
+                    if (snapshot.child("phone").toString() == nomorHP) {
+                        duplikat = true
+                    }
+                }
+            }
+        })
+        return duplikat
     }
 
     private fun sembunyikan(teksKesalahan: TextView) {

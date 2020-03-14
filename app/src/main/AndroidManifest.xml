@@ -9,11 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.DaftarKlinikActivity" />
-        <activity android:name=".activity.DaftarPasienActivity" />
-        <activity android:name=".activity.LoginKlinikActivity" />
-        <activity android:name=".activity.LoginPasienActivity" />
-        <activity android:name=".activity.LoginActivity">
+        <activity android:name=".activity.beranda.BerandaKlinikActivity"></activity>
+        <activity android:name=".activity.beranda.BerandaPasienActivity" />
+        <activity android:name=".activity.pendaftaran.DaftarKlinikActivity" />
+        <activity android:name=".activity.pendaftaran.DaftarPasienActivity" />
+        <activity android:name=".activity.login.LoginKlinikActivity" />
+        <activity android:name=".activity.login.LoginPasienActivity" />
+        <activity android:name=".activity.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
