@@ -25,7 +25,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/home_greeting"
+        android:text="@string/patient_home_greeting"
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,18 +43,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSelamatDatangPasien"
         app:srcCompat="@drawable/pasien_pemeriksaan" />
-
-    <ImageView
-        android:id="@+id/imgLihatPemeriksaanPasien"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDaftarPeriksaDeskripsiPasien"
-        app:srcCompat="@drawable/pasien_rekam" />
 
     <TextView
         android:id="@+id/txtDaftarPeriksaPasien"
@@ -85,6 +73,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDaftarPeriksaPasien" />
+
+    <ImageView
+        android:id="@+id/imgLihatPemeriksaanPasien"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDaftarPeriksaDeskripsiPasien"
+        app:srcCompat="@drawable/pasien_rekam" />
 
     <TextView
         android:id="@+id/txtLihatPemeriksaanPasien"
@@ -151,11 +151,22 @@
         android:text="@string/home_settings"
         android:textAlignment="center"
         android:textAllCaps="false"
+        android:textColor="#D5A61A"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/glBerandaPasienVertikal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgPengaturanBerandaPasien" />
+
+    <ImageView
+        android:id="@+id/imgKeluarBerandaPasien"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/glBerandaPasienVertikal"
+        app:layout_constraintTop_toBottomOf="@+id/glBerandaPasienHorizontal"
+        app:srcCompat="@drawable/keluar" />
 
     <TextView
         android:id="@+id/txtKeluarBerandaPasien"
@@ -171,15 +182,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/glBerandaPasienVertikal"
         app:layout_constraintTop_toBottomOf="@id/imgKeluarBerandaPasien" />
-
-    <ImageView
-        android:id="@+id/imgKeluarBerandaPasien"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/glBerandaPasienVertikal"
-        app:layout_constraintTop_toBottomOf="@+id/glBerandaPasienHorizontal"
-        app:srcCompat="@drawable/keluar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

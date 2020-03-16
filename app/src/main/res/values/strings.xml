@@ -40,21 +40,22 @@
     <string name="clinic_terms_of_use_unchecked">Anda belum menyetujui persyaratan penggunaan layanan Klinik Kita!</string>
 
     <!-- beranda -->
-    <string name="home_greeting">Selamat datang, %s!</string>
     <string name="home_settings">Pengaturan</string>
     <string name="home_logout">Keluar</string>
 
     <!-- beranda pasien -->
+    <string name="patient_home_greeting">Selamat datang, %s!</string>
     <string name="patient_home_register_appointment">Daftar untuk Pemeriksaan</string>
     <string name="patient_home_register_appointment_text">Cari klinik dan dokter di sekitar Anda</string>
     <string name="patient_home_appointment_list">Lihat Pemeriksaan</string>
     <string name="patient_home_appointment_list_text">Cek pendaftaran yang sedang diproses dan riwayat pemeriksaan sebelumnya</string>
 
     <!-- beranda klinik -->
+    <string name="clinic_home_header">Pengelolaan Klinik: %s</string>
     <string name="clinic_home_appointment_list">Lihat Pendaftaran dan Riwayat</string>
     <string name="clinic_home_appointment_list_text">Cek pendaftaran dari pasien serta riwayat pemeriksaan klinik</string>
-    <string name="clinic_home_add_doctor">Pengelolaan Dokter</string>
-    <string name="clinic_home_add_doctor_text">Lihat dan tambahkan dokter yang ada di klinik Anda</string>
+    <string name="clinic_home_manage_doctor">Pengelolaan Dokter</string>
+    <string name="clinic_home_manage_doctor_text">Lihat dan tambahkan dokter yang ada di klinik Anda</string>
 
     <!-- key words & phrases -->
     <string name="key_address">Alamat</string>

@@ -6,4 +6,178 @@
     android:layout_height="match_parent"
     tools:context=".activity.beranda.BerandaKlinikActivity">
 
+    <ImageView
+        android:id="@+id/imgBerandaKlinik"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/pasien"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSelamatDatangKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/clinic_home_header"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBerandaKlinik" />
+
+    <ImageView
+        android:id="@+id/imgDaftarPeriksaKlinik"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSelamatDatangKlinik"
+        app:srcCompat="@drawable/klinik_rekam" />
+
+    <TextView
+        android:id="@+id/txtDaftarPeriksaKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/clinic_home_appointment_list"
+        android:textAlignment="center"
+        android:textColor="#1F8006"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgDaftarPeriksaKlinik" />
+
+    <TextView
+        android:id="@+id/txtDaftarPeriksaDeskripsiKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/clinic_home_appointment_list_text"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDaftarPeriksaKlinik" />
+
+    <ImageView
+        android:id="@+id/imgLihatPemeriksaanKlinik"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDaftarPeriksaDeskripsiKlinik"
+        app:srcCompat="@drawable/klinik_dokter" />
+
+    <TextView
+        android:id="@+id/txtLihatPemeriksaanKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/clinic_home_manage_doctor"
+        android:textAlignment="center"
+        android:textColor="#020AB1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLihatPemeriksaanKlinik" />
+
+    <TextView
+        android:id="@+id/txtLihatPemeriksaanDeskripsiKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/clinic_home_manage_doctor_text"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLihatPemeriksaanKlinik" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBerandaKlinikHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBerandaKlinikVertikal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/imgPengaturanBerandaKlinik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@id/glBerandaKlinikVertikal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/glBerandaKlinikHorizontal"
+        app:srcCompat="@drawable/pengaturan" />
+
+    <TextView
+        android:id="@+id/txtPengaturanBerandaKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/home_settings"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#D5A61A"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/glBerandaKlinikVertikal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPengaturanBerandaKlinik" />
+
+    <ImageView
+        android:id="@+id/imgKeluarBerandaKlinik"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/glBerandaKlinikVertikal"
+        app:layout_constraintTop_toBottomOf="@+id/glBerandaKlinikHorizontal"
+        app:srcCompat="@drawable/keluar" />
+
+    <TextView
+        android:id="@+id/txtKeluarBerandaKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/home_logout"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FB0000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/glBerandaKlinikVertikal"
+        app:layout_constraintTop_toBottomOf="@id/imgKeluarBerandaKlinik" />
 </androidx.constraintlayout.widget.ConstraintLayout>
