@@ -20,15 +20,166 @@
 
     <TextView
         android:id="@+id/txtSelamatDatangPasien"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:text="@string/home_greeting"
+        android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgBerandaPasien" />
+
+    <ImageView
+        android:id="@+id/imgDaftarPeriksaPasien"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSelamatDatangPasien"
+        app:srcCompat="@drawable/pasien_pemeriksaan" />
+
+    <ImageView
+        android:id="@+id/imgLihatPemeriksaanPasien"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDaftarPeriksaDeskripsiPasien"
+        app:srcCompat="@drawable/pasien_rekam" />
+
+    <TextView
+        android:id="@+id/txtDaftarPeriksaPasien"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/patient_home_register_appointment"
+        android:textAlignment="center"
+        android:textColor="#1F8006"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgDaftarPeriksaPasien" />
+
+    <TextView
+        android:id="@+id/txtDaftarPeriksaDeskripsiPasien"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/patient_home_register_appointment_text"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDaftarPeriksaPasien" />
+
+    <TextView
+        android:id="@+id/txtLihatPemeriksaanPasien"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/patient_home_appointment_list"
+        android:textAlignment="center"
+        android:textColor="#020AB1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLihatPemeriksaanPasien" />
+
+    <TextView
+        android:id="@+id/txtLihatPemeriksaanDeskripsiPasien"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/patient_home_appointment_list_text"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLihatPemeriksaanPasien" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBerandaPasienHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBerandaPasienVertikal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/imgPengaturanBerandaPasien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="0dp"
+        app:layout_constraintEnd_toStartOf="@id/glBerandaPasienVertikal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/glBerandaPasienHorizontal"
+        app:srcCompat="@drawable/pengaturan" />
+
+    <TextView
+        android:id="@+id/txtPengaturanBerandaPasien"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/home_settings"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/glBerandaPasienVertikal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPengaturanBerandaPasien" />
+
+    <TextView
+        android:id="@+id/txtKeluarBerandaPasien"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/home_logout"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FB0000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/glBerandaPasienVertikal"
+        app:layout_constraintTop_toBottomOf="@id/imgKeluarBerandaPasien" />
+
+    <ImageView
+        android:id="@+id/imgKeluarBerandaPasien"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/glBerandaPasienVertikal"
+        app:layout_constraintTop_toBottomOf="@+id/glBerandaPasienHorizontal"
+        app:srcCompat="@drawable/keluar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
