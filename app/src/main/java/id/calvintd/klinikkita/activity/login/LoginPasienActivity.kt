@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import id.calvintd.klinikkita.R
-import id.calvintd.klinikkita.activity.pendaftaran.DaftarPasienActivity
+import id.calvintd.klinikkita.activity.pendaftaran.PendaftaranPasienActivity
 
 class LoginPasienActivity : AppCompatActivity() {
     private lateinit var btnMasuk: Button
@@ -25,7 +25,7 @@ class LoginPasienActivity : AppCompatActivity() {
         }
 
         txtDaftar.setOnClickListener {
-            startActivity(Intent(this, DaftarPasienActivity::class.java))
+            startActivity(Intent(this, PendaftaranPasienActivity::class.java))
         }
     }
 }

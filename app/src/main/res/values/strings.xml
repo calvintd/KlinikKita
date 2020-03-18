@@ -16,9 +16,9 @@
     <string name="clinic_login_register_desc">Daftarkanlah klinik Anda dan jadilah bagian dari jaringan Klinik Kita!</string>
 
     <!-- halaman daftar pasien -->
+    <string name="patient_register_title">Pendaftaran Pasien</string>
     <string name="key_full_name_example">Contoh: Calvin Tandra</string>
     <string name="key_nickname_example">Contoh: Calvin</string>
-    <string name="patient_register_title">Pendaftaran Pasien</string>
     <string name="patient_full_name">Nama lengkap</string>
     <string name="patient_empty_full_name">Nama lengkap pasien tidak boleh kosong!</string>
     <string name="patient_nickname">Nama panggilan</string>
@@ -29,9 +29,9 @@
     <string name="patient_privacy_policy_unchecked">Anda belum menyetujui pernyataan mengenai data Anda!</string>
 
     <!-- halaman daftar klinik -->
-    <string name="key_clinic_name_example">Contoh: Klinik Sehat Abadi</string>
     <string name="clinic_register_title">Pendaftaran Klinik</string>
     <string name="clinic_name">Nama klinik</string>
+    <string name="clinic_name_example">Contoh: Klinik Sehat Abadi</string>
     <string name="clinic_empty_name">Nama klinik tidak boleh kosong!</string>
     <string name="clinic_register_existing_phone">Nomor HP yang Anda masukkan telah terdaftar sebagai klinik!</string>
     <string name="clinic_terms_of_use">Saya setuju bahwa data yang saya pergunakan merupakan data milik bersama keluarga besar jaringan Klinik Kita. Saya tidak
@@ -45,17 +45,79 @@
 
     <!-- beranda pasien -->
     <string name="patient_home_greeting">Selamat datang, %s!</string>
-    <string name="patient_home_register_appointment">Daftar untuk Pemeriksaan</string>
-    <string name="patient_home_register_appointment_text">Cari klinik dan dokter di sekitar Anda</string>
-    <string name="patient_home_appointment_list">Lihat Pemeriksaan</string>
-    <string name="patient_home_appointment_list_text">Cek pendaftaran yang sedang diproses dan riwayat pemeriksaan sebelumnya</string>
+    <string name="patient_home_register_appointment">Pendaftaran Pemeriksaan</string>
+    <string name="patient_home_register_appointment_desc">Cari klinik dan dokter di sekitar Anda</string>
+    <string name="patient_home_appointments_list">Lihat Pemeriksaan</string>
+    <string name="patient_home_appointments_list_desc">Cek pendaftaran yang sedang diproses dan riwayat pemeriksaan sebelumnya</string>
+
+    <!-- pencarian klinik -->
+    <string name="patient_appointments_registration_clinic_header">Pencarian Klinik</string>
+    <string name="patient_appointments_registration_choose_clinic">Pilih klinik yang ingin didatangi</string>
+    <string name="patient_appointments_registration_clinic_name_example">Klinik Sehat Abadi</string>
+    <string name="patient_appointments_registration_clinic_address_example">Jl. DI Panjaitan no. 727, Sampit, Delta Pawan</string>
+    <string name="patient_appointments_registration_clinic_city_example">Ketapang</string>
+    <string name="patient_appointments_registration_clinic_doctor_count">%d dokter</string>
+    <string name="patient_appointments_registration_clinic_no_clinics">Belum ada klinik yang terdaftar atau memiliki dokter.</string>
+
+    <!-- pencarian dokter -->
+    <string name="patient_appointments_registration_doctor_header">Pencarian Dokter</string>
+    <string name="patient_appointments_registration_choose_doctor">Pilih dokter yang sesuai dengan keluhan Anda</string>
+    <string name="patient_appointments_registration_doctor_name_example">Tanjung Martapura</string>
+    <string name="patient_appointments_registration_doctor_description_example">Spesialis penyakit dalam</string>
+
+    <!-- entri keluhan -->
+    <string name="patient_appointments_registration_details_header">Entri Keluhan</string>
+    <string name="patient_appointments_registration_details_clinic_name">Klinik</string>
+    <string name="patient_appointments_registration_details_doctor_name">Dokter</string>
+    <string name="patient_appointments_registration_details_complaints">Keluhan</string>
+    <string name="patient_appointments_registration_details_complaints_example">Contoh: Asam lambung naik, pusing, mual-mual</string>
+    <string name="patient_appointments_registration_details_button">Daftar Pemeriksaan</string>
+
+    <!-- daftar pemeriksaan -->
+    <string name="patient_appointments_list_header">Lihat Pemeriksaan</string>
+    <string name="patient_appointments_list_current_registrations">Cek Pendaftaran</string>
+    <string name="patient_appointments_list_current_registrations_desc">Lihat pendaftaran yang sedang diproses</string>
+    <string name="patient_appointments_list_history">Riwayat Pemeriksaan</string>
+    <string name="patient_appointments_list_history_desc">Lihat riwayat pemeriksaan yang telah dijalani sebelumnya</string>
+
+    <!-- cek pendaftaran pasien -->
+    <string name="patient_appointments_list_current_registrations_status">Status</string>
+    <string name="patient_appointments_list_current_registrations_accepted">Diterima</string>
+    <string name="patient_appointments_list_current_registrations_pending">Menunggu</string>
+    <string name="patient_appointments_list_current_registrations_rejected">Ditolak</string>
+
+    <!-- riwayat pendaftaran pasien -->
+    <string name="patient_appointments_list_history_complaints_example">Asam lambung naik, pusing, mual-mual</string>
+    <string name="patient_appointments_list_history_diagnosis">Diagnosis</string>
+    <string name="patient_appointments_list_history_diagnosis_example">Refluks asam lambung</string>
+    <string name="patient_appointments_list_history_treatment">Pengobatan</string>
+    <string name="patient_appointments_list_history_treatment_example">Kurangi makanan pemicu gas &amp; minum obat LPZ 2 kali sehari 30 menit sebelum makan</string>
 
     <!-- beranda klinik -->
     <string name="clinic_home_header">Pengelolaan Klinik: %s</string>
-    <string name="clinic_home_appointment_list">Lihat Pendaftaran dan Riwayat</string>
-    <string name="clinic_home_appointment_list_text">Cek pendaftaran dari pasien serta riwayat pemeriksaan klinik</string>
+    <string name="clinic_home_appointments_list">Lihat Pendaftaran &amp; Riwayat</string>
+    <string name="clinic_home_appointments_list_desc">Cek pendaftaran dari pasien serta riwayat pemeriksaan klinik</string>
     <string name="clinic_home_manage_doctor">Pengelolaan Dokter</string>
-    <string name="clinic_home_manage_doctor_text">Lihat dan tambahkan dokter yang ada di klinik Anda</string>
+    <string name="clinic_home_manage_doctor_desc">Lihat dan tambahkan dokter yang ada di klinik Anda</string>
+
+    <!-- lihat pendaftaran dan riwayat -->
+    <string name="clinic_home_appointments_list_header">Pendaftaran &amp; Riwayat</string>
+    <string name="clinic_home_appointments_list_registration">Cek Pendaftaran</string>
+    <string name="clinic_home_appointments_list_registration_desc">Lihat entri pendaftaran yang sedang menunggu keputusan dari Anda</string>
+    <string name="clinic_home_appointments_list_pending">Kelola Pemeriksaan</string>
+    <string name="clinic_home_appointments_list_pending_desc">Lihat entri pemeriksaan yang telah dikonfirmasi &amp; atur status kehadiran, diagnosis, dan
+        pengobatan dari setiap pemeriksaan</string>
+    <string name="clinic_home_appointments_list_history">Riwayat Pemeriksaan</string>
+    <string name="clinic_home_appointments_list_history_desc">Lihat seluruh riwayat pemeriksaan yang dilakukan di klinik Anda</string>
+
+    <!-- cek pendaftaran klinik -->
+    <string name="clinic_home_appointments_list_registration_header">Pendaftaran Pemeriksaan</string>
+
+    <!-- kelola pemeriksaan -->
+    <string name="clinic_home_appointments_list_pending_header">Pengelolaan Pemeriksaan</string>
+
+    <!-- riwayat pemeriksaan klinik -->
+    <string name="clinic_home_appointments_list_history_header">Riwayat Pemeriksaan</string>
 
     <!-- key words & phrases -->
     <string name="key_address">Alamat</string>

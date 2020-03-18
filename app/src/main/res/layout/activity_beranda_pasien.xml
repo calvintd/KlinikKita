@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.beranda.BerandaPasienActivity">
+    tools:context=".activity.pasien.BerandaPasienActivity">
 
     <ImageView
         android:id="@+id/imgBerandaPasien"
@@ -67,7 +67,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/patient_home_register_appointment_text"
+        android:text="@string/patient_home_register_appointment_desc"
         android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,7 +93,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/patient_home_appointment_list"
+        android:text="@string/patient_home_appointments_list"
         android:textAlignment="center"
         android:textColor="#020AB1"
         android:textSize="24sp"
@@ -110,7 +110,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/patient_home_appointment_list_text"
+        android:text="@string/patient_home_appointments_list_desc"
         android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"

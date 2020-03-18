@@ -16,7 +16,7 @@ import id.calvintd.klinikkita.itemmodel.internal.Kolom
 import id.calvintd.klinikkita.presenter.pendaftaran.DaftarKlinikPresenter
 import id.calvintd.klinikkita.view.PendaftaranView
 
-class DaftarKlinikActivity : AppCompatActivity(), PendaftaranView {
+class PendaftaranKlinikActivity : AppCompatActivity(), PendaftaranView {
     // EditText
     private lateinit var edtNamaKlinik: EditText
     private lateinit var edtAlamat: EditText
@@ -42,7 +42,7 @@ class DaftarKlinikActivity : AppCompatActivity(), PendaftaranView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_daftar_klinik)
+        setContentView(R.layout.activity_pendaftaran_klinik)
 
         // EditText
         edtNamaKlinik = findViewById(R.id.edtNamaKlinik)
