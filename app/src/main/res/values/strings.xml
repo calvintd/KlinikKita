@@ -112,12 +112,32 @@
 
     <!-- cek pendaftaran klinik -->
     <string name="clinic_home_appointments_list_registration_header">Pendaftaran Pemeriksaan</string>
+    <string name="clinic_home_appointments_list_registration_patient_name">Nama Pasien</string>
+    <string name="clinic_home_appointments_list_registration_patient_name_example">Calvin Tandra</string>
 
     <!-- kelola pemeriksaan -->
     <string name="clinic_home_appointments_list_pending_header">Pengelolaan Pemeriksaan</string>
 
     <!-- riwayat pemeriksaan klinik -->
     <string name="clinic_home_appointments_list_history_header">Riwayat Pemeriksaan</string>
+    
+    <!-- kelola dokter -->
+    <string name="clinic_manage_doctors_add_doctor">Penambahan Dokter</string>
+    <string name="clinic_manage_doctors_edit_doctor">Pengubahan Data Dokter</string>
+    <string name="clinic_manage_doctors_delete_doctor">Hapus Dokter</string>
+    
+    <string name="clinic_manage_doctors_details_name">Nama</string>
+    <string name="clinic_manage_doctors_details_name_example">Contoh: Tanjung Martapura</string>
+    <string name="clinic_manage_doctors_details_description">Deskripsi</string>
+    <string name="clinic_manage_doctors_details_description_example">Contoh: Spesialis penyakit dalam</string>
+    
+    <string name="clinic_manage_doctors_add_doctor_button">Tambahkan Dokter</string>
+    <string name="clinic_manage_doctors_edit_doctor_button">Ubah Data Dokter</string>
+    <string name="clinic_manage_doctors_delete_doctor_question">Hapus dokter ini? Ini juga akan menghapus seluruh rekaman pemeriksaan yang berhubungan dengan dokter
+    ini.</string>
+    
+    <string name="clinic_manage_doctors_empty_name">Nama dokter tidak boleh kosong!</string>
+    <string name="clinic_manage_doctors_empty_description">Deskripsi dokter tidak boleh kosong!</string>
 
     <!-- key words & phrases -->
     <string name="key_address">Alamat</string>
@@ -141,6 +161,8 @@
     <string name="key_phone_example">10–12 digit | Contoh: 081234567890</string>
     <string name="key_phone_wrong_formatting">Nomor HP Anda harus diawali dengan 08!</string>
     <string name="key_successful_registration">Pendaftaran sukses! Silahkan masuk ke dalam akun Anda melalui halaman login.</string>
+    <string name="key_yes">Ya</string>
+    <string name="key_no">Tidak</string>
 
     <string name="test">Test!</string>
 </resources>
