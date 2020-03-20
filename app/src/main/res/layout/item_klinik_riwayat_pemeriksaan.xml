@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glRiwayatPemeriksaanKlinik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <TextView
+        android:id="@+id/txtPasienRiwayatPemeriksaanKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/clinic_appointments_list_pending_patient_name"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/glRiwayatPemeriksaanKlinik"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNamaPasienRiwayatPemeriksaanKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/clinic_appointments_list_pending_patient_name_example"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/glRiwayatPemeriksaanKlinik"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierPasienRiwayatPemeriksaanKlinik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="txtPasienRiwayatPemeriksaanKlinik, txtNamaPasienRiwayatPemeriksaanKlinik" />
+
+    <TextView
+        android:id="@+id/txtKlinikRiwayatPemeriksaanKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/patient_appointments_registration_details_clinic_name"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/glRiwayatPemeriksaanKlinik"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrierPasienRiwayatPemeriksaanKlinik" />
+
+    <TextView
+        android:id="@+id/txtNamaKlinikRiwayatPemeriksaanKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/patient_appointments_registration_clinic_name_example"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/glRiwayatPemeriksaanKlinik"
+        app:layout_constraintTop_toBottomOf="@id/barrierPasienRiwayatPemeriksaanKlinik" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierKlinikRiwayatPemeriksaanKlinik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="txtKlinikRiwayatPemeriksaanKlinik, txtNamaKlinikRiwayatPemeriksaanKlinik" />
+
+    <TextView
+        android:id="@+id/txtDokterRiwayatPemeriksaanKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/patient_appointments_registration_details_doctor_name"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/glRiwayatPemeriksaanKlinik"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrierKlinikRiwayatPemeriksaanKlinik" />
+
+    <TextView
+        android:id="@+id/txtNamaDokterRiwayatPemeriksaanKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/patient_appointments_registration_doctor_name_example"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/glRiwayatPemeriksaanKlinik"
+        app:layout_constraintTop_toBottomOf="@+id/barrierKlinikRiwayatPemeriksaanKlinik" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierDokterRiwayatPemeriksaanKlinik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="txtDokterRiwayatPemeriksaanKlinik, txtNamaDokterRiwayatPemeriksaanKlinik" />
+
+    <TextView
+        android:id="@+id/txtKeluhanRiwayatPemeriksaanKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/patient_appointments_registration_details_complaints"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/glRiwayatPemeriksaanKlinik"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrierDokterRiwayatPemeriksaanKlinik" />
+
+    <TextView
+        android:id="@+id/txtIsiKeluhanRiwayatPemeriksaanKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/patient_appointments_list_history_complaints_example"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtKeluhanRiwayatPemeriksaanKlinik"
+        app:layout_constraintTop_toBottomOf="@+id/barrierDokterRiwayatPemeriksaanKlinik" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierKeluhanRiwayatPemeriksaanKlinik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="txtKeluhanRiwayatPemeriksaanKlinik, txtIsiKeluhanRiwayatPemeriksaanKlinik" />
+
+    <TextView
+        android:id="@+id/txtDiagnosisRiwayatPemeriksaanKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/patient_appointments_list_history_diagnosis"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/glRiwayatPemeriksaanKlinik"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrierKeluhanRiwayatPemeriksaanKlinik" />
+
+    <TextView
+        android:id="@+id/txtIsiDiagnosisRiwayatPemeriksaanKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/patient_appointments_list_history_diagnosis_example"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtDiagnosisRiwayatPemeriksaanKlinik"
+        app:layout_constraintTop_toBottomOf="@+id/txtIsiKeluhanRiwayatPemeriksaanKlinik" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierDiagnosisRiwayatPemeriksaanKlinik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="txtDiagnosisRiwayatPemeriksaanKlinik, txtIsiDiagnosisRiwayatPemeriksaanKlinik" />
+
+    <TextView
+        android:id="@+id/txtPengobatanRiwayatPemeriksaanKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/patient_appointments_list_history_treatment"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/glRiwayatPemeriksaanKlinik"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrierDiagnosisRiwayatPemeriksaanKlinik" />
+
+    <TextView
+        android:id="@+id/txtIsiPengobatanRiwayatPemeriksaanKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/patient_appointments_list_history_treatment_example"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtDiagnosisRiwayatPemeriksaanKlinik"
+        app:layout_constraintTop_toBottomOf="@+id/barrierDiagnosisRiwayatPemeriksaanKlinik" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierPengobatanRiwayatPemeriksaanKlinik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="txtPengobatanRiwayatPemeriksaanKlinik, txtIsiPengobatanRiwayatPemeriksaanKlinik" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

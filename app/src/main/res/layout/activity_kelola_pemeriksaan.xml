@@ -13,7 +13,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/clinic_home_appointments_list_pending_header"
+        android:text="@string/clinic_appointments_list_pending_header"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"

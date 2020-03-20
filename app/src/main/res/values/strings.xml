@@ -72,6 +72,8 @@
     <string name="patient_appointments_registration_details_complaints">Keluhan</string>
     <string name="patient_appointments_registration_details_complaints_example">Contoh: Asam lambung naik, pusing, mual-mual</string>
     <string name="patient_appointments_registration_details_button">Daftar Pemeriksaan</string>
+    <string name="patient_appointments_registration_details_message_header">Konfirmasi</string>
+    <string name="patient_appointments_registration_details_message">Apakah Anda yakin ingin mendaftarkan diri?</string>
 
     <!-- daftar pemeriksaan -->
     <string name="patient_appointments_list_header">Lihat Pemeriksaan</string>
@@ -102,40 +104,47 @@
 
     <!-- lihat pendaftaran dan riwayat -->
     <string name="clinic_home_appointments_list_header">Pendaftaran &amp; Riwayat</string>
-    <string name="clinic_home_appointments_list_registration">Cek Pendaftaran</string>
-    <string name="clinic_home_appointments_list_registration_desc">Lihat entri pendaftaran yang sedang menunggu keputusan dari Anda</string>
     <string name="clinic_home_appointments_list_pending">Kelola Pemeriksaan</string>
-    <string name="clinic_home_appointments_list_pending_desc">Lihat entri pemeriksaan yang telah dikonfirmasi &amp; atur status kehadiran, diagnosis, dan
-        pengobatan dari setiap pemeriksaan</string>
+    <string name="clinic_home_appointments_list_pending_desc">Lihat entri pendaftaran pasien &amp; atur status kehadiran, diagnosis, dan pengobatan dari setiap
+        pemeriksaan</string>
     <string name="clinic_home_appointments_list_history">Riwayat Pemeriksaan</string>
     <string name="clinic_home_appointments_list_history_desc">Lihat seluruh riwayat pemeriksaan yang dilakukan di klinik Anda</string>
 
-    <!-- cek pendaftaran klinik -->
-    <string name="clinic_home_appointments_list_registration_header">Pendaftaran Pemeriksaan</string>
-    <string name="clinic_home_appointments_list_registration_patient_name">Nama Pasien</string>
-    <string name="clinic_home_appointments_list_registration_patient_name_example">Calvin Tandra</string>
-
     <!-- kelola pemeriksaan -->
-    <string name="clinic_home_appointments_list_pending_header">Pengelolaan Pemeriksaan</string>
+    <string name="clinic_appointments_list_pending_patient_name">Nama Pasien</string>
+    <string name="clinic_appointments_list_pending_patient_name_example">Calvin Tandra</string>
+    <string name="clinic_appointments_list_pending_header">Pengelolaan Pemeriksaan</string>
+    <string name="clinic_appointments_list_pending_show">Hadir</string>
+    <string name="clinic_appointments_list_pending_no_show">Tidak Hadir</string>
+    <string name="clinic_appointments_list_pending_no_show_message">Nyatakan pasien tidak hadir?</string>
+
+    <!-- diagnosis pemeriksaan -->
+    <string name="clinic_appointments_list_diagnosis_header">Diagnosis Pemeriksaan</string>
+    <string name="clinic_appointments_list_diagnosis_diagnosis_example">Contoh: Refluks asam lambung</string>
+    <string name="clinic_appointments_list_diagnosis_treatment_example">Contoh: Kurangi makanan pemicu gas &amp; minum obat LPZ 2 kali sehari 30 menit sebelum
+        makan</string>
+    <string name="clinic_appointments_list_diagnosis_confirmation_button">Konfirmasi</string>
+    <string name="clinic_appointments_list_diagnosis_confirmation_header">Konfirmasi Diagnosis</string>
+    <string name="clinic_appointments_list_diagnosis_confirmation_message">Apakah Anda yakin dengan data diagnosis yang telah Anda isi?</string>
 
     <!-- riwayat pemeriksaan klinik -->
-    <string name="clinic_home_appointments_list_history_header">Riwayat Pemeriksaan</string>
-    
+    <string name="clinic_appointments_list_history_header">Riwayat Pemeriksaan</string>
+
     <!-- kelola dokter -->
     <string name="clinic_manage_doctors_add_doctor">Penambahan Dokter</string>
     <string name="clinic_manage_doctors_edit_doctor">Pengubahan Data Dokter</string>
     <string name="clinic_manage_doctors_delete_doctor">Hapus Dokter</string>
-    
+
     <string name="clinic_manage_doctors_details_name">Nama</string>
     <string name="clinic_manage_doctors_details_name_example">Contoh: Tanjung Martapura</string>
     <string name="clinic_manage_doctors_details_description">Deskripsi</string>
     <string name="clinic_manage_doctors_details_description_example">Contoh: Spesialis penyakit dalam</string>
-    
+
     <string name="clinic_manage_doctors_add_doctor_button">Tambahkan Dokter</string>
     <string name="clinic_manage_doctors_edit_doctor_button">Ubah Data Dokter</string>
     <string name="clinic_manage_doctors_delete_doctor_question">Hapus dokter ini? Ini juga akan menghapus seluruh rekaman pemeriksaan yang berhubungan dengan dokter
     ini.</string>
-    
+
     <string name="clinic_manage_doctors_empty_name">Nama dokter tidak boleh kosong!</string>
     <string name="clinic_manage_doctors_empty_description">Deskripsi dokter tidak boleh kosong!</string>
 
