@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.klinik.pemeriksaan.MenuPemeriksaanActivity">
+    tools:context=".activity.klinik.pemeriksaan.MenuPemeriksaanKlinikActivity">
 
     <TextView
-        android:id="@+id/txtMenuPemeriksaanHeader"
+        android:id="@+id/txtMenuPemeriksaanKlinikHeader"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -30,7 +30,7 @@
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMenuPemeriksaanHeader"
+        app:layout_constraintTop_toBottomOf="@+id/txtMenuPemeriksaanKlinikHeader"
         app:srcCompat="@drawable/klinik_kelola_periksa" />
 
     <TextView

@@ -4,10 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import id.calvintd.klinikkita.R
 
-class MenuPemeriksaanActivity : AppCompatActivity() {
+class MenuPemeriksaanKlinikActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu_pemeriksaan)
+        setContentView(R.layout.activity_menu_pemeriksaan_klinik)
     }
 }

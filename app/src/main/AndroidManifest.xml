@@ -12,14 +12,14 @@
         <activity android:name=".activity.klinik.pemeriksaan.DiagnosisPemeriksaanActivity"></activity>
         <activity android:name=".activity.pasien.pemeriksaan.RiwayatPemeriksaanPasienActivity" />
         <activity android:name=".activity.pasien.pemeriksaan.CekPendaftaranActivity" />
-        <activity android:name=".activity.pasien.pemeriksaan.BerandaPemeriksaanActivity" />
+        <activity android:name=".activity.pasien.pemeriksaan.MenuPemeriksaanPasienActivity" />
         <activity android:name=".activity.pasien.daftar.EntriKeluhanActivity" />
         <activity android:name=".activity.pasien.daftar.PencarianDokterActivity" />
         <activity android:name=".activity.pasien.daftar.PencarianKlinikActivity" />
         <activity android:name=".activity.klinik.pemeriksaan.RiwayatPemeriksaanKlinikActivity" />
         <activity android:name=".activity.klinik.pemeriksaan.KelolaPemeriksaanActivity" />
         <activity android:name=".activity.klinik.pemeriksaan.CekPendaftaranKlinikActivity" />
-        <activity android:name=".activity.klinik.pemeriksaan.MenuPemeriksaanActivity" />
+        <activity android:name=".activity.klinik.pemeriksaan.MenuPemeriksaanKlinikActivity" />
         <activity android:name=".activity.klinik.dokter.UbahDokterActivity" />
         <activity android:name=".activity.klinik.dokter.TambahDokterActivity" />
         <activity android:name=".activity.klinik.dokter.KelolaDokterActivity" />

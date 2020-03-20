@@ -75,20 +75,22 @@
     <string name="patient_appointments_registration_details_message_header">Konfirmasi</string>
     <string name="patient_appointments_registration_details_message">Apakah Anda yakin ingin mendaftarkan diri?</string>
 
-    <!-- daftar pemeriksaan -->
+    <!-- lihat pemeriksaan -->
     <string name="patient_appointments_list_header">Lihat Pemeriksaan</string>
     <string name="patient_appointments_list_current_registrations">Cek Pendaftaran</string>
-    <string name="patient_appointments_list_current_registrations_desc">Lihat pendaftaran yang sedang diproses</string>
+    <string name="patient_appointments_list_current_registrations_desc">Lihat pendaftaran/pemeriksaan yang sedang diproses</string>
     <string name="patient_appointments_list_history">Riwayat Pemeriksaan</string>
     <string name="patient_appointments_list_history_desc">Lihat riwayat pemeriksaan yang telah dijalani sebelumnya</string>
 
     <!-- cek pendaftaran pasien -->
-    <string name="patient_appointments_list_current_registrations_status">Status</string>
-    <string name="patient_appointments_list_current_registrations_accepted">Diterima</string>
-    <string name="patient_appointments_list_current_registrations_pending">Menunggu</string>
-    <string name="patient_appointments_list_current_registrations_rejected">Ditolak</string>
+    <string name="patient_appointments_list_current_status">Status</string>
+    <string name="patient_appointments_list_current_status_show">Hadir</string>
+    <string name="patient_appointments_list_current_status_pending">Menunggu</string>
+    <string name="patient_appointments_list_current_status_no_show">Tidak Hadir</string>
 
-    <!-- riwayat pendaftaran pasien -->
+    <!-- riwayat pemeriksaan pasien -->
+    <string name="patient_appointments_list_history_date_and_time">Tanggal/Waktu</string>
+    <string name="patient_appointments_list_history_date_and_time_example">Senin, 30 Maret 2020 18:00 WIB</string>
     <string name="patient_appointments_list_history_complaints_example">Asam lambung naik, pusing, mual-mual</string>
     <string name="patient_appointments_list_history_diagnosis">Diagnosis</string>
     <string name="patient_appointments_list_history_diagnosis_example">Refluks asam lambung</string>
@@ -103,7 +105,7 @@
     <string name="clinic_home_manage_doctor_desc">Lihat dan tambahkan dokter yang ada di klinik Anda</string>
 
     <!-- lihat pendaftaran dan riwayat -->
-    <string name="clinic_home_appointments_list_header">Pendaftaran &amp; Riwayat</string>
+    <string name="clinic_home_appointments_list_header">Pemeriksaan &amp; Riwayat</string>
     <string name="clinic_home_appointments_list_pending">Kelola Pemeriksaan</string>
     <string name="clinic_home_appointments_list_pending_desc">Lihat entri pendaftaran pasien &amp; atur status kehadiran, diagnosis, dan pengobatan dari setiap
         pemeriksaan</string>
