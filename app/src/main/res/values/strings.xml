@@ -166,6 +166,7 @@
     <string name="key_remember">Ingat:</string>
     <string name="key_login_button">Masuk</string>
     <string name="key_register_button">Daftar</string>
+    <string name="key_login_empty">Nomor HP dan kata sandi harus terisi!</string>
     <string name="key_login_mistake">Nomor HP atau kata sandi yang Anda masukkan salah atau tidak terdaftar!</string>
     <string name="key_address_example">Format: Nama dan nomor jalan, kelurahan/desa, kecamatan | Contoh: Jl. Jend. Sudirman no. 999, Tengah, Delta Pawan</string>
     <string name="key_city_example">Contoh: Ketapang</string>
