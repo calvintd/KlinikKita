@@ -1,4 +1,4 @@
-package id.calvintd.klinikkita.view.login
+package id.calvintd.klinikkita.view
 
 interface LoginView {
     fun kolomKosong()

@@ -27,9 +27,9 @@
         <activity android:name=".activity.pasien.BerandaPasienActivity" />
         <activity android:name=".activity.pendaftaran.PendaftaranKlinikActivity" />
         <activity android:name=".activity.pendaftaran.PendaftaranPasienActivity" />
-        <activity android:name=".activity.login.LoginKlinikActivity" />
-        <activity android:name=".activity.login.LoginPasienActivity" />
-        <activity android:name=".activity.login.HomeActivity">
+        <activity android:name=".activity.klinik.LoginKlinikActivity" />
+        <activity android:name=".activity.pasien.LoginPasienActivity" />
+        <activity android:name=".activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -72,24 +72,6 @@ class PendaftaranPresenter(private val pendaftaranView: PendaftaranView) {
         return terverifikasi
     }
 
-    fun verifikasiHP(reference: DatabaseReference, tipe: String, nomorHP: String): Boolean {
-        var duplikat = false
-        reference.addValueEventListener(object : ValueEventListener {
-            override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                for (snapshot in dataSnapshot.child(tipe).children) {
-                    if (snapshot.child("phone").toString() == nomorHP) {
-                        duplikat = true
-                    }
-                }
-            }
-        })
-        return duplikat
-    }
-
     private fun sembunyikan(teksKesalahan: TextView) {
         pendaftaranView.sembunyikanTeksKesalahan(teksKesalahan)
     }

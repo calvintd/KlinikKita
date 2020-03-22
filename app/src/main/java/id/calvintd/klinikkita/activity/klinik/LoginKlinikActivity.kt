@@ -1,4 +1,4 @@
-package id.calvintd.klinikkita.activity.login
+package id.calvintd.klinikkita.activity.klinik
 
 import android.content.Context
 import android.content.Intent
@@ -8,11 +8,10 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import id.calvintd.klinikkita.R
-import id.calvintd.klinikkita.activity.klinik.BerandaKlinikActivity
 import id.calvintd.klinikkita.activity.pendaftaran.PendaftaranKlinikActivity
 import id.calvintd.klinikkita.itemmodel.database.Klinik
 import id.calvintd.klinikkita.presenter.login.LoginKlinikPresenter
-import id.calvintd.klinikkita.view.login.LoginKlinikView
+import id.calvintd.klinikkita.view.klinik.LoginKlinikView
 
 class LoginKlinikActivity : AppCompatActivity(),
     LoginKlinikView {
@@ -73,8 +72,7 @@ class LoginKlinikActivity : AppCompatActivity(),
                 resources.getString(R.string.shared_pref_clinic_password),
                 dataKlinik.password
             )
-
-        sharedPrefEditor.apply()
+            .apply()
         startActivity(
             Intent(this, BerandaKlinikActivity::class.java)
                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)

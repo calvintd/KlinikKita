@@ -10,7 +10,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import id.calvintd.klinikkita.R
-import id.calvintd.klinikkita.activity.login.HomeActivity
+import id.calvintd.klinikkita.activity.HomeActivity
 import id.calvintd.klinikkita.itemmodel.database.Klinik
 import id.calvintd.klinikkita.itemmodel.internal.Kolom
 import id.calvintd.klinikkita.presenter.pendaftaran.DaftarKlinikPresenter

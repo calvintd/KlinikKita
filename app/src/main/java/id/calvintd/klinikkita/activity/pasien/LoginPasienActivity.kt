@@ -1,4 +1,4 @@
-package id.calvintd.klinikkita.activity.login
+package id.calvintd.klinikkita.activity.pasien
 
 import android.content.Context
 import android.content.Intent
@@ -8,11 +8,10 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import id.calvintd.klinikkita.R
-import id.calvintd.klinikkita.activity.pasien.BerandaPasienActivity
 import id.calvintd.klinikkita.activity.pendaftaran.PendaftaranPasienActivity
 import id.calvintd.klinikkita.itemmodel.database.Pasien
 import id.calvintd.klinikkita.presenter.login.LoginPasienPresenter
-import id.calvintd.klinikkita.view.login.LoginPasienView
+import id.calvintd.klinikkita.view.pasien.LoginPasienView
 
 class LoginPasienActivity : AppCompatActivity(),
     LoginPasienView {

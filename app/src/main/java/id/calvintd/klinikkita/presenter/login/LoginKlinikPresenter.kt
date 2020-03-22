@@ -5,7 +5,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import id.calvintd.klinikkita.itemmodel.database.Klinik
-import id.calvintd.klinikkita.view.login.LoginKlinikView
+import id.calvintd.klinikkita.view.klinik.LoginKlinikView
 
 class LoginKlinikPresenter(private val loginKlinikView: LoginKlinikView) {
     private val reference = FirebaseDatabase.getInstance().reference

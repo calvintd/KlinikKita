@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imgBerandaKlinik" />
 
     <ImageView
-        android:id="@+id/imgDaftarPeriksaKlinik"
+        android:id="@+id/imgLihatDaftarRiwayatKlinik"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginStart="32dp"
@@ -58,7 +58,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgDaftarPeriksaKlinik" />
+        app:layout_constraintTop_toBottomOf="@+id/imgLihatDaftarRiwayatKlinik" />
 
     <TextView
         android:id="@+id/txtDaftarPeriksaDeskripsiKlinik"
@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtDaftarPeriksaKlinik" />
 
     <ImageView
-        android:id="@+id/imgLihatPemeriksaanKlinik"
+        android:id="@+id/imgKelolaDokterKlinik"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginStart="32dp"
@@ -101,7 +101,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgLihatPemeriksaanKlinik" />
+        app:layout_constraintTop_toBottomOf="@+id/imgKelolaDokterKlinik" />
 
     <TextView
         android:id="@+id/txtLihatPemeriksaanDeskripsiKlinik"
