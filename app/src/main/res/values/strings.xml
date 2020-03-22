@@ -87,6 +87,7 @@
     <string name="patient_appointments_list_current_status_show">Hadir</string>
     <string name="patient_appointments_list_current_status_pending">Menunggu</string>
     <string name="patient_appointments_list_current_status_no_show">Tidak Hadir</string>
+    <string name="patient_appointmnets_list_current_empty">Anda belum pernah mendaftar di klinik manapun.</string>
 
     <!-- riwayat pemeriksaan pasien -->
     <string name="patient_appointments_list_history_date_and_time">Tanggal/Waktu</string>
@@ -96,6 +97,7 @@
     <string name="patient_appointments_list_history_diagnosis_example">Refluks asam lambung</string>
     <string name="patient_appointments_list_history_treatment">Pengobatan</string>
     <string name="patient_appointments_list_history_treatment_example">Kurangi makanan pemicu gas &amp; minum obat LPZ 2 kali sehari 30 menit sebelum makan</string>
+    <string name="patient_appointments_list_history_empty">Anda belum pernah berobat di klinik manapun.</string>
 
     <!-- beranda klinik -->
     <string name="clinic_home_header">Pengelolaan Klinik: %s</string>
@@ -113,12 +115,13 @@
     <string name="clinic_home_appointments_list_history_desc">Lihat seluruh riwayat pemeriksaan yang dilakukan di klinik Anda</string>
 
     <!-- kelola pemeriksaan -->
+    <string name="clinic_appointments_list_pending_header">Pengelolaan Pemeriksaan</string>
     <string name="clinic_appointments_list_pending_patient_name">Nama Pasien</string>
     <string name="clinic_appointments_list_pending_patient_name_example">Calvin Tandra</string>
-    <string name="clinic_appointments_list_pending_header">Pengelolaan Pemeriksaan</string>
     <string name="clinic_appointments_list_pending_show">Hadir</string>
     <string name="clinic_appointments_list_pending_no_show">Tidak Hadir</string>
     <string name="clinic_appointments_list_pending_no_show_message">Nyatakan pasien tidak hadir?</string>
+    <string name="clinic_appointments_list_pending_empty">Tidak ada pemeriksaan yang sedang menunggu entri dari Anda.</string>
 
     <!-- diagnosis pemeriksaan -->
     <string name="clinic_appointments_list_diagnosis_header">Diagnosis Pemeriksaan</string>
@@ -131,6 +134,7 @@
 
     <!-- riwayat pemeriksaan klinik -->
     <string name="clinic_appointments_list_history_header">Riwayat Pemeriksaan</string>
+    <string name="clinic_appointments_list_history_empty">Belum ada rekaman kunjungan pasien ke klinik Anda.</string>
 
     <!-- kelola dokter -->
     <string name="clinic_manage_doctors_add_doctor">Penambahan Dokter</string>
@@ -175,6 +179,26 @@
     <string name="key_successful_registration">Pendaftaran sukses! Silahkan masuk ke dalam akun Anda melalui halaman login.</string>
     <string name="key_yes">Ya</string>
     <string name="key_no">Tidak</string>
+
+    <!-- shared preferences -->
+    <string name="key_shared_pref">SHARED_PREF</string>
+
+    <string name="shared_pref_patient_key">keyPasien</string>
+    <string name="shared_pref_patient_full_name">namaLengkapPasien</string>
+    <string name="shared_pref_patient_nickname">namaPanggilanPasien</string>
+    <string name="shared_pref_patient_address">alamatPasien</string>
+    <string name="shared_pref_patient_city">kotaPasien</string>
+    <string name="shared_pref_patient_phone_number">nomorHPPasien</string>
+    <string name="shared_pref_patient_password">kataSandiPasien</string>
+
+    <string name="shared_pref_clinic_key">keyKlinik</string>
+    <string name="shared_pref_clinic_name">namaKlinik</string>
+    <string name="shared_pref_clinic_address">alamatKlinik</string>
+    <string name="shared_pref_clinic_city">kotaKlinik</string>
+    <string name="shared_pref_clinic_phone_number">nomorHPKlinik</string>
+    <string name="shared_pref_clinic_password">kataSandiKlinik</string>
+
+    <string name="shared_pref_key_default">-</string>
 
     <string name="test">Test!</string>
 </resources>

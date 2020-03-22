@@ -29,7 +29,7 @@
         <activity android:name=".activity.pendaftaran.PendaftaranPasienActivity" />
         <activity android:name=".activity.login.LoginKlinikActivity" />
         <activity android:name=".activity.login.LoginPasienActivity" />
-        <activity android:name=".activity.login.LoginActivity">
+        <activity android:name=".activity.login.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

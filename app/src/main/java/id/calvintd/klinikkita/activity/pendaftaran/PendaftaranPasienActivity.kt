@@ -10,7 +10,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import id.calvintd.klinikkita.R
-import id.calvintd.klinikkita.activity.login.LoginActivity
+import id.calvintd.klinikkita.activity.login.HomeActivity
 import id.calvintd.klinikkita.itemmodel.database.Pasien
 import id.calvintd.klinikkita.itemmodel.internal.Kolom
 import id.calvintd.klinikkita.presenter.pendaftaran.DaftarPasienPresenter
@@ -172,7 +172,7 @@ class PendaftaranPasienActivity : AppCompatActivity(), PendaftaranView {
 
     override fun pendaftaranSukses() {
         Toast.makeText(this, R.string.key_successful_registration, Toast.LENGTH_LONG).show()
-        startActivity(Intent(this, LoginActivity::class.java)
+        startActivity(Intent(this, HomeActivity::class.java)
             .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
     }
 }
