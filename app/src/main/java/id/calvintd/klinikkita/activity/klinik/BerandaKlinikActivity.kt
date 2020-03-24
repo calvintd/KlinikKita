@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.activity.HomeActivity
+import id.calvintd.klinikkita.activity.klinik.dokter.KelolaDokterActivity
 
 class BerandaKlinikActivity : AppCompatActivity() {
     private lateinit var txtSelamatDatang: TextView
@@ -51,9 +52,23 @@ class BerandaKlinikActivity : AppCompatActivity() {
             )
         )
 
+        imgLihatDaftarRiwayat.setOnClickListener {
+
+        }
+
+        imgKelolaDokter.setOnClickListener {
+            startActivity(
+                Intent(this, KelolaDokterActivity::class.java)
+            )
+        }
+
+        imgPengaturan.setOnClickListener {
+
+        }
+
         imgKeluar.setOnClickListener {
             val builder = AlertDialog.Builder(this)
-            builder.setTitle(resources.getString(R.string.key_logout_dialog_title))
+                .setTitle(resources.getString(R.string.key_logout_dialog_title))
                 .setMessage(resources.getString(R.string.key_logout_dialog_message))
                 .setPositiveButton(resources.getString(R.string.key_yes)) { _, _ ->
                     sharedPreferences.edit()
@@ -81,7 +96,8 @@ class BerandaKlinikActivity : AppCompatActivity() {
                         .apply()
                     startActivity(
                         Intent(this, HomeActivity::class.java)
-                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+                            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                    )
                 }
                 .setNegativeButton(resources.getString(R.string.key_no)) { _, _ ->
 

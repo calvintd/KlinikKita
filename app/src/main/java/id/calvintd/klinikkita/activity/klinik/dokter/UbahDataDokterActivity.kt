@@ -10,15 +10,19 @@ import android.widget.TextView
 import android.widget.Toast
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.itemmodel.database.Dokter
-import id.calvintd.klinikkita.presenter.klinik.dokter.TambahDokterPresenter
-import id.calvintd.klinikkita.view.klinik.dokter.TambahDokterView
+import id.calvintd.klinikkita.presenter.klinik.dokter.UbahDataDokterPresenter
+import id.calvintd.klinikkita.view.klinik.dokter.UbahDataDokterView
 
-class TambahDokterActivity : AppCompatActivity(), TambahDokterView {
+class UbahDataDokterActivity : AppCompatActivity(), UbahDataDokterView {
     private lateinit var edtNama: EditText
     private lateinit var txtKesalahanNama: TextView
     private lateinit var edtDeskripsi: EditText
     private lateinit var txtKesalahanDeskripsi: TextView
-    private lateinit var btnTambah: Button
+    private lateinit var btnUbahData: Button
+
+    private val bundle: Bundle? = intent.extras
+    private lateinit var key: String
+    private var dokter: Dokter? = null
 
     private val sharedPreferences =
         getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
@@ -26,29 +30,26 @@ class TambahDokterActivity : AppCompatActivity(), TambahDokterView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tambah_dokter)
+        setContentView(R.layout.activity_ubah_data_dokter)
 
-        edtNama = findViewById(R.id.edtNamaTambahDokter)
-        txtKesalahanNama = findViewById(R.id.txtKesalahanNamaTambahDokter)
-        edtDeskripsi = findViewById(R.id.edtDeskripsiTambahDokter)
-        txtKesalahanDeskripsi = findViewById(R.id.txtKesalahanDeskripsiTambahDokter)
-        btnTambah = findViewById(R.id.btnTambahDokter)
+        edtNama = findViewById(R.id.edtNamaUbahDataDokter)
+        txtKesalahanNama = findViewById(R.id.txtKesalahanNamaUbahDataDokter)
+        edtDeskripsi = findViewById(R.id.edtDeskripsiUbahDataDokter)
+        txtKesalahanDeskripsi = findViewById(R.id.txtKesalahanDeskripsiUbahDataDokter)
+        btnUbahData = findViewById(R.id.btnUbahDataDokter)
 
-        val presenter = TambahDokterPresenter(this)
+        val presenter = UbahDataDokterPresenter(this)
 
-        val idKlinik = sharedPreferences.getString(
-            resources.getString(R.string.shared_pref_clinic_key),
-            defaultKey
-        )
-        val nama = edtNama.text.toString()
-        val deskripsi = edtDeskripsi.text.toString()
-        val dokter = idKlinik?.let { Dokter(it, nama, deskripsi) }
+        bundle?.apply {
+            key = getString(R.string.extras_key)
+            dokter = getParcelable(resources.getString(R.string.parcelable_doctor))
+        }
 
-        dokter?.let { presenter.tambahDokter(it) }
+        dokter?.let { presenter.ubahDataDokter(key, it) }
     }
 
-    override fun tambahDokter() {
-        Toast.makeText(this, R.string.clinic_manage_doctors_add_doctor_added_toast, Toast.LENGTH_LONG).show()
+    override fun ubahDataDokter() {
+        Toast.makeText(this, R.string.clinic_manage_doctors_edit_doctor_edited_toast, Toast.LENGTH_LONG).show()
         finish()
     }
 

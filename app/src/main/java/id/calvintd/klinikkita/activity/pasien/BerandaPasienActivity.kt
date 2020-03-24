@@ -51,6 +51,18 @@ class BerandaPasienActivity : AppCompatActivity() {
             )
         )
 
+        imgDaftarPeriksa.setOnClickListener {
+
+        }
+
+        imgLihatPemeriksaan.setOnClickListener {
+
+        }
+
+        imgPengaturan.setOnClickListener {
+
+        }
+
         imgKeluar.setOnClickListener {
             val builder = AlertDialog.Builder(this)
             builder.setTitle(resources.getString(R.string.key_logout_dialog_title))

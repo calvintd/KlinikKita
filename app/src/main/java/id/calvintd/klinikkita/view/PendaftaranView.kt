@@ -10,6 +10,6 @@ interface PendaftaranView {
     fun passwordUlangSalah(teksKesalahan: TextView)
     fun persetujuanDitolak(teksKesalahan: TextView)
     fun setelTeksKesalahan(teksKesalahan: TextView, teks: String)
-    fun sembunyikanTeksKesalahan(teksKesalahan: TextView)
     fun pendaftaranSukses()
+    fun sembunyikanTeksKesalahan(teksKesalahan: TextView)
 }

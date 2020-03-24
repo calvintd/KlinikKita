@@ -140,6 +140,7 @@
     <string name="clinic_manage_doctors_add_doctor">Penambahan Dokter</string>
     <string name="clinic_manage_doctors_edit_doctor">Pengubahan Data Dokter</string>
     <string name="clinic_manage_doctors_delete_doctor">Hapus Dokter</string>
+    <string name="clinic_manage_doctors_no_doctors">Klinik Anda belum memiliki dokter!</string>
 
     <string name="clinic_manage_doctors_details_name">Nama</string>
     <string name="clinic_manage_doctors_details_name_example">Contoh: Tanjung Martapura</string>
@@ -147,9 +148,13 @@
     <string name="clinic_manage_doctors_details_description_example">Contoh: Spesialis penyakit dalam</string>
 
     <string name="clinic_manage_doctors_add_doctor_button">Tambahkan Dokter</string>
+    <string name="clinic_manage_doctors_add_doctor_added_toast">Dokter berhasil ditambahkan!</string>
     <string name="clinic_manage_doctors_edit_doctor_button">Ubah Data Dokter</string>
-    <string name="clinic_manage_doctors_delete_doctor_question">Hapus dokter ini? Ini juga akan menghapus seluruh rekaman pemeriksaan yang berhubungan dengan dokter
+    <string name="clinic_manage_doctors_edit_doctor_edited_toast">Data dokter berhasil diubah!</string>
+    <string name="clinic_manage_doctors_delete_doctor_header">Hapus Dokter</string>
+    <string name="clinic_manage_doctors_delete_doctor_message">Hapus dokter ini? Ini juga akan menghapus seluruh rekaman pemeriksaan yang berhubungan dengan dokter
     ini.</string>
+    <string name="clinic_manage_doctors_delete_doctor_deleted_toast">Dokter telah terhapus.</string>
 
     <string name="clinic_manage_doctors_empty_name">Nama dokter tidak boleh kosong!</string>
     <string name="clinic_manage_doctors_empty_description">Deskripsi dokter tidak boleh kosong!</string>
@@ -203,4 +208,10 @@
     <string name="shared_pref_key_default">-</string>
 
     <string name="test">Test!</string>
+
+    <!-- parcelables -->
+    <string name="extras_key">key</string>
+    <string name="parcelable_patient">pasien</string>
+    <string name="parcelable_clinic">klinik</string>
+    <string name="parcelable_doctor">dokter</string>
 </resources>

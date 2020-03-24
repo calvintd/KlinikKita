@@ -20,7 +20,7 @@
         <activity android:name=".activity.klinik.pemeriksaan.KelolaPemeriksaanActivity" />
         <activity android:name=".activity.klinik.pemeriksaan.CekPendaftaranKlinikActivity" />
         <activity android:name=".activity.klinik.pemeriksaan.MenuPemeriksaanKlinikActivity" />
-        <activity android:name=".activity.klinik.dokter.UbahDokterActivity" />
+        <activity android:name=".activity.klinik.dokter.UbahDataDokterActivity" />
         <activity android:name=".activity.klinik.dokter.TambahDokterActivity" />
         <activity android:name=".activity.klinik.dokter.KelolaDokterActivity" />
         <activity android:name=".activity.klinik.BerandaKlinikActivity" />
