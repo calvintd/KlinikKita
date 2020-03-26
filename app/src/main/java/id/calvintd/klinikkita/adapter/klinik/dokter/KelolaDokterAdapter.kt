@@ -32,14 +32,12 @@ class KelolaDokterAdapter(
         private var txtDeskripsiDokter: TextView? = null
         private var imgUbahDokter: ImageView? = null
         private var imgHapusDokter: ImageView? = null
-        private var txtIdDokter: TextView? = null
 
         init {
             txtNamaDokter = itemView.findViewById(R.id.txtNamaDokterKelolaDokter)
             txtDeskripsiDokter = itemView.findViewById(R.id.txtDeskripsiDokterKelolaDokter)
             imgUbahDokter = itemView.findViewById(R.id.imgUbahDokter)
             imgHapusDokter = itemView.findViewById(R.id.imgHapusDokter)
-            txtIdDokter = itemView.findViewById(R.id.txtIdDokterKelolaDokter)
         }
 
         fun bind(
@@ -56,7 +54,6 @@ class KelolaDokterAdapter(
             imgHapusDokter?.setOnClickListener {
                 hapusListener(key)
             }
-            txtIdDokter?.text = key
         }
     }
 }

@@ -21,6 +21,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/txtNamaKlinikPemeriksaanPasien"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/patient_appointments_registration_clinic_name_example"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtDaftarDokterHeaderPemeriksaanPasien" />
+
     <ScrollView
         android:id="@+id/scrollViewPencarianDokter"
         android:layout_width="0dp"
@@ -29,7 +41,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDaftarDokterHeaderPemeriksaanPasien">
+        app:layout_constraintTop_toBottomOf="@+id/txtNamaKlinikPemeriksaanPasien">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clScrollPencarianDokter"

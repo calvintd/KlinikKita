@@ -17,7 +17,7 @@
         <activity android:name=".activity.pasien.daftar.PencarianDokterActivity" />
         <activity android:name=".activity.pasien.daftar.PencarianKlinikActivity" />
         <activity android:name=".activity.klinik.pemeriksaan.RiwayatPemeriksaanKlinikActivity" />
-        <activity android:name=".activity.klinik.pemeriksaan.KelolaPemeriksaanActivity" />
+        <activity android:name=".activity.klinik.pemeriksaan.KelolaPendaftaranActivity" />
         <activity android:name=".activity.klinik.pemeriksaan.CekPendaftaranKlinikActivity" />
         <activity android:name=".activity.klinik.pemeriksaan.MenuPemeriksaanKlinikActivity" />
         <activity android:name=".activity.klinik.dokter.UbahDataDokterActivity" />

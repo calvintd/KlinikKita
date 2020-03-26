@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.activity.HomeActivity
+import id.calvintd.klinikkita.activity.pasien.daftar.PencarianKlinikActivity
 
 class BerandaPasienActivity : AppCompatActivity() {
     private lateinit var txtSelamatDatang: TextView
@@ -52,7 +53,7 @@ class BerandaPasienActivity : AppCompatActivity() {
         )
 
         imgDaftarPeriksa.setOnClickListener {
-
+            startActivity(Intent(this, PencarianKlinikActivity::class.java))
         }
 
         imgLihatPemeriksaan.setOnClickListener {

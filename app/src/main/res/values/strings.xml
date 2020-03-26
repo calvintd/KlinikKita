@@ -56,7 +56,7 @@
     <string name="patient_appointments_registration_clinic_name_example">Klinik Sehat Abadi</string>
     <string name="patient_appointments_registration_clinic_address_example">Jl. DI Panjaitan no. 727, Sampit, Delta Pawan</string>
     <string name="patient_appointments_registration_clinic_city_example">Ketapang</string>
-    <string name="patient_appointments_registration_clinic_doctor_count">%d dokter</string>
+    <string name="patient_appointments_registration_clinic_phone_number_example">081234567890</string>
     <string name="patient_appointments_registration_clinic_no_clinics">Belum ada klinik yang terdaftar atau memiliki dokter.</string>
 
     <!-- pencarian dokter -->
@@ -71,9 +71,11 @@
     <string name="patient_appointments_registration_details_doctor_name">Dokter</string>
     <string name="patient_appointments_registration_details_complaints">Keluhan</string>
     <string name="patient_appointments_registration_details_complaints_example">Contoh: Asam lambung naik, pusing, mual-mual</string>
+    <string name="patient_appointments_registration_details_complaints_empty">Keluhan harus diisi!</string>
     <string name="patient_appointments_registration_details_button">Daftar Pemeriksaan</string>
     <string name="patient_appointments_registration_details_message_header">Konfirmasi</string>
     <string name="patient_appointments_registration_details_message">Apakah Anda yakin ingin mendaftarkan diri?</string>
+    <string name="patient_appointments_registration_details_registered_toast">Pendaftaran sukses! Silakan cek status pendaftaran pada halaman yang bersangkutan.</string>
 
     <!-- lihat pemeriksaan -->
     <string name="patient_appointments_list_header">Lihat Pemeriksaan</string>
@@ -108,20 +110,20 @@
 
     <!-- lihat pendaftaran dan riwayat -->
     <string name="clinic_home_appointments_list_header">Pemeriksaan &amp; Riwayat</string>
-    <string name="clinic_home_appointments_list_pending">Kelola Pemeriksaan</string>
+    <string name="clinic_home_appointments_list_pending">Kelola Pendaftaran</string>
     <string name="clinic_home_appointments_list_pending_desc">Lihat entri pendaftaran pasien &amp; atur status kehadiran, diagnosis, dan pengobatan dari setiap
         pemeriksaan</string>
     <string name="clinic_home_appointments_list_history">Riwayat Pemeriksaan</string>
     <string name="clinic_home_appointments_list_history_desc">Lihat seluruh riwayat pemeriksaan yang dilakukan di klinik Anda</string>
 
     <!-- kelola pemeriksaan -->
-    <string name="clinic_appointments_list_pending_header">Pengelolaan Pemeriksaan</string>
+    <string name="clinic_appointments_list_pending_header">Pengelolaan Pendaftaran</string>
     <string name="clinic_appointments_list_pending_patient_name">Nama Pasien</string>
     <string name="clinic_appointments_list_pending_patient_name_example">Calvin Tandra</string>
     <string name="clinic_appointments_list_pending_show">Hadir</string>
     <string name="clinic_appointments_list_pending_no_show">Tidak Hadir</string>
     <string name="clinic_appointments_list_pending_no_show_message">Nyatakan pasien tidak hadir?</string>
-    <string name="clinic_appointments_list_pending_empty">Tidak ada pemeriksaan yang sedang menunggu entri dari Anda.</string>
+    <string name="clinic_appointments_list_pending_empty">Tidak ada pendaftaran yang sedang menunggu input dari Anda.</string>
 
     <!-- diagnosis pemeriksaan -->
     <string name="clinic_appointments_list_diagnosis_header">Diagnosis Pemeriksaan</string>
@@ -211,6 +213,11 @@
 
     <!-- parcelables -->
     <string name="extras_key">key</string>
+    <string name="extras_key_clinic">key_clinic</string>
+    <string name="extras_name_clinic">name_clinic</string>
+    <string name="extras_key_doctor">key_doctor</string>
+    <string name="extras_name_doctor">name_doctor</string>
+
     <string name="parcelable_patient">pasien</string>
     <string name="parcelable_clinic">klinik</string>
     <string name="parcelable_doctor">dokter</string>

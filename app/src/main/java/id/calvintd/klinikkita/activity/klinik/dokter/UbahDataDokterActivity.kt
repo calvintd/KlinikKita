@@ -41,7 +41,7 @@ class UbahDataDokterActivity : AppCompatActivity(), UbahDataDokterView {
         val presenter = UbahDataDokterPresenter(this)
 
         bundle?.apply {
-            key = getString(R.string.extras_key)
+            key = getString(resources.getString(R.string.extras_key)).toString()
             dokter = getParcelable(resources.getString(R.string.parcelable_doctor))
         }
 
