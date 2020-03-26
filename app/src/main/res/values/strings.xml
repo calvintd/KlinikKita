@@ -122,17 +122,22 @@
     <string name="clinic_appointments_list_pending_patient_name_example">Calvin Tandra</string>
     <string name="clinic_appointments_list_pending_show">Hadir</string>
     <string name="clinic_appointments_list_pending_no_show">Tidak Hadir</string>
+    <string name="clinic_appointments_list_pending_no_show_title">Pasien Tidak Hadir</string>
     <string name="clinic_appointments_list_pending_no_show_message">Nyatakan pasien tidak hadir?</string>
+    <string name="clinic_appointments_list_pending_no_show_marked_toast">Pasien telah dinyatakan tidak hadir.</string>
     <string name="clinic_appointments_list_pending_empty">Tidak ada pendaftaran yang sedang menunggu input dari Anda.</string>
 
     <!-- diagnosis pemeriksaan -->
     <string name="clinic_appointments_list_diagnosis_header">Diagnosis Pemeriksaan</string>
     <string name="clinic_appointments_list_diagnosis_diagnosis_example">Contoh: Refluks asam lambung</string>
+    <string name="clinic_appointments_list_diagnosis_diagnosis_empty">Diagnosis harus diisi!</string>
     <string name="clinic_appointments_list_diagnosis_treatment_example">Contoh: Kurangi makanan pemicu gas &amp; minum obat LPZ 2 kali sehari 30 menit sebelum
         makan</string>
+    <string name="clinic_appointments_list_diagnosis_treatment_empty">Pengobatan harus diisi!</string>
     <string name="clinic_appointments_list_diagnosis_confirmation_button">Konfirmasi</string>
     <string name="clinic_appointments_list_diagnosis_confirmation_header">Konfirmasi Diagnosis</string>
     <string name="clinic_appointments_list_diagnosis_confirmation_message">Apakah Anda yakin dengan data diagnosis yang telah Anda isi?</string>
+    <string name="clinic_appointments_list_diagnosis_confirmed_toast">Konfirmasi diagnosis sukses!</string>
 
     <!-- riwayat pemeriksaan klinik -->
     <string name="clinic_appointments_list_history_header">Riwayat Pemeriksaan</string>
@@ -221,4 +226,5 @@
     <string name="parcelable_patient">pasien</string>
     <string name="parcelable_clinic">klinik</string>
     <string name="parcelable_doctor">dokter</string>
+    <string name="parcelable_internal_clinic_registration">pendaftaran_klinik_internal</string>
 </resources>

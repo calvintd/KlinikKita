@@ -41,7 +41,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/txtKelolaPemeriksaanKlinikKosong"
+                android:id="@+id/txtKelolaPendaftaranKlinikKosong"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -56,13 +56,13 @@
                 tools:visibility="gone" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvKelolaPemeriksaanKlinik"
+                android:id="@+id/rvKelolaPendaftaranKlinik"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtKelolaPemeriksaanKlinikKosong" />
+                app:layout_constraintTop_toBottomOf="@id/txtKelolaPendaftaranKlinikKosong" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

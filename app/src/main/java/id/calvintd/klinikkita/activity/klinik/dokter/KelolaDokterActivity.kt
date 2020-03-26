@@ -74,10 +74,17 @@ class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
                     .setPositiveButton(resources.getString(R.string.key_yes)) { _, _ ->
                         presenter.hapusDokterKlinik(key)
                     }
+                    .setNegativeButton(resources.getString(R.string.key_no)) { _, _ ->
+
+                    }.show()
             })
     }
 
     override fun dokterTerhapus() {
-        Toast.makeText(this, R.string.clinic_manage_doctors_delete_doctor_deleted_toast, Toast.LENGTH_LONG).show()
+        Toast.makeText(
+            this,
+            R.string.clinic_manage_doctors_delete_doctor_deleted_toast,
+            Toast.LENGTH_LONG
+        ).show()
     }
 }

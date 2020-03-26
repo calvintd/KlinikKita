@@ -194,6 +194,22 @@
         app:constraint_referenced_ids="txtDiagnosisDiagnosisPemeriksaan, edtDiagnosisDiagnosisPemeriksaan" />
 
     <TextView
+        android:id="@+id/txtDiagnosisDiagnosisPemeriksaanKosong"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/clinic_appointments_list_diagnosis_diagnosis_empty"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrierDiagnosisDiagnosisPemeriksaan"
+        tools:visibility="gone" />
+
+    <TextView
         android:id="@+id/txtPengobatanDiagnosisPemeriksaan"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -205,7 +221,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@id/glDiagnosisPemeriksaan"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/barrierDiagnosisDiagnosisPemeriksaan" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDiagnosisDiagnosisPemeriksaanKosong" />
 
     <EditText
         android:id="@+id/edtPengobatanDiagnosisPemeriksaan"
@@ -218,7 +234,7 @@
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtDiagnosisDiagnosisPemeriksaan"
-        app:layout_constraintTop_toBottomOf="@+id/barrierDiagnosisDiagnosisPemeriksaan" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDiagnosisDiagnosisPemeriksaanKosong" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrierPengobatanDiagnosisPemeriksaan"
@@ -226,6 +242,22 @@
         android:layout_height="wrap_content"
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="txtPengobatanDiagnosisPemeriksaan, edtPengobatanDiagnosisPemeriksaan" />
+
+    <TextView
+        android:id="@+id/txtPengobatanDiagnosisPemeriksaanKosong"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/clinic_appointments_list_diagnosis_treatment_empty"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrierPengobatanDiagnosisPemeriksaan"
+        tools:visibility="gone" />
 
     <Button
         android:id="@+id/btnKonfirmasiDiagnosisPemeriksaan"
