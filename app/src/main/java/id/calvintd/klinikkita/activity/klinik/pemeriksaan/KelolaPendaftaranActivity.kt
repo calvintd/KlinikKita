@@ -30,7 +30,7 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
 
     private val presenter = KelolaPendaftaranPresenter(this)
 
-    private lateinit var listPendaftaranKlinik: MutableList<PendaftaranKlinikInternal>
+    private val listPendaftaranKlinik = mutableListOf<PendaftaranKlinikInternal>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,6 +69,13 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
     override fun pendaftaranKosong() {
         txtKosong.visibility = View.VISIBLE
         rvPendaftaran.visibility = View.GONE
+
+        rvPendaftaran.layoutManager = LinearLayoutManager(this)
+        rvPendaftaran.adapter = KelolaPendaftaranAdapter(listOf(), { _ ->
+
+        }, { _ ->
+
+        })
     }
 
     override fun olahDataPasien(pairPasien: List<Pair<String, String>>) {

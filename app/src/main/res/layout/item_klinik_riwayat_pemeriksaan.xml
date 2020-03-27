@@ -45,39 +45,6 @@
         app:constraint_referenced_ids="txtPasienRiwayatPemeriksaanKlinik, txtNamaPasienRiwayatPemeriksaanKlinik" />
 
     <TextView
-        android:id="@+id/txtKlinikRiwayatPemeriksaanKlinik"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/patient_appointments_registration_details_clinic_name"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/glRiwayatPemeriksaanKlinik"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/barrierPasienRiwayatPemeriksaanKlinik" />
-
-    <TextView
-        android:id="@+id/txtNamaKlinikRiwayatPemeriksaanKlinik"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/patient_appointments_registration_clinic_name_example"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/glRiwayatPemeriksaanKlinik"
-        app:layout_constraintTop_toBottomOf="@id/barrierPasienRiwayatPemeriksaanKlinik" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrierKlinikRiwayatPemeriksaanKlinik"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="bottom"
-        app:constraint_referenced_ids="txtKlinikRiwayatPemeriksaanKlinik, txtNamaKlinikRiwayatPemeriksaanKlinik" />
-
-    <TextView
         android:id="@+id/txtDokterRiwayatPemeriksaanKlinik"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -89,7 +56,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@id/glRiwayatPemeriksaanKlinik"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/barrierKlinikRiwayatPemeriksaanKlinik" />
+        app:layout_constraintTop_toBottomOf="@+id/barrierPasienRiwayatPemeriksaanKlinik" />
 
     <TextView
         android:id="@+id/txtNamaDokterRiwayatPemeriksaanKlinik"
@@ -101,7 +68,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/glRiwayatPemeriksaanKlinik"
-        app:layout_constraintTop_toBottomOf="@+id/barrierKlinikRiwayatPemeriksaanKlinik" />
+        app:layout_constraintTop_toBottomOf="@+id/barrierPasienRiwayatPemeriksaanKlinik" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrierDokterRiwayatPemeriksaanKlinik"

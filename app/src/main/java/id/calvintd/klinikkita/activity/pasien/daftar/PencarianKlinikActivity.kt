@@ -32,6 +32,11 @@ class PencarianKlinikActivity : AppCompatActivity(), PencarianKlinikView {
     override fun dokterKlinikKosong() {
         txtKosong.visibility = View.VISIBLE
         rvKlinik.visibility = View.GONE
+
+        rvKlinik.layoutManager = LinearLayoutManager(this)
+        rvKlinik.adapter = PencarianKlinikAdapter(listOf(), listOf()) { _, _ ->
+
+        }
     }
 
     override fun dokterTersedia(keyKlinikList: List<String>) {
@@ -47,10 +52,13 @@ class PencarianKlinikActivity : AppCompatActivity(), PencarianKlinikView {
         val listKlinik = pairKlinikUnzip.second
 
         rvKlinik.layoutManager = LinearLayoutManager(this)
-        rvKlinik.adapter = PencarianKlinikAdapter(keyKlinikList, listKlinik) { key: String, namaKlinik: String ->
-            startActivity(Intent(this, PencarianDokterActivity::class.java)
-                .putExtra(resources.getString(R.string.extras_key_clinic), key)
-                .putExtra(resources.getString(R.string.extras_name_clinic), namaKlinik))
-        }
+        rvKlinik.adapter =
+            PencarianKlinikAdapter(keyKlinikList, listKlinik) { key: String, namaKlinik: String ->
+                startActivity(
+                    Intent(this, PencarianDokterActivity::class.java)
+                        .putExtra(resources.getString(R.string.extras_key_clinic), key)
+                        .putExtra(resources.getString(R.string.extras_name_clinic), namaKlinik)
+                )
+            }
     }
 }
