@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,6 +12,39 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.3" />
+
+    <TextView
+        android:id="@+id/txtWaktuRiwayatPemeriksaanKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/patient_appointments_list_history_time"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/glRiwayatPemeriksaanPasien"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtIsiWaktuRiwayatPemeriksaanKlinik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/patient_appointments_list_history_time_example"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/glRiwayatPemeriksaanPasien"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierWaktuRiwayatPemeriksaanPasien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="txtWaktuRiwayatPemeriksaanKlinik, @+id/txtIsiWaktuRiwayatPemeriksaanKlinik" />
 
     <TextView
         android:id="@+id/txtKlinikRiwayatPemeriksaanPasien"
@@ -24,7 +58,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@id/glRiwayatPemeriksaanPasien"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/barrierWaktuRiwayatPemeriksaanPasien" />
 
     <TextView
         android:id="@+id/txtNamaKlinikRiwayatPemeriksaanPasien"
@@ -36,7 +70,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/glRiwayatPemeriksaanPasien"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/barrierWaktuRiwayatPemeriksaanPasien" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrierKlinikRiwayatPemeriksaanPasien"

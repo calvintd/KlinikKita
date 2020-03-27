@@ -46,7 +46,7 @@ class KelolaDokterAdapter(
             ubahListener: (key: String, dokter: Dokter) -> Unit,
             hapusListener: (key: String) -> Unit
         ) {
-            txtNamaDokter?.text = dokter.nama
+            txtNamaDokter?.text = dokter.namaDokter
             txtDeskripsiDokter?.text = dokter.deskripsi
             imgUbahDokter?.setOnClickListener {
                 ubahListener(key, dokter)

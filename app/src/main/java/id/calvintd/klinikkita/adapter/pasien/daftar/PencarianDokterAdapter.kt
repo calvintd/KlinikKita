@@ -35,10 +35,10 @@ class PencarianDokterAdapter(
         }
 
         fun bind(key: String, dokter: Dokter, dokterListener: (String, String) -> Unit) {
-            txtNamaDokter?.text = dokter.nama
+            txtNamaDokter?.text = dokter.namaDokter
             txtDeskripsiDokter?.text = dokter.deskripsi
             itemView.setOnClickListener {
-                dokterListener(key, dokter.nama)
+                dokterListener(key, dokter.namaDokter)
             }
         }
     }

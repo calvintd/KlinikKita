@@ -26,6 +26,8 @@ class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
         getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
     private val defaultKey = resources.getString(R.string.shared_pref_key_default)
 
+    private var idKlinik: String? = null
+
     val linearLayoutManager = LinearLayoutManager(this)
 
     private val presenter = KelolaDokterPresenter(this)
@@ -44,12 +46,12 @@ class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
             startActivity(Intent(this, TambahDokterActivity::class.java))
         }
 
-        val clinicKey = sharedPreferences.getString(
+        idKlinik = sharedPreferences.getString(
             resources.getString(R.string.shared_pref_clinic_key),
             defaultKey
         )
 
-        clinicKey?.let { presenter.cekDokterKlinik(it) }
+        idKlinik?.let { presenter.cekDokterKlinik(it) }
     }
 
     override fun daftarDokterKosong() {
@@ -81,6 +83,7 @@ class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
     }
 
     override fun dokterTerhapus() {
+        idKlinik?.let { presenter.cekDokterKlinik(it) }
         Toast.makeText(
             this,
             R.string.clinic_manage_doctors_delete_doctor_deleted_toast,

@@ -59,7 +59,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtRiwayatPemeriksaanPasienKosong" />
+                app:layout_constraintTop_toBottomOf="@id/txtRiwayatPemeriksaanPasienKosong"
+                tools:listitem="@layout/item_pasien_riwayat_pemeriksaan" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

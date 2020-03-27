@@ -92,8 +92,8 @@
     <string name="patient_appointments_list_current_empty">Anda belum pernah mendaftar di klinik manapun.</string>
 
     <!-- riwayat pemeriksaan pasien -->
-    <string name="patient_appointments_list_history_date_and_time">Tanggal/Waktu</string>
-    <string name="patient_appointments_list_history_date_and_time_example">Senin, 30 Maret 2020, 18:00 WIB</string>
+    <string name="patient_appointments_list_history_time">Waktu</string>
+    <string name="patient_appointments_list_history_time_example">Senin, 30 Maret 2020, 18:00</string>
     <string name="patient_appointments_list_history_complaints_example">Asam lambung naik, pusing, mual-mual</string>
     <string name="patient_appointments_list_history_diagnosis">Diagnosis</string>
     <string name="patient_appointments_list_history_diagnosis_example">Refluks asam lambung</string>

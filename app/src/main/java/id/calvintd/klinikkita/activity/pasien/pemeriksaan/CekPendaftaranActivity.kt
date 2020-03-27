@@ -82,7 +82,7 @@ class CekPendaftaranActivity : AppCompatActivity(), CekPendaftaranView {
         for (i in listPendaftaranPasien.indices) {
             for (j in pairDokter.indices) {
                 if (listPendaftaranPasien[i].idDokter.equals(pairDokter[j].first)) {
-                    listPendaftaranPasien[i].namaDokter = pairDokter[j].second.nama
+                    listPendaftaranPasien[i].namaDokter = pairDokter[j].second.namaDokter
                     listPendaftaranPasien[i].idKlinik = pairDokter[j].second.idKlinik
                     break
                 }

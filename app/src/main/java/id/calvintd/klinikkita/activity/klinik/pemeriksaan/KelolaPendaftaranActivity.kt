@@ -13,8 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.adapter.klinik.pemeriksaan.KelolaPendaftaranAdapter
 import id.calvintd.klinikkita.itemmodel.database.Dokter
-import id.calvintd.klinikkita.itemmodel.database.Klinik
-import id.calvintd.klinikkita.itemmodel.database.Pasien
 import id.calvintd.klinikkita.itemmodel.database.Pendaftaran
 import id.calvintd.klinikkita.itemmodel.internal.PendaftaranKlinikInternal
 import id.calvintd.klinikkita.presenter.klinik.pemeriksaan.KelolaPendaftaranPresenter
@@ -28,6 +26,8 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
         getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
     private val defaultKey = resources.getString(R.string.shared_pref_key_default)
 
+    private var idKlinik: String? = null
+
     private val presenter = KelolaPendaftaranPresenter(this)
 
     private val listPendaftaranKlinik = mutableListOf<PendaftaranKlinikInternal>()
@@ -39,7 +39,7 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
         txtKosong = findViewById(R.id.txtKelolaPendaftaranKlinikKosong)
         rvPendaftaran = findViewById(R.id.rvKelolaPendaftaranKlinik)
 
-        val idKlinik = sharedPreferences.getString(
+        idKlinik = sharedPreferences.getString(
             resources.getString(R.string.shared_pref_clinic_key),
             defaultKey
         )
@@ -95,7 +95,7 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
         for (i in listPendaftaranKlinik.indices) {
             for (j in pairDokter.indices) {
                 if (listPendaftaranKlinik[i].idDokter.equals(pairDokter[j].first)) {
-                    listPendaftaranKlinik[i].namaDokter = pairDokter[j].second.nama
+                    listPendaftaranKlinik[i].namaDokter = pairDokter[j].second.namaDokter
                     listPendaftaranKlinik[i].idKlinik = pairDokter[j].second.idKlinik
                     break
                 }
@@ -143,6 +143,7 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
     }
 
     override fun tidakHadirPendaftaran() {
+        idKlinik?.let { presenter.cekPendaftaran(it) }
         Toast.makeText(
             this,
             R.string.clinic_appointments_list_pending_no_show_marked_toast,

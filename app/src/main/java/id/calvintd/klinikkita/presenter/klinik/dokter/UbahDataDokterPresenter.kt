@@ -14,7 +14,7 @@ class UbahDataDokterPresenter(private val ubahDataDokterView: UbahDataDokterView
     fun ubahDataDokter(key: String, dokter: Dokter) {
         var terisi = true
 
-        if (dokter.nama.isEmpty() || dokter.deskripsi.isEmpty()) {
+        if (dokter.namaDokter.isEmpty() || dokter.deskripsi.isEmpty()) {
             terisi = false
         }
 
