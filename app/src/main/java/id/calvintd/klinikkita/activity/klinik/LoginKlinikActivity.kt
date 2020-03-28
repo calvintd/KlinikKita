@@ -1,7 +1,9 @@
 package id.calvintd.klinikkita.activity.klinik
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -21,12 +23,15 @@ class LoginKlinikActivity : AppCompatActivity(),
     private lateinit var btnMasuk: Button
     private lateinit var txtDaftar: TextView
 
-    private val sharedPrefEditor =
-        getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE).edit()
+    private lateinit var sharedPrefEditor: SharedPreferences.Editor
 
+    @SuppressLint("CommitPrefEdits")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_klinik)
+
+        sharedPrefEditor =
+            getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE).edit()
 
         edtNomorPonsel = findViewById(R.id.nomorPonselKlinik)
         edtKataSandi = findViewById(R.id.kataSandiKlinik)

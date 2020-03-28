@@ -2,6 +2,7 @@ package id.calvintd.klinikkita.activity
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -15,13 +16,15 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var imgPasien: ImageView
     private lateinit var imgKlinik: ImageView
 
-    private val sharedPreferences =
-        getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
-    private val defaultKey = resources.getString(R.string.shared_pref_key_default)
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var defaultKey: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        sharedPreferences = getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
+        defaultKey = resources.getString(R.string.shared_pref_key_default)
 
         imgPasien = findViewById(R.id.imgPasien)
         imgKlinik = findViewById(R.id.imgKlinik)

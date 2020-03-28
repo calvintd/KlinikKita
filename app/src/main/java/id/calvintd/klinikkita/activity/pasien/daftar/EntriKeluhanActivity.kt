@@ -2,6 +2,7 @@ package id.calvintd.klinikkita.activity.pasien.daftar
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -21,9 +22,8 @@ class EntriKeluhanActivity : AppCompatActivity(), EntriKeluhanView {
     private lateinit var txtKesalahanKeluhan: TextView
     private lateinit var btnDaftar: Button
 
-    private val sharedPreferences =
-        getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
-    private val defaultKey = resources.getString(R.string.shared_pref_key_default)
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var defaultKey: String
 
     private val bundle: Bundle? = intent.extras
     private lateinit var namaKlinik: String
@@ -33,6 +33,9 @@ class EntriKeluhanActivity : AppCompatActivity(), EntriKeluhanView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_entri_keluhan)
+
+        sharedPreferences = getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
+        defaultKey = resources.getString(R.string.shared_pref_key_default)
 
         txtKlinik = findViewById(R.id.txtNamaKlinikEntriKeluhan)
         txtDokter = findViewById(R.id.txtNamaDokterEntriKeluhan)

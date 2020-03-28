@@ -2,6 +2,7 @@ package id.calvintd.klinikkita.activity.klinik.pemeriksaan
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -22,9 +23,8 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
     private lateinit var txtKosong: TextView
     private lateinit var rvPendaftaran: RecyclerView
 
-    private val sharedPreferences =
-        getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
-    private val defaultKey = resources.getString(R.string.shared_pref_key_default)
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var defaultKey: String
 
     private var idKlinik: String? = null
 
@@ -35,6 +35,9 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kelola_pendaftaran)
+
+        sharedPreferences = getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
+        defaultKey = resources.getString(R.string.shared_pref_key_default)
 
         txtKosong = findViewById(R.id.txtKelolaPendaftaranKlinikKosong)
         rvPendaftaran = findViewById(R.id.rvKelolaPendaftaranKlinik)

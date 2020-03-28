@@ -1,6 +1,7 @@
 package id.calvintd.klinikkita.activity.pasien.pemeriksaan
 
 import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -19,9 +20,8 @@ class CekPendaftaranActivity : AppCompatActivity(), CekPendaftaranView {
     private lateinit var txtDaftarKosong: TextView
     private lateinit var rvCekPendaftaran: RecyclerView
 
-    private val sharedPreferences =
-        getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
-    private val defaultKey = resources.getString(R.string.shared_pref_key_default)
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var defaultKey: String
 
     private val listPendaftaranPasien = mutableListOf<PendaftaranPasienInternal>()
 
@@ -30,6 +30,9 @@ class CekPendaftaranActivity : AppCompatActivity(), CekPendaftaranView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cek_pendaftaran_pasien)
+
+        sharedPreferences = getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
+        defaultKey = resources.getString(R.string.shared_pref_key_default)
 
         txtDaftarKosong = findViewById(R.id.txtCekPendaftaranPasienKosong)
         rvCekPendaftaran = findViewById(R.id.rvCekPendaftaranPasien)

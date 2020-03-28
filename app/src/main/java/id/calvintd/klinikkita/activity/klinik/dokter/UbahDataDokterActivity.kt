@@ -1,6 +1,7 @@
 package id.calvintd.klinikkita.activity.klinik.dokter
 
 import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -24,13 +25,15 @@ class UbahDataDokterActivity : AppCompatActivity(), UbahDataDokterView {
     private lateinit var key: String
     private var dokter: Dokter? = null
 
-    private val sharedPreferences =
-        getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
-    private val defaultKey = resources.getString(R.string.shared_pref_key_default)
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var defaultKey: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ubah_data_dokter)
+
+        sharedPreferences = getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
+        defaultKey = resources.getString(R.string.shared_pref_key_default)
 
         edtNama = findViewById(R.id.edtNamaUbahDataDokter)
         txtKesalahanNama = findViewById(R.id.txtKesalahanNamaUbahDataDokter)

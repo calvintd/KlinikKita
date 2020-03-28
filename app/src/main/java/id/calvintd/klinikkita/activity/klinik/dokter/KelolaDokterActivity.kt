@@ -2,6 +2,7 @@ package id.calvintd.klinikkita.activity.klinik.dokter
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -22,9 +23,8 @@ class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
     private lateinit var txtDaftarDokterKosong: TextView
     private lateinit var rvDaftarDokter: RecyclerView
 
-    private val sharedPreferences =
-        getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
-    private val defaultKey = resources.getString(R.string.shared_pref_key_default)
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var defaultKey: String
 
     private var idKlinik: String? = null
 
@@ -35,6 +35,9 @@ class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kelola_dokter)
+
+        sharedPreferences = getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
+        defaultKey = resources.getString(R.string.shared_pref_key_default)
 
         imgTambahDokter = findViewById(R.id.imgTambahDokter)
         txtDaftarDokterKosong = findViewById(R.id.txtDaftarDokterKosong)

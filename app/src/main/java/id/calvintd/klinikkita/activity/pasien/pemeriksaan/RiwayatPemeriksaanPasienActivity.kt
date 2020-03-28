@@ -1,6 +1,7 @@
 package id.calvintd.klinikkita.activity.pasien.pemeriksaan
 
 import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -18,9 +19,8 @@ class RiwayatPemeriksaanPasienActivity : AppCompatActivity(), RiwayatPemeriksaan
     private lateinit var txtPemeriksaanKosong: TextView
     private lateinit var rvPemeriksaanPasien: RecyclerView
 
-    private val sharedPreferences =
-        getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
-    private val defaultKey = resources.getString(R.string.shared_pref_key_default)
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var defaultKey: String
     private lateinit var idPasien: String
 
     private val presenter = RiwayatPemeriksaanPasienPresenter(this)
@@ -30,6 +30,9 @@ class RiwayatPemeriksaanPasienActivity : AppCompatActivity(), RiwayatPemeriksaan
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_riwayat_pemeriksaan_pasien)
+
+        sharedPreferences = getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
+        defaultKey = resources.getString(R.string.shared_pref_key_default)
 
         txtPemeriksaanKosong = findViewById(R.id.txtRiwayatPemeriksaanPasienKosong)
         rvPemeriksaanPasien = findViewById(R.id.rvRiwayatPemeriksaanPasien)

@@ -2,6 +2,7 @@ package id.calvintd.klinikkita.activity.pasien
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -21,12 +22,14 @@ class LoginPasienActivity : AppCompatActivity(),
     private lateinit var btnMasuk: Button
     private lateinit var txtDaftar: TextView
 
-    private val sharedPrefEditor =
-        getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE).edit()
+    private lateinit var sharedPrefEditor: SharedPreferences.Editor
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_pasien)
+
+        sharedPrefEditor =
+            getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE).edit()
 
         edtNomorPonsel = findViewById(R.id.nomorPonselPasien)
         edtKataSandi = findViewById(R.id.kataSandiPasien)
@@ -78,8 +81,7 @@ class LoginPasienActivity : AppCompatActivity(),
             .putString(
                 resources.getString(R.string.shared_pref_patient_password),
                 dataPasien.password
-            )
-        sharedPrefEditor.apply()
+            ).apply()
         startActivity(
             Intent(this, BerandaPasienActivity::class.java)
                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)

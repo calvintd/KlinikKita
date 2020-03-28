@@ -1,6 +1,7 @@
 package id.calvintd.klinikkita.activity.pasien
 
 import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -27,13 +28,15 @@ class PengaturanPasienActivity : AppCompatActivity(), PengaturanView {
     private lateinit var txtSalahUlangBaru: TextView
     private lateinit var btnUbah: Button
 
-    private val sharedPreferences =
-        getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
-    private val defaultKey = resources.getString(R.string.shared_pref_key_default)
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var defaultKey: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pengaturan_pasien)
+
+        sharedPreferences = getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
+        defaultKey = resources.getString(R.string.shared_pref_key_default)
 
         txtNamaLengkap = findViewById(R.id.txtNamaLengkapPengaturanPasien)
         txtNamaPanggilan = findViewById(R.id.txtNamaPanggilanPengaturanPasien)
