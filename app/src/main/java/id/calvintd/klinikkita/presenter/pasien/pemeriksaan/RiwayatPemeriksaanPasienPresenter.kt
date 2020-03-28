@@ -1,4 +1,4 @@
-package id.calvintd.klinikkita.presenter.klinik.pemeriksaan
+package id.calvintd.klinikkita.presenter.pasien.pemeriksaan
 
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -8,7 +8,7 @@ import id.calvintd.klinikkita.itemmodel.database.Dokter
 import id.calvintd.klinikkita.itemmodel.database.Pemeriksaan
 import id.calvintd.klinikkita.view.RiwayatPemeriksaanView
 
-class RiwayatPemeriksaanKlinikPresenter(private val riwayatPemeriksaanView: RiwayatPemeriksaanView) {
+class RiwayatPemeriksaanPasienPresenter(private val riwayatPemeriksaanView: RiwayatPemeriksaanView) {
     private val reference = FirebaseDatabase.getInstance().reference
     private val pemeriksaanRef = reference.child("pemeriksaan")
     private val pendaftaranRef = reference.child("pendaftaran")

@@ -1,9 +1,9 @@
-package id.calvintd.klinikkita.view.klinik.pemeriksaan
+package id.calvintd.klinikkita.view
 
 import id.calvintd.klinikkita.itemmodel.database.Dokter
 import id.calvintd.klinikkita.itemmodel.database.Pemeriksaan
 
-interface RiwayatPemeriksaanKlinikView {
+interface RiwayatPemeriksaanView {
     fun cekPemeriksaan(pairPemeriksaan: List<Pair<String, Pemeriksaan>>)
     fun pemeriksaanKosong()
     fun olahDataPendaftaran(pairPendaftaran: List<Pair<String, String>>)

@@ -12,9 +12,10 @@ import id.calvintd.klinikkita.itemmodel.database.Dokter
 import id.calvintd.klinikkita.itemmodel.database.Pemeriksaan
 import id.calvintd.klinikkita.itemmodel.internal.PemeriksaanInternal
 import id.calvintd.klinikkita.presenter.klinik.pemeriksaan.RiwayatPemeriksaanKlinikPresenter
-import id.calvintd.klinikkita.view.klinik.pemeriksaan.RiwayatPemeriksaanKlinikView
+import id.calvintd.klinikkita.view.RiwayatPemeriksaanView
 
-class RiwayatPemeriksaanKlinikActivity : AppCompatActivity(), RiwayatPemeriksaanKlinikView {
+class RiwayatPemeriksaanKlinikActivity : AppCompatActivity(),
+    RiwayatPemeriksaanView {
     private lateinit var txtPemeriksaanKosong: TextView
     private lateinit var rvPemeriksaanKlinik: RecyclerView
 
@@ -61,6 +62,8 @@ class RiwayatPemeriksaanKlinikActivity : AppCompatActivity(), RiwayatPemeriksaan
                 )
             )
         }
+
+        presenter.ambilDataPendaftaran()
     }
 
     override fun pemeriksaanKosong() {
@@ -104,6 +107,7 @@ class RiwayatPemeriksaanKlinikActivity : AppCompatActivity(), RiwayatPemeriksaan
             }
         }
 
+        presenter.ambilDataKlinik()
     }
 
     override fun olahDataKlinik(pairKlinik: List<Pair<String, String>>) {
@@ -112,6 +116,12 @@ class RiwayatPemeriksaanKlinikActivity : AppCompatActivity(), RiwayatPemeriksaan
                 if (listPemeriksaanKlinik[i].idKlinik.equals(pairKlinik[j].first)) {
                     listPemeriksaanKlinik[i].namaKlinik = pairKlinik[j].second
                 }
+            }
+        }
+
+        for (i in listPemeriksaanKlinik.indices) {
+            if (!listPemeriksaanKlinik[i].idKlinik.equals(idKlinik)) {
+                listPemeriksaanKlinik.removeAt(i)
             }
         }
 

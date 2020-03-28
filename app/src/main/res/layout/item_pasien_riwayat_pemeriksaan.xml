@@ -14,7 +14,7 @@
         app:layout_constraintGuide_percent="0.3" />
 
     <TextView
-        android:id="@+id/txtWaktuRiwayatPemeriksaanKlinik"
+        android:id="@+id/txtWaktuRiwayatPemeriksaanPasien"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtIsiWaktuRiwayatPemeriksaanKlinik"
+        android:id="@+id/txtIsiWaktuRiwayatPemeriksaanPasien"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="bottom"
-        app:constraint_referenced_ids="txtWaktuRiwayatPemeriksaanKlinik, @+id/txtIsiWaktuRiwayatPemeriksaanKlinik" />
+        app:constraint_referenced_ids="txtWaktuRiwayatPemeriksaanPasien, @+id/txtIsiWaktuRiwayatPemeriksaanPasien" />
 
     <TextView
         android:id="@+id/txtKlinikRiwayatPemeriksaanPasien"
