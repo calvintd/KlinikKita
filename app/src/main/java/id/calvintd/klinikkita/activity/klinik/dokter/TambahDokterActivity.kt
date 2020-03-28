@@ -43,11 +43,14 @@ class TambahDokterActivity : AppCompatActivity(), TambahDokterView {
             resources.getString(R.string.shared_pref_clinic_key),
             defaultKey
         )
-        val nama = edtNama.text.toString()
-        val deskripsi = edtDeskripsi.text.toString()
-        val dokter = idKlinik?.let { Dokter(it, nama, deskripsi) }
 
-        dokter?.let { presenter.tambahDokter(it) }
+        btnTambah.setOnClickListener {
+            val nama = edtNama.text.toString()
+            val deskripsi = edtDeskripsi.text.toString()
+            val dokter = idKlinik?.let { Dokter(it, nama, deskripsi) }
+
+            dokter?.let { it1 -> presenter.tambahDokter(it1) }
+        }
     }
 
     override fun tambahDokter() {

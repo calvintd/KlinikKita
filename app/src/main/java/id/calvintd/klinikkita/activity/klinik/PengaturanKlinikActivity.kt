@@ -76,11 +76,12 @@ class PengaturanKlinikActivity : AppCompatActivity(), PengaturanView {
         )
 
         val presenter = PengaturanKlinikPresenter(this)
-        val kataSandiLama = edtLama.text.toString()
-        val kataSandiBaru = edtBaru.text.toString()
-        val kataSandiUlangBaru = edtUlangBaru.text.toString()
 
         btnUbah.setOnClickListener {
+            val kataSandiLama = edtLama.text.toString()
+            val kataSandiBaru = edtBaru.text.toString()
+            val kataSandiUlangBaru = edtUlangBaru.text.toString()
+
             val builder = AlertDialog.Builder(this)
                 .setTitle(resources.getString(R.string.settings_change_password_dialog_title))
                 .setMessage(resources.getString(R.string.settings_change_password_dialog_message))

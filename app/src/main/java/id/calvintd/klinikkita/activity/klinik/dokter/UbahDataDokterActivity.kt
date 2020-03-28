@@ -32,7 +32,8 @@ class UbahDataDokterActivity : AppCompatActivity(), UbahDataDokterView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ubah_data_dokter)
 
-        sharedPreferences = getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
+        sharedPreferences =
+            getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
         defaultKey = resources.getString(R.string.shared_pref_key_default)
 
         edtNama = findViewById(R.id.edtNamaUbahDataDokter)
@@ -48,11 +49,23 @@ class UbahDataDokterActivity : AppCompatActivity(), UbahDataDokterView {
             dokter = getParcelable(resources.getString(R.string.parcelable_doctor))
         }
 
-        dokter?.let { presenter.ubahDataDokter(key, it) }
+        edtNama.setText(dokter?.namaDokter)
+        edtDeskripsi.setText(dokter?.deskripsi)
+
+        btnUbahData.setOnClickListener {
+            val nama = edtNama.text.toString()
+            val deskripsi = edtDeskripsi.text.toString()
+            val idKlinik = dokter?.idKlinik
+            if (idKlinik != null) presenter.ubahDataDokter(key, Dokter(nama, idKlinik, deskripsi))
+        }
     }
 
     override fun ubahDataDokter() {
-        Toast.makeText(this, R.string.clinic_manage_doctors_edit_doctor_edited_toast, Toast.LENGTH_LONG).show()
+        Toast.makeText(
+            this,
+            R.string.clinic_manage_doctors_edit_doctor_edited_toast,
+            Toast.LENGTH_LONG
+        ).show()
         finish()
     }
 

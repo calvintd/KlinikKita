@@ -39,12 +39,11 @@ class LoginKlinikActivity : AppCompatActivity(),
         btnMasuk = findViewById(R.id.btnLoginKlinik)
         txtDaftar = findViewById(R.id.txtDaftarKlinik)
 
-        val nomorHP = edtNomorPonsel.text.toString()
-        val kataSandi = edtKataSandi.text.toString()
-
         val presenter = LoginKlinikPresenter(this)
 
         btnMasuk.setOnClickListener {
+            val nomorHP = edtNomorPonsel.text.toString()
+            val kataSandi = edtKataSandi.text.toString()
             presenter.login(nomorHP, kataSandi)
         }
 
