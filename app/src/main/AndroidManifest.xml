@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.klinik.pemeriksaan.DiagnosisPemeriksaanActivity"></activity>
+        <activity android:name=".activity.pasien.PengaturanPasienActivity"></activity>
+        <activity android:name=".activity.klinik.PengaturanKlinikActivity" />
+        <activity android:name=".activity.klinik.pemeriksaan.DiagnosisPemeriksaanActivity" />
         <activity android:name=".activity.pasien.pemeriksaan.RiwayatPemeriksaanPasienActivity" />
         <activity android:name=".activity.pasien.pemeriksaan.CekPendaftaranActivity" />
         <activity android:name=".activity.pasien.pemeriksaan.MenuPemeriksaanPasienActivity" />

@@ -166,6 +166,34 @@
     <string name="clinic_manage_doctors_empty_name">Nama dokter tidak boleh kosong!</string>
     <string name="clinic_manage_doctors_empty_description">Deskripsi dokter tidak boleh kosong!</string>
 
+    <!-- settings -->
+    <string name="settings_header">Pengaturan</string>
+    <string name="settings_change_password">Ubah Kata Sandi</string>
+    <string name="settings_old_password">Kata Sandi Lama</string>
+    <string name="settings_old_password_empty">Kata sandi lama harus diisi!</string>
+    <string name="settings_old_password_wrong">Kata sandi yang Anda masukkan tidak sesuai!</string>
+    <string name="settings_new_password">Kata Sandi Baru</string>
+    <string name="settings_new_password_empty">Kata sandi baru harus diisi!</string>
+    <string name="settings_repeat_new_password">Ulang Kata Sandi Baru</string>
+    <string name="settings_repeat_new_password_empty">Pengulangan kata sandi harus diisi!</string>
+    <string name="settings_repeat_new_password_wrong">Pengulangan kata sandi tidak sama dengan kata sandi baru yang dimasukkan!</string>
+    <string name="settings_change_password_dialog_title">Konfirmasi Pengubahan</string>
+    <string name="settings_change_password_dialog_message">Apakah Anda yakin ingin mengubah kata sandi Anda?</string>
+    <string name="settings_password_changed_toast">Kata sandi Anda telah diubah!</string>
+
+    <string name="settings_patient_full_name">Nama Lengkap</string>
+    <string name="settings_patient_nickname">Nama Panggilan</string>
+    <string name="settings_patient_address">Alamat</string>
+    <string name="settings_patient_city">Kota</string>
+    <string name="settings_patient_phone_number">Nomor HP</string>
+
+    <string name="settings_patient_nickname_example">Calvin</string>
+
+    <string name="settings_clinic_name">Nama</string>
+    <string name="settings_clinic_address">Alamat</string>
+    <string name="settings_clinic_city">Kota</string>
+    <string name="settings_clinic_phone_number">Nomor HP</string>
+
     <!-- key words & phrases -->
     <string name="key_address">Alamat</string>
     <string name="key_empty_address">Alamat tidak boleh kosong!</string>

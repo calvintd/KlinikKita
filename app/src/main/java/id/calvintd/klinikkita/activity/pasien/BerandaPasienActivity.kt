@@ -10,6 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.activity.HomeActivity
 import id.calvintd.klinikkita.activity.pasien.daftar.PencarianKlinikActivity
+import id.calvintd.klinikkita.activity.pasien.pemeriksaan.MenuPemeriksaanPasienActivity
 
 class BerandaPasienActivity : AppCompatActivity() {
     private lateinit var txtSelamatDatang: TextView
@@ -57,11 +58,11 @@ class BerandaPasienActivity : AppCompatActivity() {
         }
 
         imgLihatPemeriksaan.setOnClickListener {
-
+            startActivity(Intent(this, MenuPemeriksaanPasienActivity::class.java))
         }
 
         imgPengaturan.setOnClickListener {
-
+            startActivity(Intent(this, PengaturanPasienActivity::class.java))
         }
 
         imgKeluar.setOnClickListener {
