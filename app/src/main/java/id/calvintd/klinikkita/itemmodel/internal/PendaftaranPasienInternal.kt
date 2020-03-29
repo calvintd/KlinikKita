@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-class PendaftaranPasienInternal(
+data class PendaftaranPasienInternal(
     var idPendaftaran: String?,
     var keluhan: String?,
     var status: Int?,

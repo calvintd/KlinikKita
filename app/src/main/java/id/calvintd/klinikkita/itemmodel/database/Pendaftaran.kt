@@ -1,7 +1,11 @@
 package id.calvintd.klinikkita.itemmodel.database
 
 import android.os.Parcelable
+import androidx.annotation.Keep
+import com.google.firebase.database.IgnoreExtraProperties
 import kotlinx.android.parcel.Parcelize
 
+@Keep
+@IgnoreExtraProperties
 @Parcelize
-class Pendaftaran (var idPasien: String, var idDokter: String, var keluhan: String, var status: Int): Parcelable
+data class Pendaftaran (var idPasien: String, var idDokter: String, var keluhan: String, var status: Int): Parcelable
