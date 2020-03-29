@@ -64,7 +64,7 @@ class DiagnosisPemeriksaanActivity : AppCompatActivity(), DiagnosisPemeriksaanVi
                 .setMessage(resources.getString(R.string.clinic_appointments_list_diagnosis_confirmation_message))
                 .setPositiveButton(resources.getString(R.string.key_yes)) { _, _ ->
                     pendaftaran?.let {
-                        val pemeriksaan = Pemeriksaan(
+                        Pemeriksaan(
                             idPendaftaran,
                             System.currentTimeMillis(),
                             edtDiagnosis.text.toString(),

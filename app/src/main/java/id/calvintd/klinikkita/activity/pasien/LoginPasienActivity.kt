@@ -1,5 +1,6 @@
 package id.calvintd.klinikkita.activity.pasien
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -24,6 +25,7 @@ class LoginPasienActivity : AppCompatActivity(),
 
     private lateinit var sharedPrefEditor: SharedPreferences.Editor
 
+    @SuppressLint("CommitPrefEdits")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_pasien)

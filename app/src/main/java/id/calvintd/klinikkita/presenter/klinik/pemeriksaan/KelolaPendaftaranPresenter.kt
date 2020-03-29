@@ -16,7 +16,7 @@ class KelolaPendaftaranPresenter(private val kelolaPendaftaranView: KelolaPendaf
     private val dokterRef = reference.child("dokter")
     private val klinikRef = reference.child("klinik")
 
-    fun cekPendaftaran(idKlinik: String) {
+    fun cekPendaftaran() {
         pendaftaranRef.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
                 TODO("Not yet implemented")
@@ -29,9 +29,7 @@ class KelolaPendaftaranPresenter(private val kelolaPendaftaranView: KelolaPendaf
                     val pairPendaftaran = mutableListOf<Pair<String, Pendaftaran>>()
 
                     for (snapshot in dataSnapshot.children) {
-                        if (snapshot.child("idKlinik").getValue(String::class.java)
-                                .equals(idKlinik) && snapshot.child("status")
-                                .getValue(Int::class.java) == 0
+                        if (snapshot.child("status").getValue(Int::class.java) == 0
                         ) {
                             val key = snapshot.key
                             val pendaftaran = snapshot.getValue(Pendaftaran::class.java)
@@ -98,7 +96,7 @@ class KelolaPendaftaranPresenter(private val kelolaPendaftaranView: KelolaPendaf
     }
 
     fun ambilDataKlinik() {
-        klinikRef.addListenerForSingleValueEvent(object : ValueEventListener{
+        klinikRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
                 TODO("Not yet implemented")
             }
@@ -119,7 +117,7 @@ class KelolaPendaftaranPresenter(private val kelolaPendaftaranView: KelolaPendaf
     }
 
     fun tidakHadirPendaftaran(idPendaftaran: String) {
-        pendaftaranRef.addListenerForSingleValueEvent(object : ValueEventListener{
+        pendaftaranRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
                 TODO("Not yet implemented")
             }

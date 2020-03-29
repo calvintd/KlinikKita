@@ -37,6 +37,8 @@ class CekPendaftaranActivity : AppCompatActivity(), CekPendaftaranView {
         txtDaftarKosong = findViewById(R.id.txtCekPendaftaranPasienKosong)
         rvCekPendaftaran = findViewById(R.id.rvCekPendaftaranPasien)
 
+        txtDaftarKosong.visibility = View.GONE
+
         val idPasien = sharedPreferences.getString(
             resources.getString(R.string.shared_pref_patient_key),
             defaultKey
@@ -66,6 +68,8 @@ class CekPendaftaranActivity : AppCompatActivity(), CekPendaftaranView {
                 )
             )
         }
+
+        presenter.ambilDataPasien()
     }
 
     override fun olahDataPasien(pairPasien: List<Pair<String, String>>) {

@@ -21,7 +21,7 @@ class PencarianDokterPresenter(private val pencarianDokterView: PencarianDokterV
                 val pairDokter = mutableListOf<Pair<String, Dokter>>()
 
                 for (snapshot in dataSnapshot.children) {
-                    if (snapshot.child("idKlinik").equals(idKlinik)) {
+                    if (snapshot.child("idKlinik").getValue(String::class.java).equals(idKlinik)) {
                         val key = snapshot.key
                         val dokter = snapshot.getValue(Dokter::class.java)
 

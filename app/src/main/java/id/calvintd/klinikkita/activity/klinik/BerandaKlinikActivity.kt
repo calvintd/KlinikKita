@@ -69,7 +69,7 @@ class BerandaKlinikActivity : AppCompatActivity() {
         }
 
         imgKeluar.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
+            AlertDialog.Builder(this)
                 .setTitle(resources.getString(R.string.key_logout_dialog_title))
                 .setMessage(resources.getString(R.string.key_logout_dialog_message))
                 .setPositiveButton(resources.getString(R.string.key_yes)) { _, _ ->
@@ -98,8 +98,7 @@ class BerandaKlinikActivity : AppCompatActivity() {
                         .apply()
                     startActivity(
                         Intent(this, HomeActivity::class.java)
-                            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                    )
+                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK))
                 }
                 .setNegativeButton(resources.getString(R.string.key_no)) { _, _ ->
 

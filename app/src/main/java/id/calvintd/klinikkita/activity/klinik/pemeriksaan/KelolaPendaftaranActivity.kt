@@ -42,12 +42,14 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
         txtKosong = findViewById(R.id.txtKelolaPendaftaranKlinikKosong)
         rvPendaftaran = findViewById(R.id.rvKelolaPendaftaranKlinik)
 
+        txtKosong.visibility = View.GONE
+
         idKlinik = sharedPreferences.getString(
             resources.getString(R.string.shared_pref_clinic_key),
             defaultKey
         )
 
-        idKlinik?.let { presenter.cekPendaftaran(it) }
+        idKlinik?.let { presenter.cekPendaftaran() }
     }
 
     override fun cekPendaftaran(pairPendaftaran: List<Pair<String, Pendaftaran>>) {
@@ -118,6 +120,12 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
             }
         }
 
+        for (i in listPendaftaranKlinik.indices) {
+            if (!listPendaftaranKlinik[i].idKlinik.equals(idKlinik)) {
+                listPendaftaranKlinik.removeAt(i)
+            }
+        }
+
         txtKosong.visibility = View.GONE
         rvPendaftaran.visibility = View.VISIBLE
         rvPendaftaran.layoutManager = LinearLayoutManager(this)
@@ -133,7 +141,7 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
                 )
             },
             { key: String ->
-                val builder = AlertDialog.Builder(this)
+                AlertDialog.Builder(this)
                     .setTitle(resources.getString(R.string.clinic_appointments_list_pending_no_show_title))
                     .setMessage(resources.getString(R.string.clinic_appointments_list_pending_no_show_message))
                     .setPositiveButton(resources.getString(R.string.key_yes)) { _, _ ->
@@ -146,7 +154,7 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
     }
 
     override fun tidakHadirPendaftaran() {
-        idKlinik?.let { presenter.cekPendaftaran(it) }
+        presenter.cekPendaftaran()
         Toast.makeText(
             this,
             R.string.clinic_appointments_list_pending_no_show_marked_toast,

@@ -28,7 +28,7 @@ class CekPendaftaranPresenter(private val cekPendaftaranView: CekPendaftaranView
                     val pairPendaftaran = mutableListOf<Pair<String, Pendaftaran>>()
 
                     for (snapshot in dataSnapshot.children) {
-                        if (snapshot.child("idPasien").equals(idPasien)) {
+                        if (snapshot.child("idPasien").getValue(String::class.java).equals(idPasien)) {
                             val key = snapshot.key
                             val pendaftaran = snapshot.getValue(Pendaftaran::class.java)
 

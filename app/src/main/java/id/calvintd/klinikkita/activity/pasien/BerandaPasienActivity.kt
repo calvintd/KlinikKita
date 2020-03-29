@@ -101,7 +101,7 @@ class BerandaPasienActivity : AppCompatActivity() {
                         )
                         .apply()
                     startActivity(Intent(this, HomeActivity::class.java)
-                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK))
                 }
                 .setNegativeButton(resources.getString(R.string.key_no)) { _, _ ->
 

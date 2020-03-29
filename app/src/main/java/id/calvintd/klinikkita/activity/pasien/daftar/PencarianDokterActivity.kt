@@ -3,6 +3,8 @@ package id.calvintd.klinikkita.activity.pasien.daftar
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.calvintd.klinikkita.R
@@ -12,6 +14,7 @@ import id.calvintd.klinikkita.presenter.pasien.daftar.PencarianDokterPresenter
 import id.calvintd.klinikkita.view.pasien.daftar.PencarianDokterView
 
 class PencarianDokterActivity : AppCompatActivity(), PencarianDokterView {
+    private lateinit var txtNamaKlinik: TextView
     private lateinit var rvDokter: RecyclerView
 
     private var bundle: Bundle? = null
@@ -22,12 +25,15 @@ class PencarianDokterActivity : AppCompatActivity(), PencarianDokterView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pencarian_dokter)
 
+        txtNamaKlinik = findViewById(R.id.txtNamaKlinikPemeriksaanPasien)
         rvDokter = findViewById(R.id.rvPencarianDokter)
 
         bundle = intent.extras
 
         keyKlinik = bundle?.getString(resources.getString(R.string.extras_key_clinic)).toString()
         namaKlinik = bundle?.getString(resources.getString(R.string.extras_name_clinic)).toString()
+
+        txtNamaKlinik.text = namaKlinik
 
         val presenter = PencarianDokterPresenter(this)
 
@@ -40,6 +46,7 @@ class PencarianDokterActivity : AppCompatActivity(), PencarianDokterView {
         val keyDokterList = pairDokterUnzip.first
         val listDokter = pairDokterUnzip.second
 
+        rvDokter.visibility = View.VISIBLE
         rvDokter.layoutManager = LinearLayoutManager(this)
         rvDokter.adapter = PencarianDokterAdapter(keyDokterList, listDokter) { key: String, namaDokter: String ->
             startActivity(Intent(this, EntriKeluhanActivity::class.java)

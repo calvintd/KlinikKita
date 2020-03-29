@@ -9,12 +9,12 @@ import id.calvintd.klinikkita.view.klinik.LoginKlinikView
 
 class LoginKlinikPresenter(private val loginKlinikView: LoginKlinikView) {
     private val reference = FirebaseDatabase.getInstance().reference
+    private val klinikRef = reference.child("klinik")
 
     fun login(nomorHP: String, kataSandi: String) {
         if (nomorHP.isEmpty() || kataSandi.isEmpty()) {
             loginKlinikView.kolomKosong()
         } else {
-            val klinikRef = reference.child("klinik")
             klinikRef.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onCancelled(p0: DatabaseError) {
                     TODO("Not yet implemented")
@@ -37,6 +37,7 @@ class LoginKlinikPresenter(private val loginKlinikView: LoginKlinikView) {
                             } else {
                                 loginKlinikView.kolomSalah()
                             }
+                            break
                         } else {
                             loginKlinikView.kolomSalah()
                         }

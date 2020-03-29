@@ -35,12 +35,12 @@ class KelolaPendaftaranAdapter(
         private var imgTidakHadir: ImageView? = null
 
         init {
-            txtNamaPasien = itemView.findViewById(R.id.txtNamaPasienKelolaPemeriksaan)
-            txtNamaKlinik = itemView.findViewById(R.id.txtNamaKlinikKelolaPemeriksaan)
-            txtNamaDokter = itemView.findViewById(R.id.txtNamaDokterKelolaPemeriksaan)
-            txtIsiKeluhan = itemView.findViewById(R.id.txtIsiKeluhanKelolaPemeriksaan)
-            imgHadir = itemView.findViewById(R.id.imgHadirKelolaPemeriksaan)
-            imgTidakHadir = itemView.findViewById(R.id.imgTidakHadirKelolaPemeriksaan)
+            txtNamaPasien = itemView.findViewById(R.id.txtNamaPasienKelolaPendaftaran)
+            txtNamaKlinik = itemView.findViewById(R.id.txtNamaKlinikKelolaPendaftaran)
+            txtNamaDokter = itemView.findViewById(R.id.txtNamaDokterKelolaPendaftaran)
+            txtIsiKeluhan = itemView.findViewById(R.id.txtIsiKeluhanKelolaPendaftaran)
+            imgHadir = itemView.findViewById(R.id.imgHadirKelolaPendaftaran)
+            imgTidakHadir = itemView.findViewById(R.id.imgTidakHadirKelolaPendaftaran)
         }
 
         fun bind(
