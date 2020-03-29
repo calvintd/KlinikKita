@@ -13,6 +13,7 @@ import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.activity.klinik.BerandaKlinikActivity
 import id.calvintd.klinikkita.itemmodel.database.Pemeriksaan
 import id.calvintd.klinikkita.itemmodel.internal.PendaftaranKlinikInternal
+import id.calvintd.klinikkita.presenter.klinik.pemeriksaan.DiagnosisPemeriksaanPresenter
 import id.calvintd.klinikkita.view.klinik.pemeriksaan.DiagnosisPemeriksaanView
 
 class DiagnosisPemeriksaanActivity : AppCompatActivity(), DiagnosisPemeriksaanView {
@@ -30,6 +31,8 @@ class DiagnosisPemeriksaanActivity : AppCompatActivity(), DiagnosisPemeriksaanVi
     private var pendaftaran: PendaftaranKlinikInternal? = null
     private lateinit var idPendaftaran: String
 
+    private val presenter = DiagnosisPemeriksaanPresenter(this)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diagnosis_pemeriksaan)
@@ -43,6 +46,9 @@ class DiagnosisPemeriksaanActivity : AppCompatActivity(), DiagnosisPemeriksaanVi
         edtPengobatan = findViewById(R.id.edtPengobatanDiagnosisPemeriksaan)
         txtPengobatanKosong = findViewById(R.id.txtPengobatanDiagnosisPemeriksaanKosong)
         btnKonfirmasi = findViewById(R.id.btnKonfirmasiDiagnosisPemeriksaan)
+
+        txtDiagnosisKosong.visibility = View.GONE
+        txtPengobatanKosong.visibility = View.GONE
 
         bundle = intent.extras
 
@@ -64,12 +70,12 @@ class DiagnosisPemeriksaanActivity : AppCompatActivity(), DiagnosisPemeriksaanVi
                 .setMessage(resources.getString(R.string.clinic_appointments_list_diagnosis_confirmation_message))
                 .setPositiveButton(resources.getString(R.string.key_yes)) { _, _ ->
                     pendaftaran?.let {
-                        Pemeriksaan(
+                        presenter.diagnosis(Pemeriksaan(
                             idPendaftaran,
                             System.currentTimeMillis(),
                             edtDiagnosis.text.toString(),
                             edtPengobatan.text.toString()
-                        )
+                        ))
                     }
                 }
                 .setNegativeButton(resources.getString(R.string.key_no)) { _, _ ->
