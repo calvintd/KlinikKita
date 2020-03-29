@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,8 +16,10 @@ import id.calvintd.klinikkita.itemmodel.database.Pendaftaran
 import id.calvintd.klinikkita.itemmodel.internal.PendaftaranPasienInternal
 import id.calvintd.klinikkita.presenter.pasien.pemeriksaan.CekPendaftaranPresenter
 import id.calvintd.klinikkita.view.pasien.pemeriksaan.CekPendaftaranView
+import kotlinx.android.synthetic.main.activity_cek_pendaftaran_pasien.*
 
 class CekPendaftaranActivity : AppCompatActivity(), CekPendaftaranView {
+    private lateinit var progressBar: ProgressBar
     private lateinit var txtDaftarKosong: TextView
     private lateinit var rvCekPendaftaran: RecyclerView
 
@@ -34,6 +37,7 @@ class CekPendaftaranActivity : AppCompatActivity(), CekPendaftaranView {
         sharedPreferences = getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
         defaultKey = resources.getString(R.string.shared_pref_key_default)
 
+        progressBar = findViewById(R.id.pbCekPendaftaran)
         txtDaftarKosong = findViewById(R.id.txtCekPendaftaranPasienKosong)
         rvCekPendaftaran = findViewById(R.id.rvCekPendaftaranPasien)
 
@@ -48,6 +52,7 @@ class CekPendaftaranActivity : AppCompatActivity(), CekPendaftaranView {
     }
 
     override fun pendaftaranKosong() {
+        progressBar.visibility = View.GONE
         txtDaftarKosong.visibility = View.VISIBLE
         rvCekPendaftaran.visibility = View.GONE
     }
@@ -109,6 +114,7 @@ class CekPendaftaranActivity : AppCompatActivity(), CekPendaftaranView {
             }
         }
 
+        progressBar.visibility = View.GONE
         txtDaftarKosong.visibility = View.GONE
         rvCekPendaftaran.visibility = View.VISIBLE
         rvCekPendaftaran.layoutManager = LinearLayoutManager(this)

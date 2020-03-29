@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,6 +15,7 @@ import id.calvintd.klinikkita.presenter.pasien.daftar.PencarianDokterPresenter
 import id.calvintd.klinikkita.view.pasien.daftar.PencarianDokterView
 
 class PencarianDokterActivity : AppCompatActivity(), PencarianDokterView {
+    private lateinit var progressBar: ProgressBar
     private lateinit var txtNamaKlinik: TextView
     private lateinit var rvDokter: RecyclerView
 
@@ -25,6 +27,7 @@ class PencarianDokterActivity : AppCompatActivity(), PencarianDokterView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pencarian_dokter)
 
+        progressBar = findViewById(R.id.pbPencarianDokter)
         txtNamaKlinik = findViewById(R.id.txtNamaKlinikPemeriksaanPasien)
         rvDokter = findViewById(R.id.rvPencarianDokter)
 
@@ -46,6 +49,7 @@ class PencarianDokterActivity : AppCompatActivity(), PencarianDokterView {
         val keyDokterList = pairDokterUnzip.first
         val listDokter = pairDokterUnzip.second
 
+        progressBar.visibility = View.GONE
         rvDokter.visibility = View.VISIBLE
         rvDokter.layoutManager = LinearLayoutManager(this)
         rvDokter.adapter = PencarianDokterAdapter(keyDokterList, listDokter) { key: String, namaDokter: String ->

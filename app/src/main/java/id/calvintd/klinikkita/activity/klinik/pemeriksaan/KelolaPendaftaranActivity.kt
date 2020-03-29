@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -20,6 +21,7 @@ import id.calvintd.klinikkita.presenter.klinik.pemeriksaan.KelolaPendaftaranPres
 import id.calvintd.klinikkita.view.klinik.pemeriksaan.KelolaPendaftaranView
 
 class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
+    private lateinit var progressBar: ProgressBar
     private lateinit var txtKosong: TextView
     private lateinit var rvPendaftaran: RecyclerView
 
@@ -39,6 +41,7 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
         sharedPreferences = getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
         defaultKey = resources.getString(R.string.shared_pref_key_default)
 
+        progressBar = findViewById(R.id.pbKelolaPendaftaran)
         txtKosong = findViewById(R.id.txtKelolaPendaftaranKlinikKosong)
         rvPendaftaran = findViewById(R.id.rvKelolaPendaftaranKlinik)
 
@@ -70,6 +73,7 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
     }
 
     override fun pendaftaranKosong() {
+        progressBar.visibility = View.GONE
         txtKosong.visibility = View.VISIBLE
         rvPendaftaran.visibility = View.GONE
 
@@ -124,6 +128,7 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
             }
         }
 
+        progressBar.visibility = View.GONE
         txtKosong.visibility = View.GONE
         rvPendaftaran.visibility = View.VISIBLE
         rvPendaftaran.layoutManager = LinearLayoutManager(this)

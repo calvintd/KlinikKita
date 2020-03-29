@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,6 +20,7 @@ import id.calvintd.klinikkita.view.RiwayatPemeriksaanView
 
 class RiwayatPemeriksaanKlinikActivity : AppCompatActivity(),
     RiwayatPemeriksaanView {
+    private lateinit var progressBar: ProgressBar
     private lateinit var txtPemeriksaanKosong: TextView
     private lateinit var rvPemeriksaanKlinik: RecyclerView
 
@@ -37,6 +39,7 @@ class RiwayatPemeriksaanKlinikActivity : AppCompatActivity(),
         sharedPreferences = getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
         defaultKey = resources.getString(R.string.shared_pref_key_default)
 
+        progressBar = findViewById(R.id.pbRiwayatPemeriksaanKlinik)
         txtPemeriksaanKosong = findViewById(R.id.txtRiwayatPemeriksaanKlinikKosong)
         rvPemeriksaanKlinik = findViewById(R.id.rvRiwayatPemeriksaanKlinik)
 
@@ -72,6 +75,7 @@ class RiwayatPemeriksaanKlinikActivity : AppCompatActivity(),
     }
 
     override fun pemeriksaanKosong() {
+        progressBar.visibility = View.GONE
         txtPemeriksaanKosong.visibility = View.VISIBLE
         rvPemeriksaanKlinik.visibility = View.GONE
     }
@@ -132,6 +136,7 @@ class RiwayatPemeriksaanKlinikActivity : AppCompatActivity(),
             }
         }
 
+        progressBar.visibility = View.GONE
         txtPemeriksaanKosong.visibility = View.GONE
         rvPemeriksaanKlinik.visibility = View.VISIBLE
 

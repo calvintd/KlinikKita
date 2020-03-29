@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -19,6 +20,7 @@ import id.calvintd.klinikkita.presenter.klinik.dokter.KelolaDokterPresenter
 import id.calvintd.klinikkita.view.klinik.dokter.KelolaDokterView
 
 class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
+    private lateinit var progressBar: ProgressBar
     private lateinit var imgTambahDokter: ImageView
     private lateinit var txtDaftarDokterKosong: TextView
     private lateinit var rvDaftarDokter: RecyclerView
@@ -40,6 +42,7 @@ class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
             getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
         defaultKey = resources.getString(R.string.shared_pref_key_default)
 
+        progressBar = findViewById(R.id.pbKelolaDokter)
         imgTambahDokter = findViewById(R.id.imgTambahDokter)
         txtDaftarDokterKosong = findViewById(R.id.txtDaftarDokterKosong)
         rvDaftarDokter = findViewById(R.id.rvDaftarDokter)
@@ -62,11 +65,16 @@ class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
     }
 
     override fun daftarDokterKosong() {
+        progressBar.visibility = View.GONE
+        imgTambahDokter.visibility = View.VISIBLE
         txtDaftarDokterKosong.visibility = View.VISIBLE
         rvDaftarDokter.visibility = View.GONE
     }
 
     override fun isiDaftarDokter(listKeyDokter: List<String>, listDokter: List<Dokter>) {
+        progressBar.visibility = View.GONE
+        imgTambahDokter.visibility = View.VISIBLE
+        txtDaftarDokterKosong.visibility = View.GONE
         rvDaftarDokter.visibility = View.VISIBLE
         rvDaftarDokter.adapter =
             KelolaDokterAdapter(listKeyDokter, listDokter, { key: String, dokter: Dokter ->

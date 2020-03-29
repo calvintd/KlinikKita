@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,6 +19,7 @@ import id.calvintd.klinikkita.presenter.pasien.pemeriksaan.RiwayatPemeriksaanPas
 import id.calvintd.klinikkita.view.RiwayatPemeriksaanView
 
 class RiwayatPemeriksaanPasienActivity : AppCompatActivity(), RiwayatPemeriksaanView {
+    private lateinit var progressBar: ProgressBar
     private lateinit var txtPemeriksaanKosong: TextView
     private lateinit var rvPemeriksaanPasien: RecyclerView
 
@@ -36,6 +38,7 @@ class RiwayatPemeriksaanPasienActivity : AppCompatActivity(), RiwayatPemeriksaan
         sharedPreferences = getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
         defaultKey = resources.getString(R.string.shared_pref_key_default)
 
+        progressBar = findViewById(R.id.pbRiwayatPemeriksaanPasien)
         txtPemeriksaanKosong = findViewById(R.id.txtRiwayatPemeriksaanPasienKosong)
         rvPemeriksaanPasien = findViewById(R.id.rvRiwayatPemeriksaanPasien)
 
@@ -130,6 +133,7 @@ class RiwayatPemeriksaanPasienActivity : AppCompatActivity(), RiwayatPemeriksaan
             }
         }
 
+        progressBar.visibility = View.GONE
         txtPemeriksaanKosong.visibility = View.GONE
         rvPemeriksaanPasien.visibility = View.VISIBLE
 
