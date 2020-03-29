@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.33" />
+            app:layout_constraintGuide_percent="0.35" />
 
         <TextView
             android:id="@+id/txtWaktuRiwayatPemeriksaanKlinik"
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="0dp"
             android:text="@string/patient_appointments_list_history_time_example"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@id/barrierWaktuRiwayatPemeriksaanKlinik"
@@ -56,7 +56,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:barrierDirection="bottom"
-            app:constraint_referenced_ids="txtWaktuRiwayatPemeriksaanKlinik, @+id/txtIsiWaktuRiwayatPemeriksaanKlinik" />
+            app:constraint_referenced_ids="txtWaktuRiwayatPemeriksaanKlinik, @+id/txtIsiWaktuRiwayatPemeriksaanKlinik"
+            app:layout_constraintBottom_toTopOf="@+id/barrierPasienRiwayatPemeriksaanKlinik"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txtPasienRiwayatPemeriksaanKlinik"
@@ -88,7 +90,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:barrierDirection="bottom"
-            app:constraint_referenced_ids="txtPasienRiwayatPemeriksaanKlinik, txtNamaPasienRiwayatPemeriksaanKlinik" />
+            app:constraint_referenced_ids="txtPasienRiwayatPemeriksaanKlinik, txtNamaPasienRiwayatPemeriksaanKlinik"
+            app:layout_constraintBottom_toTopOf="@+id/barrierDokterRiwayatPemeriksaanKlinik"
+            app:layout_constraintTop_toBottomOf="@+id/barrierWaktuRiwayatPemeriksaanKlinik" />
 
         <TextView
             android:id="@+id/txtDokterRiwayatPemeriksaanKlinik"
@@ -121,7 +125,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:barrierDirection="bottom"
-            app:constraint_referenced_ids="txtDokterRiwayatPemeriksaanKlinik, txtNamaDokterRiwayatPemeriksaanKlinik" />
+            app:constraint_referenced_ids="txtDokterRiwayatPemeriksaanKlinik, txtNamaDokterRiwayatPemeriksaanKlinik"
+            app:layout_constraintBottom_toTopOf="@+id/barrierKeluhanRiwayatPemeriksaanKlinik"
+            app:layout_constraintTop_toBottomOf="@+id/barrierPasienRiwayatPemeriksaanKlinik" />
 
         <TextView
             android:id="@+id/txtKeluhanRiwayatPemeriksaanKlinik"
@@ -154,7 +160,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:barrierDirection="bottom"
-            app:constraint_referenced_ids="txtKeluhanRiwayatPemeriksaanKlinik, txtIsiKeluhanRiwayatPemeriksaanKlinik" />
+            app:constraint_referenced_ids="txtKeluhanRiwayatPemeriksaanKlinik, txtIsiKeluhanRiwayatPemeriksaanKlinik"
+            app:layout_constraintBottom_toTopOf="@+id/barrierDiagnosisRiwayatPemeriksaanKlinik"
+            app:layout_constraintTop_toBottomOf="@+id/barrierDokterRiwayatPemeriksaanKlinik" />
 
         <TextView
             android:id="@+id/txtDiagnosisRiwayatPemeriksaanKlinik"
@@ -187,7 +195,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:barrierDirection="bottom"
-            app:constraint_referenced_ids="txtDiagnosisRiwayatPemeriksaanKlinik, txtIsiDiagnosisRiwayatPemeriksaanKlinik" />
+            app:constraint_referenced_ids="txtDiagnosisRiwayatPemeriksaanKlinik, txtIsiDiagnosisRiwayatPemeriksaanKlinik"
+            app:layout_constraintBottom_toTopOf="@+id/barrierPengobatanRiwayatPemeriksaanKlinik"
+            app:layout_constraintTop_toBottomOf="@+id/barrierKeluhanRiwayatPemeriksaanKlinik" />
 
         <TextView
             android:id="@+id/txtPengobatanRiwayatPemeriksaanKlinik"
@@ -220,7 +230,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:barrierDirection="bottom"
-            app:constraint_referenced_ids="txtPengobatanRiwayatPemeriksaanKlinik, txtIsiPengobatanRiwayatPemeriksaanKlinik" />
+            app:constraint_referenced_ids="txtPengobatanRiwayatPemeriksaanKlinik, txtIsiPengobatanRiwayatPemeriksaanKlinik"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrierDiagnosisRiwayatPemeriksaanKlinik" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
