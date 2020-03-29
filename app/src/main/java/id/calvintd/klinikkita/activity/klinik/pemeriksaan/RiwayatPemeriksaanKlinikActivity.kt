@@ -40,8 +40,6 @@ class RiwayatPemeriksaanKlinikActivity : AppCompatActivity(),
         txtPemeriksaanKosong = findViewById(R.id.txtRiwayatPemeriksaanKlinikKosong)
         rvPemeriksaanKlinik = findViewById(R.id.rvRiwayatPemeriksaanKlinik)
 
-        txtPemeriksaanKosong.visibility = View.GONE
-
         idKlinik = sharedPreferences.getString(
             resources.getString(R.string.shared_pref_clinic_key),
             defaultKey

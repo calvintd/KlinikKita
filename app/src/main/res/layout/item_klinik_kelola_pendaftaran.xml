@@ -1,200 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvKelolaPendaftaran"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#DDDDDD"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="24dp"
+    app:contentPadding="8dp">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glKelolaPendaftaran"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.3" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glKelolaPendaftaranTombol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glKelolaPendaftaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
 
-    <TextView
-        android:id="@+id/txtPasienKelolaPendaftaran"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/clinic_appointments_list_pending_patient_name"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/glKelolaPendaftaran"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glKelolaPendaftaranTombol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
 
-    <TextView
-        android:id="@+id/txtNamaPasienKelolaPendaftaran"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/clinic_appointments_list_pending_patient_name_example"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/glKelolaPendaftaran"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/txtPasienKelolaPendaftaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/clinic_appointments_list_pending_patient_name"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/glKelolaPendaftaran"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrierPasienKelolaPendaftaran"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="bottom"
-        app:constraint_referenced_ids="txtPasienKelolaPendaftaran, txtNamaPasienKelolaPendaftaran" />
+        <TextView
+            android:id="@+id/txtNamaPasienKelolaPendaftaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/clinic_appointments_list_pending_patient_name_example"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/glKelolaPendaftaran"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtKlinikKelolaPendaftaran"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/patient_appointments_registration_details_clinic_name"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/glKelolaPendaftaran"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/barrierPasienKelolaPendaftaran" />
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierPasienKelolaPendaftaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="txtPasienKelolaPendaftaran, txtNamaPasienKelolaPendaftaran" />
 
-    <TextView
-        android:id="@+id/txtNamaKlinikKelolaPendaftaran"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/patient_appointments_registration_clinic_name_example"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/glKelolaPendaftaran"
-        app:layout_constraintTop_toBottomOf="@id/barrierPasienKelolaPendaftaran" />
+        <TextView
+            android:id="@+id/txtKlinikKelolaPendaftaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/patient_appointments_registration_details_clinic_name"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/glKelolaPendaftaran"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierPasienKelolaPendaftaran" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrierKlinikKelolaPendaftaran"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="bottom"
-        app:constraint_referenced_ids="txtKlinikKelolaPendaftaran, txtNamaKlinikKelolaPendaftaran" />
+        <TextView
+            android:id="@+id/txtNamaKlinikKelolaPendaftaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/patient_appointments_registration_clinic_name_example"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/glKelolaPendaftaran"
+            app:layout_constraintTop_toBottomOf="@id/barrierPasienKelolaPendaftaran" />
 
-    <TextView
-        android:id="@+id/txtDokterKelolaPendaftaran"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/patient_appointments_registration_details_doctor_name"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/glKelolaPendaftaran"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/barrierKlinikKelolaPendaftaran" />
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierKlinikKelolaPendaftaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="txtKlinikKelolaPendaftaran, txtNamaKlinikKelolaPendaftaran" />
 
-    <TextView
-        android:id="@+id/txtNamaDokterKelolaPendaftaran"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/patient_appointments_registration_doctor_name_example"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/glKelolaPendaftaran"
-        app:layout_constraintTop_toBottomOf="@+id/barrierKlinikKelolaPendaftaran" />
+        <TextView
+            android:id="@+id/txtDokterKelolaPendaftaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/patient_appointments_registration_details_doctor_name"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/glKelolaPendaftaran"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrierKlinikKelolaPendaftaran" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrierDokterKelolaPendaftaran"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="bottom"
-        app:constraint_referenced_ids="txtDokterKelolaPendaftaran, txtNamaDokterKelolaPendaftaran" />
+        <TextView
+            android:id="@+id/txtNamaDokterKelolaPendaftaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/patient_appointments_registration_doctor_name_example"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/glKelolaPendaftaran"
+            app:layout_constraintTop_toBottomOf="@+id/barrierKlinikKelolaPendaftaran" />
 
-    <TextView
-        android:id="@+id/txtKeluhanKelolaPendaftaran"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/patient_appointments_registration_details_complaints"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/glKelolaPendaftaran"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/barrierDokterKelolaPendaftaran" />
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierDokterKelolaPendaftaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="txtDokterKelolaPendaftaran, txtNamaDokterKelolaPendaftaran" />
 
-    <TextView
-        android:id="@+id/txtIsiKeluhanKelolaPendaftaran"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/patient_appointments_list_history_complaints_example"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtKeluhanKelolaPendaftaran"
-        app:layout_constraintTop_toBottomOf="@+id/barrierDokterKelolaPendaftaran" />
+        <TextView
+            android:id="@+id/txtKeluhanKelolaPendaftaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/patient_appointments_registration_details_complaints"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/glKelolaPendaftaran"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrierDokterKelolaPendaftaran" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrierKeluhanKelolaPendaftaran"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="bottom"
-        app:constraint_referenced_ids="txtKeluhanKelolaPendaftaran, txtIsiKeluhanKelolaPendaftaran" />
+        <TextView
+            android:id="@+id/txtIsiKeluhanKelolaPendaftaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/patient_appointments_list_history_complaints_example"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtKeluhanKelolaPendaftaran"
+            app:layout_constraintTop_toBottomOf="@+id/barrierDokterKelolaPendaftaran" />
 
-    <ImageView
-        android:id="@+id/imgHadirKelolaPendaftaran"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/glKelolaPendaftaranTombol"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/barrierKeluhanKelolaPendaftaran"
-        app:srcCompat="@drawable/terima" />
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierKeluhanKelolaPendaftaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="txtKeluhanKelolaPendaftaran, txtIsiKeluhanKelolaPendaftaran" />
 
-    <ImageView
-        android:id="@+id/imgTidakHadirKelolaPendaftaran"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/glKelolaPendaftaranTombol"
-        app:layout_constraintTop_toBottomOf="@+id/barrierKeluhanKelolaPendaftaran"
-        app:srcCompat="@drawable/tolak" />
+        <ImageView
+            android:id="@+id/imgHadirKelolaPendaftaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/glKelolaPendaftaranTombol"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierKeluhanKelolaPendaftaran"
+            app:srcCompat="@drawable/terima" />
 
-    <TextView
-        android:id="@+id/txtTerimaKelolaPendaftaran"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/clinic_appointments_list_pending_show"
-        android:textAlignment="center"
-        android:textColor="#1F8006"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/glKelolaPendaftaranTombol"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgHadirKelolaPendaftaran" />
+        <ImageView
+            android:id="@+id/imgTidakHadirKelolaPendaftaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/glKelolaPendaftaranTombol"
+            app:layout_constraintTop_toBottomOf="@+id/barrierKeluhanKelolaPendaftaran"
+            app:srcCompat="@drawable/tolak" />
 
-    <TextView
-        android:id="@+id/txtTolakKelolaPendaftaran"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/clinic_appointments_list_pending_no_show"
-        android:textAlignment="center"
-        android:textColor="#FF0000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/glKelolaPendaftaranTombol"
-        app:layout_constraintTop_toBottomOf="@+id/imgTidakHadirKelolaPendaftaran" />
+        <TextView
+            android:id="@+id/txtTerimaKelolaPendaftaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/clinic_appointments_list_pending_show"
+            android:textAlignment="center"
+            android:textColor="#1F8006"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/glKelolaPendaftaranTombol"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgHadirKelolaPendaftaran" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/txtTolakKelolaPendaftaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/clinic_appointments_list_pending_no_show"
+            android:textAlignment="center"
+            android:textColor="#FF0000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/glKelolaPendaftaranTombol"
+            app:layout_constraintTop_toBottomOf="@+id/imgTidakHadirKelolaPendaftaran" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

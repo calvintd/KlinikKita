@@ -268,10 +268,10 @@
                 android:text="@string/settings_old_password_empty"
                 android:textColor="#FF0000"
                 android:textSize="18sp"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edtKataSandiLamaPengaturanPasien"
-                tools:visibility="gone" />
+                app:layout_constraintTop_toBottomOf="@+id/edtKataSandiLamaPengaturanPasien" />
 
             <TextView
                 android:id="@+id/txtKataSandiBaruPengaturanPasien"
@@ -309,10 +309,10 @@
                 android:text="@string/settings_new_password_empty"
                 android:textColor="#FF0000"
                 android:textSize="18sp"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edtKataSandiBaruPengaturanPasien"
-                tools:visibility="gone" />
+                app:layout_constraintTop_toBottomOf="@+id/edtKataSandiBaruPengaturanPasien" />
 
             <TextView
                 android:id="@+id/txtUlangKataSandiBaruPengaturanPasien"
@@ -353,7 +353,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edtUlangKataSandiBaruPengaturanPasien"
-                tools:visibility="gone" />
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/btnUbahKataSandiPasien"

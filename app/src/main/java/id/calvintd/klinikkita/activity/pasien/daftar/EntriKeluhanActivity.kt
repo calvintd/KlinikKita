@@ -43,8 +43,6 @@ class EntriKeluhanActivity : AppCompatActivity(), EntriKeluhanView {
         txtKesalahanKeluhan = findViewById(R.id.txtKesalahanKeluhanEntriKeluhan)
         btnDaftar = findViewById(R.id.btnDaftarPemeriksaan)
 
-        txtKesalahanKeluhan.visibility = View.GONE
-
         bundle = intent.extras
 
         namaKlinik = bundle?.getString(resources.getString(R.string.extras_name_clinic)).toString()

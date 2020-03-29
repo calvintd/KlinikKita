@@ -228,10 +228,10 @@
                 android:text="@string/settings_old_password_empty"
                 android:textColor="#FF0000"
                 android:textSize="18sp"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edtKataSandiLamaPengaturanKlinik"
-                tools:visibility="gone" />
+                app:layout_constraintTop_toBottomOf="@+id/edtKataSandiLamaPengaturanKlinik" />
 
             <TextView
                 android:id="@+id/txtKataSandiBaruPengaturanKlinik"
@@ -269,10 +269,10 @@
                 android:text="@string/settings_new_password_empty"
                 android:textColor="#FF0000"
                 android:textSize="18sp"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edtKataSandiBaruPengaturanKlinik"
-                tools:visibility="gone" />
+                app:layout_constraintTop_toBottomOf="@+id/edtKataSandiBaruPengaturanKlinik" />
 
             <TextView
                 android:id="@+id/txtUlangKataSandiBaruPengaturanKlinik"
@@ -310,10 +310,10 @@
                 android:text="@string/settings_repeat_new_password_empty"
                 android:textColor="#FF0000"
                 android:textSize="18sp"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edtUlangKataSandiBaruPengaturanKlinik"
-                tools:visibility="gone" />
+                app:layout_constraintTop_toBottomOf="@+id/edtUlangKataSandiBaruPengaturanKlinik" />
 
             <Button
                 android:id="@+id/btnUbahKataSandiKlinik"

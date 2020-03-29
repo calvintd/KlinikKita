@@ -47,9 +47,6 @@ class DiagnosisPemeriksaanActivity : AppCompatActivity(), DiagnosisPemeriksaanVi
         txtPengobatanKosong = findViewById(R.id.txtPengobatanDiagnosisPemeriksaanKosong)
         btnKonfirmasi = findViewById(R.id.btnKonfirmasiDiagnosisPemeriksaan)
 
-        txtDiagnosisKosong.visibility = View.GONE
-        txtPengobatanKosong.visibility = View.GONE
-
         bundle = intent.extras
 
         pendaftaran =

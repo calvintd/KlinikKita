@@ -42,8 +42,6 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
         txtKosong = findViewById(R.id.txtKelolaPendaftaranKlinikKosong)
         rvPendaftaran = findViewById(R.id.rvKelolaPendaftaranKlinik)
 
-        txtKosong.visibility = View.GONE
-
         idKlinik = sharedPreferences.getString(
             resources.getString(R.string.shared_pref_clinic_key),
             defaultKey
