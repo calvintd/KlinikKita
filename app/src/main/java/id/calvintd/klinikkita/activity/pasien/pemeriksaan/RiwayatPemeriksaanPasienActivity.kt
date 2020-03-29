@@ -6,11 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.adapter.pasien.pemeriksaan.RiwayatPemeriksaanPasienAdapter
 import id.calvintd.klinikkita.itemmodel.database.Dokter
 import id.calvintd.klinikkita.itemmodel.database.Pemeriksaan
+import id.calvintd.klinikkita.itemmodel.database.Pendaftaran
 import id.calvintd.klinikkita.itemmodel.internal.PemeriksaanInternal
 import id.calvintd.klinikkita.presenter.pasien.pemeriksaan.RiwayatPemeriksaanPasienPresenter
 import id.calvintd.klinikkita.view.RiwayatPemeriksaanView
@@ -37,10 +39,14 @@ class RiwayatPemeriksaanPasienActivity : AppCompatActivity(), RiwayatPemeriksaan
         txtPemeriksaanKosong = findViewById(R.id.txtRiwayatPemeriksaanPasienKosong)
         rvPemeriksaanPasien = findViewById(R.id.rvRiwayatPemeriksaanPasien)
 
+        txtPemeriksaanKosong.visibility = View.GONE
+
         idPasien = sharedPreferences.getString(
             resources.getString(R.string.shared_pref_patient_key),
             defaultKey
         ).toString()
+
+        presenter.cekPemeriksaan()
     }
 
     override fun cekPemeriksaan(pairPemeriksaan: List<Pair<String, Pemeriksaan>>) {
@@ -51,7 +57,7 @@ class RiwayatPemeriksaanPasienActivity : AppCompatActivity(), RiwayatPemeriksaan
                     waktu = pairPemeriksaan[i].second.waktu,
                     diagnosis = pairPemeriksaan[i].second.diagnosis,
                     pengobatan = pairPemeriksaan[i].second.pengobatan,
-                    idPendaftaran = null,
+                    idPendaftaran = pairPemeriksaan[i].second.idPendaftaran,
                     keluhan = null,
                     idPasien = null,
                     namaPasien = null,
@@ -70,11 +76,13 @@ class RiwayatPemeriksaanPasienActivity : AppCompatActivity(), RiwayatPemeriksaan
         TODO("Not yet implemented")
     }
 
-    override fun olahDataPendaftaran(pairPendaftaran: List<Pair<String, String>>) {
+    override fun olahDataPendaftaran(pairPendaftaran: List<Pair<String, Pendaftaran>>) {
         for (i in listPemeriksaanPasien.indices) {
             for (j in pairPendaftaran.indices) {
                 if (listPemeriksaanPasien[i].idPendaftaran.equals(pairPendaftaran[j].first)) {
-                    listPemeriksaanPasien[i].keluhan = pairPendaftaran[j].second
+                    listPemeriksaanPasien[i].idPasien = pairPendaftaran[j].second.idPasien
+                    listPemeriksaanPasien[i].idDokter = pairPendaftaran[j].second.idDokter
+                    listPemeriksaanPasien[i].keluhan = pairPendaftaran[j].second.keluhan
                     break
                 }
             }
@@ -126,6 +134,8 @@ class RiwayatPemeriksaanPasienActivity : AppCompatActivity(), RiwayatPemeriksaan
 
         txtPemeriksaanKosong.visibility = View.GONE
         rvPemeriksaanPasien.visibility = View.VISIBLE
+
+        rvPemeriksaanPasien.layoutManager = LinearLayoutManager(this)
         rvPemeriksaanPasien.adapter = RiwayatPemeriksaanPasienAdapter(listPemeriksaanPasien)
     }
 }

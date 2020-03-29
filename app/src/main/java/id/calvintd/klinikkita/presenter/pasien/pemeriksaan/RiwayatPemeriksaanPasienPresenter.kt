@@ -6,6 +6,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import id.calvintd.klinikkita.itemmodel.database.Dokter
 import id.calvintd.klinikkita.itemmodel.database.Pemeriksaan
+import id.calvintd.klinikkita.itemmodel.database.Pendaftaran
 import id.calvintd.klinikkita.view.RiwayatPemeriksaanView
 
 class RiwayatPemeriksaanPasienPresenter(private val riwayatPemeriksaanView: RiwayatPemeriksaanView) {
@@ -57,13 +58,20 @@ class RiwayatPemeriksaanPasienPresenter(private val riwayatPemeriksaanView: Riwa
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                val pairPendaftaran = mutableListOf<Pair<String, String>>()
+                val pairPendaftaran = mutableListOf<Pair<String, Pendaftaran>>()
 
                 for (snapshot in dataSnapshot.children) {
-                    val key = snapshot.key
-                    val keluhan = snapshot.child("keluhan").getValue(String::class.java)
+                    if (snapshot.child("status").getValue(Int::class.java) == 1) {
+                        val key = snapshot.key
+                        val pendaftaran = snapshot.getValue(Pendaftaran::class.java)
 
-                    if (key != null && keluhan != null) pairPendaftaran.add(Pair(key, keluhan))
+                        if (key != null && pendaftaran != null) pairPendaftaran.add(
+                            Pair(
+                                key,
+                                pendaftaran
+                            )
+                        )
+                    }
                 }
 
                 riwayatPemeriksaanView.olahDataPendaftaran(pairPendaftaran)

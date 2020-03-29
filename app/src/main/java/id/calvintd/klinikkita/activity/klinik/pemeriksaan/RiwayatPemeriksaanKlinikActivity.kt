@@ -6,11 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.adapter.klinik.pemeriksaan.RiwayatPemeriksaanKlinikAdapter
 import id.calvintd.klinikkita.itemmodel.database.Dokter
 import id.calvintd.klinikkita.itemmodel.database.Pemeriksaan
+import id.calvintd.klinikkita.itemmodel.database.Pendaftaran
 import id.calvintd.klinikkita.itemmodel.internal.PemeriksaanInternal
 import id.calvintd.klinikkita.presenter.klinik.pemeriksaan.RiwayatPemeriksaanKlinikPresenter
 import id.calvintd.klinikkita.view.RiwayatPemeriksaanView
@@ -56,7 +58,7 @@ class RiwayatPemeriksaanKlinikActivity : AppCompatActivity(),
                     waktu = pairPemeriksaan[i].second.waktu,
                     diagnosis = pairPemeriksaan[i].second.diagnosis,
                     pengobatan = pairPemeriksaan[i].second.pengobatan,
-                    idPendaftaran = null,
+                    idPendaftaran = pairPemeriksaan[i].second.idPendaftaran,
                     keluhan = null,
                     idPasien = null,
                     namaPasien = null,
@@ -76,11 +78,13 @@ class RiwayatPemeriksaanKlinikActivity : AppCompatActivity(),
         rvPemeriksaanKlinik.visibility = View.GONE
     }
 
-    override fun olahDataPendaftaran(pairPendaftaran: List<Pair<String, String>>) {
+    override fun olahDataPendaftaran(pairPendaftaran: List<Pair<String, Pendaftaran>>) {
         for (i in listPemeriksaanKlinik.indices) {
             for (j in pairPendaftaran.indices) {
                 if (listPemeriksaanKlinik[i].idPendaftaran.equals(pairPendaftaran[j].first)) {
-                    listPemeriksaanKlinik[i].keluhan = pairPendaftaran[j].second
+                    listPemeriksaanKlinik[i].idPasien = pairPendaftaran[j].second.idPasien
+                    listPemeriksaanKlinik[i].idDokter = pairPendaftaran[j].second.idDokter
+                    listPemeriksaanKlinik[i].keluhan = pairPendaftaran[j].second.keluhan
                     break
                 }
             }
@@ -132,6 +136,8 @@ class RiwayatPemeriksaanKlinikActivity : AppCompatActivity(),
 
         txtPemeriksaanKosong.visibility = View.GONE
         rvPemeriksaanKlinik.visibility = View.VISIBLE
+
+        rvPemeriksaanKlinik.layoutManager = LinearLayoutManager(this)
         rvPemeriksaanKlinik.adapter = RiwayatPemeriksaanKlinikAdapter(listPemeriksaanKlinik)
     }
 }

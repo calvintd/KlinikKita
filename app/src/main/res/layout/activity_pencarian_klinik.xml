@@ -58,7 +58,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtPencarianKlinikKosong" />
+                app:layout_constraintTop_toBottomOf="@id/txtPencarianKlinikKosong"
+                tools:listitem="@layout/item_pasien_pencarian_klinik" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
