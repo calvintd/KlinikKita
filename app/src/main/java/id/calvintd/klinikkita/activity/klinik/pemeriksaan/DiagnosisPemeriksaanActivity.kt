@@ -57,7 +57,7 @@ class DiagnosisPemeriksaanActivity : AppCompatActivity(), DiagnosisPemeriksaanVi
         idPendaftaran = pendaftaran?.idPendaftaran.toString()
 
         btnKonfirmasi.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
+            AlertDialog.Builder(this)
                 .setTitle(resources.getString(R.string.clinic_appointments_list_diagnosis_confirmation_header))
                 .setMessage(resources.getString(R.string.clinic_appointments_list_diagnosis_confirmation_message))
                 .setPositiveButton(resources.getString(R.string.key_yes)) { _, _ ->

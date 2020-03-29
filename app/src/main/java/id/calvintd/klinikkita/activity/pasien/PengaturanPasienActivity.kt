@@ -30,6 +30,9 @@ class PengaturanPasienActivity : AppCompatActivity(), PengaturanView {
 
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var defaultKey: String
+    private lateinit var idPasien: String
+
+    private val presenter = PengaturanPasienPresenter(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,11 +41,11 @@ class PengaturanPasienActivity : AppCompatActivity(), PengaturanView {
         sharedPreferences = getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
         defaultKey = resources.getString(R.string.shared_pref_key_default)
 
-        txtNamaLengkap = findViewById(R.id.txtNamaLengkapPengaturanPasien)
-        txtNamaPanggilan = findViewById(R.id.txtNamaPanggilanPengaturanPasien)
-        txtAlamat = findViewById(R.id.txtAlamatPengaturanPasien)
-        txtKota = findViewById(R.id.txtKotaPengaturanPasien)
-        txtNomorHP = findViewById(R.id.txtNomorHPPengaturanPasien)
+        txtNamaLengkap = findViewById(R.id.txtIsiNamaLengkapPengaturanPasien)
+        txtNamaPanggilan = findViewById(R.id.txtIsiNamaPanggilanPengaturanPasien)
+        txtAlamat = findViewById(R.id.txtIsiAlamatPengaturanPasien)
+        txtKota = findViewById(R.id.txtIsiKotaPengaturanPasien)
+        txtNomorHP = findViewById(R.id.txtIsiNomorHPPengaturanPasien)
         edtLama = findViewById(R.id.edtKataSandiLamaPengaturanPasien)
         txtSalahLama = findViewById(R.id.txtKesalahanKataSandiLamaPengaturanPasien)
         edtBaru = findViewById(R.id.edtKataSandiBaruPengaturanPasien)
@@ -51,10 +54,10 @@ class PengaturanPasienActivity : AppCompatActivity(), PengaturanView {
         txtSalahUlangBaru = findViewById(R.id.txtKesalahanUlangKataSandiBaruPengaturanPasien)
         btnUbah = findViewById(R.id.btnUbahKataSandiPasien)
 
-        val idPasien = sharedPreferences.getString(
+        idPasien = sharedPreferences.getString(
             resources.getString(R.string.shared_pref_patient_key),
             defaultKey
-        )
+        ).toString()
 
         txtNamaLengkap.text = sharedPreferences.getString(
             resources.getString(R.string.shared_pref_patient_full_name),
@@ -77,24 +80,27 @@ class PengaturanPasienActivity : AppCompatActivity(), PengaturanView {
             defaultKey
         )
 
-        val presenter = PengaturanPasienPresenter(this)
-
         btnUbah.setOnClickListener {
             val kataSandiLama = edtLama.text.toString()
             val kataSandiBaru = edtBaru.text.toString()
             val kataSandiUlangBaru = edtUlangBaru.text.toString()
 
-            val builder = AlertDialog.Builder(this)
-                .setTitle(resources.getString(R.string.settings_change_password_dialog_title))
-                .setMessage(resources.getString(R.string.settings_change_password_dialog_message))
-                .setPositiveButton(resources.getString(R.string.key_yes)) { _, _ ->
-                    idPasien?.let { it1 -> presenter.ubahPassword(it1, kataSandiLama, kataSandiBaru, kataSandiUlangBaru) }
-                }
-                .setNegativeButton(resources.getString(R.string.key_no)) { _, _ ->
-
-                }
-                .show()
+            presenter.verifikasi(idPasien, kataSandiLama, kataSandiBaru, kataSandiUlangBaru)
         }
+    }
+
+    override fun konfirmasi(kataSandiBaru: String) {
+        AlertDialog.Builder(this)
+            .setTitle(resources.getString(R.string.settings_change_password_dialog_title))
+            .setMessage(resources.getString(R.string.settings_change_password_dialog_message))
+            .setPositiveButton(resources.getString(R.string.key_yes)) { _, _ ->
+                presenter.ubahPassword(idPasien, kataSandiBaru)
+            }
+            .setNegativeButton(resources.getString(R.string.key_no)) { _, _ ->
+
+            }
+            .show()
+
     }
 
     override fun ubahKataSandi(kataSandiBaru: String) {

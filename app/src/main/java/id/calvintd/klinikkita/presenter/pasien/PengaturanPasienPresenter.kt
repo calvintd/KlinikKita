@@ -10,7 +10,12 @@ class PengaturanPasienPresenter(private val pengaturanView: PengaturanView) {
     private val reference = FirebaseDatabase.getInstance().reference
     private val pasienRef = reference.child("pasien")
 
-    fun ubahPassword (idPasien: String, kataSandiLama: String, kataSandiBaru: String, kataSandiUlangBaru: String) {
+    fun verifikasi(
+        idPasien: String,
+        kataSandiLama: String,
+        kataSandiBaru: String,
+        kataSandiUlangBaru: String
+    ) {
         var terisi = true
         var terulang = true
 
@@ -34,10 +39,11 @@ class PengaturanPasienPresenter(private val pengaturanView: PengaturanView) {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     for (snapshot in dataSnapshot.children) {
                         if (snapshot.key.equals(idPasien)) {
-                            if (snapshot.child("password").getValue(String::class.java).equals(kataSandiLama)) {
-                                pasienRef.child(idPasien).child("password").setValue(kataSandiBaru)
+                            if (snapshot.child("password").getValue(String::class.java)
+                                    .equals(kataSandiLama)
+                            ) {
                                 pengaturanView.cekPasswordLama(true)
-                                pengaturanView.ubahKataSandi(kataSandiBaru)
+                                pengaturanView.konfirmasi(kataSandiBaru)
                             } else {
                                 pengaturanView.cekPasswordLama(false)
                             }
@@ -47,5 +53,22 @@ class PengaturanPasienPresenter(private val pengaturanView: PengaturanView) {
                 }
             })
         }
+    }
+
+    fun ubahPassword(idPasien: String, kataSandiBaru: String) {
+        pasienRef.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (snapshot in dataSnapshot.children) {
+                    if (snapshot.key.equals(idPasien)) {
+                        pasienRef.child(idPasien).child("password").setValue(kataSandiBaru)
+                        pengaturanView.ubahKataSandi(kataSandiBaru)
+                    }
+                }
+            }
+        })
     }
 }

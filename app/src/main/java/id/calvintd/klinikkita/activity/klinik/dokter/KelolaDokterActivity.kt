@@ -73,7 +73,7 @@ class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
                         .putExtra(resources.getString(R.string.parcelable_doctor), dokter)
                 )
             }, { key: String ->
-                val builder = AlertDialog.Builder(this)
+                AlertDialog.Builder(this)
                     .setTitle(resources.getString(R.string.clinic_manage_doctors_delete_doctor_header))
                     .setMessage(resources.getString(R.string.clinic_manage_doctors_delete_doctor_message))
                     .setPositiveButton(resources.getString(R.string.key_yes)) { _, _ ->

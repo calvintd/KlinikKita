@@ -1,6 +1,7 @@
 package id.calvintd.klinikkita.view
 
 interface PengaturanView {
+    fun konfirmasi(kataSandiBaru: String)
     fun ubahKataSandi(kataSandiBaru: String)
     fun cekKolomPasswordLama()
     fun cekKolomPasswordBaru()

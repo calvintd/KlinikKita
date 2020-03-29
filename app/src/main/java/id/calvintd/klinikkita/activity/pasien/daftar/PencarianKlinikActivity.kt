@@ -24,7 +24,7 @@ class PencarianKlinikActivity : AppCompatActivity(), PencarianKlinikView {
         setContentView(R.layout.activity_pencarian_klinik)
 
         txtKosong = findViewById(R.id.txtPencarianKlinikKosong)
-        rvKlinik = findViewById(R.id.rvPencarianDokter)
+        rvKlinik = findViewById(R.id.rvPencarianKlinik)
 
         presenter.cekDokter()
     }

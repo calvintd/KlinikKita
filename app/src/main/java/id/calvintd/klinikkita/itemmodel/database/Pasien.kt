@@ -8,4 +8,11 @@ import kotlinx.android.parcel.Parcelize
 @Keep
 @IgnoreExtraProperties
 @Parcelize
-data class Pasien(var namaLengkap: String, var namaPanggilan: String, var alamat: String, var kota: String, var nomorHP: String, var password: String): Parcelable
+data class Pasien(
+    var namaLengkap: String = "",
+    var namaPanggilan: String = "",
+    var alamat: String = "",
+    var kota: String = "",
+    var nomorHP: String = "",
+    var password: String = ""
+) : Parcelable
