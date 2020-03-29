@@ -36,7 +36,8 @@ class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kelola_dokter)
 
-        sharedPreferences = getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
+        sharedPreferences =
+            getSharedPreferences(getString(R.string.key_shared_pref), Context.MODE_PRIVATE)
         defaultKey = resources.getString(R.string.shared_pref_key_default)
 
         imgTambahDokter = findViewById(R.id.imgTambahDokter)
@@ -54,7 +55,10 @@ class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
             defaultKey
         )
 
-        idKlinik?.let { presenter.cekDokterKlinik(it) }
+        idKlinik?.let {
+            txtDaftarDokterKosong.visibility = View.GONE
+            presenter.cekDokterKlinik(it)
+        }
     }
 
     override fun daftarDokterKosong() {
@@ -63,7 +67,6 @@ class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
     }
 
     override fun isiDaftarDokter(listKeyDokter: List<String>, listDokter: List<Dokter>) {
-        txtDaftarDokterKosong.visibility = View.GONE
         rvDaftarDokter.visibility = View.VISIBLE
         rvDaftarDokter.adapter =
             KelolaDokterAdapter(listKeyDokter, listDokter, { key: String, dokter: Dokter ->

@@ -26,7 +26,7 @@ class DiagnosisPemeriksaanActivity : AppCompatActivity(), DiagnosisPemeriksaanVi
     private lateinit var txtPengobatanKosong: TextView
     private lateinit var btnKonfirmasi: Button
 
-    private val bundle: Bundle? = intent.extras
+    private var bundle: Bundle? = null
     private var pendaftaran: PendaftaranKlinikInternal? = null
     private lateinit var idPendaftaran: String
 
@@ -43,6 +43,8 @@ class DiagnosisPemeriksaanActivity : AppCompatActivity(), DiagnosisPemeriksaanVi
         edtPengobatan = findViewById(R.id.edtPengobatanDiagnosisPemeriksaan)
         txtPengobatanKosong = findViewById(R.id.txtPengobatanDiagnosisPemeriksaanKosong)
         btnKonfirmasi = findViewById(R.id.btnKonfirmasiDiagnosisPemeriksaan)
+
+        bundle = intent.extras
 
         pendaftaran =
             bundle?.getParcelable(resources.getString(R.string.parcelable_internal_clinic_registration))

@@ -21,7 +21,7 @@ class UbahDataDokterActivity : AppCompatActivity(), UbahDataDokterView {
     private lateinit var txtKesalahanDeskripsi: TextView
     private lateinit var btnUbahData: Button
 
-    private val bundle: Bundle? = intent.extras
+    private var bundle: Bundle? = null
     private lateinit var key: String
     private var dokter: Dokter? = null
 
@@ -44,6 +44,8 @@ class UbahDataDokterActivity : AppCompatActivity(), UbahDataDokterView {
 
         val presenter = UbahDataDokterPresenter(this)
 
+        bundle = intent.extras
+
         bundle?.apply {
             key = getString(resources.getString(R.string.extras_key)).toString()
             dokter = getParcelable(resources.getString(R.string.parcelable_doctor))
@@ -56,7 +58,7 @@ class UbahDataDokterActivity : AppCompatActivity(), UbahDataDokterView {
             val nama = edtNama.text.toString()
             val deskripsi = edtDeskripsi.text.toString()
             val idKlinik = dokter?.idKlinik
-            if (idKlinik != null) presenter.ubahDataDokter(key, Dokter(nama, idKlinik, deskripsi))
+            if (idKlinik != null) presenter.ubahDataDokter(key, Dokter(idKlinik, nama, deskripsi))
         }
     }
 

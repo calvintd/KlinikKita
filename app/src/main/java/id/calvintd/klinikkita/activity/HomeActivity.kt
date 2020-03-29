@@ -3,9 +3,9 @@ package id.calvintd.klinikkita.activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.activity.klinik.BerandaKlinikActivity
 import id.calvintd.klinikkita.activity.klinik.LoginKlinikActivity
@@ -36,8 +36,8 @@ class HomeActivity : AppCompatActivity() {
         ) {
             startActivity(
                 Intent(this, BerandaPasienActivity::class.java)
-                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             )
+            finish()
         } else if (sharedPreferences.getString(
                 resources.getString(R.string.shared_pref_clinic_key),
                 defaultKey
@@ -45,8 +45,8 @@ class HomeActivity : AppCompatActivity() {
         ) {
             startActivity(
                 Intent(this, BerandaKlinikActivity::class.java)
-                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             )
+            finish()
         }
 
         imgPasien.setOnClickListener {

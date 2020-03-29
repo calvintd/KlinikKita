@@ -14,7 +14,7 @@ import id.calvintd.klinikkita.view.pasien.daftar.PencarianDokterView
 class PencarianDokterActivity : AppCompatActivity(), PencarianDokterView {
     private lateinit var rvDokter: RecyclerView
 
-    private val bundle: Bundle? = intent.extras
+    private var bundle: Bundle? = null
     private lateinit var keyKlinik: String
     private lateinit var namaKlinik: String
 
@@ -23,6 +23,8 @@ class PencarianDokterActivity : AppCompatActivity(), PencarianDokterView {
         setContentView(R.layout.activity_pencarian_dokter)
 
         rvDokter = findViewById(R.id.rvPencarianDokter)
+
+        bundle = intent.extras
 
         keyKlinik = bundle?.getString(resources.getString(R.string.extras_key_clinic)).toString()
         namaKlinik = bundle?.getString(resources.getString(R.string.extras_name_clinic)).toString()

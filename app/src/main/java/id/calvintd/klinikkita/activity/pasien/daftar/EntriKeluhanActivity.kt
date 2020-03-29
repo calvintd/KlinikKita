@@ -25,7 +25,7 @@ class EntriKeluhanActivity : AppCompatActivity(), EntriKeluhanView {
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var defaultKey: String
 
-    private val bundle: Bundle? = intent.extras
+    private var bundle: Bundle? = null
     private lateinit var namaKlinik: String
     private lateinit var keyDokter: String
     private lateinit var namaDokter: String
@@ -42,6 +42,8 @@ class EntriKeluhanActivity : AppCompatActivity(), EntriKeluhanView {
         edtKeluhan = findViewById(R.id.edtKeluhanEntriKeluhan)
         txtKesalahanKeluhan = findViewById(R.id.txtKesalahanKeluhanEntriKeluhan)
         btnDaftar = findViewById(R.id.btnDaftarPemeriksaan)
+
+        bundle = intent.extras
 
         namaKlinik = bundle?.getString(resources.getString(R.string.extras_name_clinic)).toString()
         keyDokter = bundle?.getString(resources.getString(R.string.extras_key_doctor)).toString()

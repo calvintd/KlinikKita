@@ -66,7 +66,7 @@ class LoginKlinikActivity : AppCompatActivity(),
         txtKesalahan.visibility = View.GONE
         sharedPrefEditor.putString(resources.getString(R.string.shared_pref_clinic_key), key)
             .putString(resources.getString(R.string.shared_pref_clinic_name), dataKlinik.namaKlinik)
-            .putString(resources.getString(R.string.shared_pref_patient_address), dataKlinik.alamat)
+            .putString(resources.getString(R.string.shared_pref_clinic_address), dataKlinik.alamat)
             .putString(resources.getString(R.string.shared_pref_clinic_city), dataKlinik.kota)
             .putString(
                 resources.getString(R.string.shared_pref_clinic_phone_number),

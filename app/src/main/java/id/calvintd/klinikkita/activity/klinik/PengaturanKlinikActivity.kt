@@ -74,6 +74,10 @@ class PengaturanKlinikActivity : AppCompatActivity(), PengaturanView {
             defaultKey
         )
 
+        txtSalahLama.visibility = View.GONE
+        txtSalahBaru.visibility = View.GONE
+        txtSalahUlangBaru.visibility = View.GONE
+
         btnUbah.setOnClickListener {
             val kataSandiLama = edtLama.text.toString()
             val kataSandiBaru = edtBaru.text.toString()
