@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.activity.klinik.BerandaKlinikActivity
 import id.calvintd.klinikkita.presenter.pasien.daftar.EntriKeluhanPresenter
@@ -60,7 +61,20 @@ class EntriKeluhanActivity : AppCompatActivity(), EntriKeluhanView {
 
         btnDaftar.setOnClickListener {
             if (idPasien != null) {
-                presenter.entriKeluhan(idPasien, keyDokter, edtKeluhan.text.toString())
+                if (edtKeluhan.text.isEmpty()) {
+                    keluhanKosong()
+                } else {
+                    AlertDialog.Builder(this)
+                        .setTitle(resources.getString(R.string.patient_appointments_registration_details_message_title))
+                        .setMessage(resources.getString(R.string.patient_appointments_registration_details_message))
+                        .setPositiveButton(resources.getString(R.string.key_yes)) { _, _ ->
+                            presenter.entriKeluhan(idPasien, keyDokter, edtKeluhan.text.toString())
+                        }
+                        .setNegativeButton(resources.getString(R.string.key_no)) { _, _ ->
+
+                        }
+                        .show()
+                }
             }
         }
     }

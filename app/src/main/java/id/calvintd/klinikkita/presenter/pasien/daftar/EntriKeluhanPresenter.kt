@@ -9,15 +9,11 @@ class EntriKeluhanPresenter(private val entriKeluhanView: EntriKeluhanView) {
     private val pendaftaranRef = reference.child("pendaftaran")
 
     fun entriKeluhan(idPasien: String, idDokter: String, keluhan: String) {
-        if (keluhan.isEmpty()) {
-            entriKeluhanView.keluhanKosong()
-        } else {
-            val pendaftaran = Pendaftaran(idPasien, idDokter, keluhan, 0)
-            val key = pendaftaranRef.push().key
-            key?.let {
-                pendaftaranRef.child(it).setValue(pendaftaran)
-                entriKeluhanView.entriKeluhan()
-            }
+        val pendaftaran = Pendaftaran(idPasien, idDokter, keluhan, 0)
+        val key = pendaftaranRef.push().key
+        key?.let {
+            pendaftaranRef.child(it).setValue(pendaftaran)
+            entriKeluhanView.entriKeluhan()
         }
     }
 }

@@ -73,7 +73,7 @@
     <string name="patient_appointments_registration_details_complaints_example">Contoh: Asam lambung naik, pusing, mual-mual</string>
     <string name="patient_appointments_registration_details_complaints_empty">Keluhan harus diisi!</string>
     <string name="patient_appointments_registration_details_button">Daftar Pemeriksaan</string>
-    <string name="patient_appointments_registration_details_message_header">Konfirmasi</string>
+    <string name="patient_appointments_registration_details_message_title">Konfirmasi</string>
     <string name="patient_appointments_registration_details_message">Apakah Anda yakin ingin mendaftarkan diri?</string>
     <string name="patient_appointments_registration_details_registered_toast">Pendaftaran sukses! Silakan cek status pendaftaran pada halaman yang bersangkutan.</string>
 
