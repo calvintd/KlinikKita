@@ -1,4 +1,4 @@
-package id.calvintd.klinikkita.presenter.pendaftaran
+package id.calvintd.klinikkita.presenter.klinik
 
 import android.widget.TextView
 import com.google.firebase.database.DataSnapshot
@@ -7,6 +7,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import id.calvintd.klinikkita.itemmodel.database.Klinik
 import id.calvintd.klinikkita.itemmodel.internal.Kolom
+import id.calvintd.klinikkita.presenter.PendaftaranPresenter
 import id.calvintd.klinikkita.view.PendaftaranView
 
 class DaftarKlinikPresenter(
@@ -48,7 +49,7 @@ class DaftarKlinikPresenter(
 
                 reference.addListenerForSingleValueEvent(object : ValueEventListener {
                     override fun onCancelled(p0: DatabaseError) {
-                        TODO("Not yet implemented")
+                        pendaftaranView.error()
                     }
 
                     override fun onDataChange(dataSnapshot: DataSnapshot) {

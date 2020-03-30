@@ -34,7 +34,7 @@ class DiagnosisPemeriksaanPresenter(private val diagnosisPemeriksaanView: Diagno
     fun ubahStatus(idPendaftaran: String) {
         pendaftaranRef.addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                diagnosisPemeriksaanView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {

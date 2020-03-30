@@ -14,6 +14,7 @@ import id.calvintd.klinikkita.activity.klinik.BerandaKlinikActivity
 import id.calvintd.klinikkita.itemmodel.database.Pemeriksaan
 import id.calvintd.klinikkita.itemmodel.internal.PendaftaranKlinikInternal
 import id.calvintd.klinikkita.presenter.klinik.pemeriksaan.DiagnosisPemeriksaanPresenter
+import id.calvintd.klinikkita.util.DialogUtil
 import id.calvintd.klinikkita.view.klinik.pemeriksaan.DiagnosisPemeriksaanView
 
 class DiagnosisPemeriksaanActivity : AppCompatActivity(), DiagnosisPemeriksaanView {
@@ -102,5 +103,9 @@ class DiagnosisPemeriksaanActivity : AppCompatActivity(), DiagnosisPemeriksaanVi
         Toast.makeText(this, R.string.clinic_appointments_list_diagnosis_confirmed_toast, Toast.LENGTH_LONG).show()
         startActivity(Intent(this, BerandaKlinikActivity::class.java)
             .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+    }
+
+    override fun error() {
+        DialogUtil.errorDialog(this, resources).show()
     }
 }

@@ -4,7 +4,7 @@ import id.calvintd.klinikkita.itemmodel.database.Dokter
 import id.calvintd.klinikkita.itemmodel.database.Pemeriksaan
 import id.calvintd.klinikkita.itemmodel.database.Pendaftaran
 
-interface RiwayatPemeriksaanView {
+interface RiwayatPemeriksaanView : ErrorView {
     fun cekPemeriksaan(pairPemeriksaan: List<Pair<String, Pemeriksaan>>)
     fun pemeriksaanKosong()
     fun olahDataPendaftaran(pairPendaftaran: List<Pair<String, Pendaftaran>>)

@@ -12,6 +12,7 @@ import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.adapter.pasien.daftar.PencarianKlinikAdapter
 import id.calvintd.klinikkita.itemmodel.database.Klinik
 import id.calvintd.klinikkita.presenter.pasien.daftar.PencarianKlinikPresenter
+import id.calvintd.klinikkita.util.DialogUtil
 import id.calvintd.klinikkita.view.pasien.daftar.PencarianKlinikView
 
 class PencarianKlinikActivity : AppCompatActivity(), PencarianKlinikView {
@@ -65,5 +66,9 @@ class PencarianKlinikActivity : AppCompatActivity(), PencarianKlinikView {
                         .putExtra(resources.getString(R.string.extras_name_clinic), namaKlinik)
                 )
             }
+    }
+
+    override fun error() {
+        DialogUtil.errorDialog(this, resources).show()
     }
 }

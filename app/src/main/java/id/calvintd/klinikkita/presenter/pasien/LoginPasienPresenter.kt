@@ -1,4 +1,4 @@
-package id.calvintd.klinikkita.presenter.login
+package id.calvintd.klinikkita.presenter.pasien
 
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -17,7 +17,7 @@ class LoginPasienPresenter(private val loginPasienView: LoginPasienView) {
         } else {
             pasienRef.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onCancelled(p0: DatabaseError) {
-                    TODO("Not yet implemented")
+                    loginPasienView.error()
                 }
 
                 override fun onDataChange(dataSnapshot: DataSnapshot) {

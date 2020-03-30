@@ -19,7 +19,7 @@ class KelolaPendaftaranPresenter(private val kelolaPendaftaranView: KelolaPendaf
     fun cekPendaftaran() {
         pendaftaranRef.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                kelolaPendaftaranView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -56,7 +56,7 @@ class KelolaPendaftaranPresenter(private val kelolaPendaftaranView: KelolaPendaf
     fun ambilDataPasien() {
         pasienRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                kelolaPendaftaranView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -77,7 +77,7 @@ class KelolaPendaftaranPresenter(private val kelolaPendaftaranView: KelolaPendaf
     fun ambilDataDokter() {
         dokterRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                kelolaPendaftaranView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -98,7 +98,7 @@ class KelolaPendaftaranPresenter(private val kelolaPendaftaranView: KelolaPendaf
     fun ambilDataKlinik() {
         klinikRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                kelolaPendaftaranView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -119,7 +119,7 @@ class KelolaPendaftaranPresenter(private val kelolaPendaftaranView: KelolaPendaf
     fun tidakHadirPendaftaran(idPendaftaran: String) {
         pendaftaranRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                kelolaPendaftaranView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {

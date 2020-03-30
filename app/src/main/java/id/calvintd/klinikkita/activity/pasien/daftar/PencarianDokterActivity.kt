@@ -12,6 +12,7 @@ import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.adapter.pasien.daftar.PencarianDokterAdapter
 import id.calvintd.klinikkita.itemmodel.database.Dokter
 import id.calvintd.klinikkita.presenter.pasien.daftar.PencarianDokterPresenter
+import id.calvintd.klinikkita.util.DialogUtil
 import id.calvintd.klinikkita.view.pasien.daftar.PencarianDokterView
 
 class PencarianDokterActivity : AppCompatActivity(), PencarianDokterView {
@@ -58,5 +59,9 @@ class PencarianDokterActivity : AppCompatActivity(), PencarianDokterView {
                 .putExtra(resources.getString(R.string.extras_key_doctor), key)
                 .putExtra(resources.getString(R.string.extras_name_doctor), namaDokter))
         }
+    }
+
+    override fun error() {
+        DialogUtil.errorDialog(this, resources).show()
     }
 }

@@ -2,7 +2,7 @@ package id.calvintd.klinikkita.view
 
 import android.widget.TextView
 
-interface PendaftaranView {
+interface PendaftaranView : ErrorView {
     fun kolomKosong(teksKesalahan: TextView, teks: String)
     fun nomorHPSalahFormat(teksKesalahan: TextView)
     fun nomorHPTerlaluPendek(teksKesalahan: TextView)

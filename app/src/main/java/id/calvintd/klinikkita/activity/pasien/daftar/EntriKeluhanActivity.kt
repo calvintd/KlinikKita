@@ -14,6 +14,7 @@ import androidx.appcompat.app.AlertDialog
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.activity.klinik.BerandaKlinikActivity
 import id.calvintd.klinikkita.presenter.pasien.daftar.EntriKeluhanPresenter
+import id.calvintd.klinikkita.util.DialogUtil
 import id.calvintd.klinikkita.view.pasien.daftar.EntriKeluhanView
 
 class EntriKeluhanActivity : AppCompatActivity(), EntriKeluhanView {
@@ -88,5 +89,9 @@ class EntriKeluhanActivity : AppCompatActivity(), EntriKeluhanView {
 
     override fun keluhanKosong() {
         txtKesalahanKeluhan.visibility = View.VISIBLE
+    }
+
+    override fun error() {
+        DialogUtil.errorDialog(this, resources).show()
     }
 }

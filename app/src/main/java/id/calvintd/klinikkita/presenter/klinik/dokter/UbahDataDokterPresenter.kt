@@ -24,7 +24,7 @@ class UbahDataDokterPresenter(private val ubahDataDokterView: UbahDataDokterView
         if (terisi) {
             dokterRef.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onCancelled(p0: DatabaseError) {
-                    TODO("Not yet implemented")
+                    ubahDataDokterView.error()
                 }
 
                 override fun onDataChange(dataSnapshot: DataSnapshot) {

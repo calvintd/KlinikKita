@@ -1,4 +1,4 @@
-package id.calvintd.klinikkita.activity.pendaftaran
+package id.calvintd.klinikkita.activity.klinik
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -14,7 +14,8 @@ import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.activity.HomeActivity
 import id.calvintd.klinikkita.itemmodel.database.Klinik
 import id.calvintd.klinikkita.itemmodel.internal.Kolom
-import id.calvintd.klinikkita.presenter.pendaftaran.DaftarKlinikPresenter
+import id.calvintd.klinikkita.presenter.klinik.DaftarKlinikPresenter
+import id.calvintd.klinikkita.util.DialogUtil
 import id.calvintd.klinikkita.view.PendaftaranView
 
 class PendaftaranKlinikActivity : AppCompatActivity(), PendaftaranView {
@@ -167,6 +168,10 @@ class PendaftaranKlinikActivity : AppCompatActivity(), PendaftaranView {
 
     override fun sembunyikanTeksKesalahan(teksKesalahan: TextView) {
         teksKesalahan.visibility = View.GONE
+    }
+
+    override fun error() {
+        DialogUtil.errorDialog(this, resources).show()
     }
 
     override fun pendaftaranSukses() {

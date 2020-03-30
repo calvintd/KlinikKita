@@ -20,7 +20,7 @@ class RiwayatPemeriksaanKlinikPresenter(private val riwayatPemeriksaanView: Riwa
     fun cekPemeriksaan() {
         pemeriksaanRef.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                riwayatPemeriksaanView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -54,7 +54,7 @@ class RiwayatPemeriksaanKlinikPresenter(private val riwayatPemeriksaanView: Riwa
     fun ambilDataPendaftaran() {
         pendaftaranRef.addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                riwayatPemeriksaanView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -82,7 +82,7 @@ class RiwayatPemeriksaanKlinikPresenter(private val riwayatPemeriksaanView: Riwa
     fun ambilDataPasien() {
         pasienRef.addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                riwayatPemeriksaanView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -103,7 +103,7 @@ class RiwayatPemeriksaanKlinikPresenter(private val riwayatPemeriksaanView: Riwa
     fun ambilDataDokter() {
         dokterRef.addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                riwayatPemeriksaanView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -124,7 +124,7 @@ class RiwayatPemeriksaanKlinikPresenter(private val riwayatPemeriksaanView: Riwa
     fun ambilDataKlinik() {
         klinikRef.addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                riwayatPemeriksaanView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {

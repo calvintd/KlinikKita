@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.itemmodel.internal.PemeriksaanInternal
-import id.calvintd.klinikkita.util.DateTimeConverter
+import id.calvintd.klinikkita.util.KonversiWaktu
 
 class RiwayatPemeriksaanPasienAdapter(private val listPemeriksaanPasien: List<PemeriksaanInternal>) :
     RecyclerView.Adapter<RiwayatPemeriksaanPasienAdapter.PemeriksaanViewHolder>() {
@@ -38,7 +38,7 @@ class RiwayatPemeriksaanPasienAdapter(private val listPemeriksaanPasien: List<Pe
         }
 
         fun bind(pemeriksaan: PemeriksaanInternal) {
-            txtIsiWaktu?.text = pemeriksaan.waktu?.let { DateTimeConverter.konversi(it) }
+            txtIsiWaktu?.text = pemeriksaan.waktu?.let { KonversiWaktu.konversi(it) }
             txtNamaKlinik?.text = pemeriksaan.namaKlinik
             txtNamaDokter?.text = pemeriksaan.namaDokter
             txtIsiKeluhan?.text = pemeriksaan.keluhan

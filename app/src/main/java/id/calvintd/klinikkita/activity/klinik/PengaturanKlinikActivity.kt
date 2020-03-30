@@ -12,6 +12,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.presenter.klinik.PengaturanKlinikPresenter
+import id.calvintd.klinikkita.util.DialogUtil
+import id.calvintd.klinikkita.view.ErrorView
 import id.calvintd.klinikkita.view.PengaturanView
 
 class PengaturanKlinikActivity : AppCompatActivity(), PengaturanView {
@@ -144,5 +146,9 @@ class PengaturanKlinikActivity : AppCompatActivity(), PengaturanView {
                 teksKesalahan.visibility = View.GONE
             }
         }
+    }
+
+    override fun error() {
+        DialogUtil.errorDialog(this, resources).show()
     }
 }

@@ -1,5 +1,6 @@
 package id.calvintd.klinikkita.presenter.klinik.dokter
 
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import id.calvintd.klinikkita.itemmodel.database.Dokter
 import id.calvintd.klinikkita.view.klinik.dokter.TambahDokterView

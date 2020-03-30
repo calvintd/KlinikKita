@@ -12,6 +12,7 @@ import android.widget.Toast
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.itemmodel.database.Dokter
 import id.calvintd.klinikkita.presenter.klinik.dokter.TambahDokterPresenter
+import id.calvintd.klinikkita.util.DialogUtil
 import id.calvintd.klinikkita.view.klinik.dokter.TambahDokterView
 
 class TambahDokterActivity : AppCompatActivity(), TambahDokterView {
@@ -72,5 +73,9 @@ class TambahDokterActivity : AppCompatActivity(), TambahDokterView {
         } else {
             txtKesalahanDeskripsi.visibility = View.GONE
         }
+    }
+
+    override fun error() {
+        DialogUtil.errorDialog(this, resources).show()
     }
 }

@@ -15,7 +15,7 @@ class PencarianKlinikPresenter(private val pencarianKlinikView: PencarianKlinikV
     fun cekDokter() {
         dokterRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                pencarianKlinikView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -40,7 +40,7 @@ class PencarianKlinikPresenter(private val pencarianKlinikView: PencarianKlinikV
     fun cekKlinik(keyDokterList: List<String>) {
         klinikRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                pencarianKlinikView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {

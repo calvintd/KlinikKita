@@ -33,7 +33,7 @@ class PengaturanPasienPresenter(private val pengaturanView: PengaturanView) {
         if (terisi && terulang) {
             pasienRef.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onCancelled(p0: DatabaseError) {
-                    TODO("Not yet implemented")
+                    pengaturanView.error()
                 }
 
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -58,7 +58,7 @@ class PengaturanPasienPresenter(private val pengaturanView: PengaturanView) {
     fun ubahPassword(idPasien: String, kataSandiBaru: String) {
         pasienRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                pengaturanView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {

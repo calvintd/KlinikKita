@@ -18,6 +18,7 @@ import id.calvintd.klinikkita.itemmodel.database.Dokter
 import id.calvintd.klinikkita.itemmodel.database.Pendaftaran
 import id.calvintd.klinikkita.itemmodel.internal.PendaftaranKlinikInternal
 import id.calvintd.klinikkita.presenter.klinik.pemeriksaan.KelolaPendaftaranPresenter
+import id.calvintd.klinikkita.util.DialogUtil
 import id.calvintd.klinikkita.view.klinik.pemeriksaan.KelolaPendaftaranView
 
 class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
@@ -163,5 +164,9 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
             R.string.clinic_appointments_list_pending_no_show_marked_toast,
             Toast.LENGTH_LONG
         ).show()
+    }
+
+    override fun error() {
+        DialogUtil.errorDialog(this, resources).show()
     }
 }

@@ -14,7 +14,7 @@ class KelolaDokterPresenter(private val kelolaDokterView: KelolaDokterView) {
     fun cekDokterKlinik(idKlinik: String) {
         dokterRef.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                kelolaDokterView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -41,7 +41,7 @@ class KelolaDokterPresenter(private val kelolaDokterView: KelolaDokterView) {
     fun hapusDokterKlinik(idDokter: String) {
         dokterRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                kelolaDokterView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {

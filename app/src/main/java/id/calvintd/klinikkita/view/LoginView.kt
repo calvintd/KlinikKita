@@ -1,6 +1,6 @@
 package id.calvintd.klinikkita.view
 
-interface LoginView {
+interface LoginView : ErrorView {
     fun kolomKosong()
     fun kolomSalah()
 }

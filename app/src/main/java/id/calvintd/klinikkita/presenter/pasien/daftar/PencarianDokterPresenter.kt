@@ -14,7 +14,7 @@ class PencarianDokterPresenter(private val pencarianDokterView: PencarianDokterV
     fun tampilDokter(idKlinik: String) {
         dokterRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
+                pencarianDokterView.error()
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {

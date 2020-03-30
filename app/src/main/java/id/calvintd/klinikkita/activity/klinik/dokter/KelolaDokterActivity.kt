@@ -17,6 +17,7 @@ import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.adapter.klinik.dokter.KelolaDokterAdapter
 import id.calvintd.klinikkita.itemmodel.database.Dokter
 import id.calvintd.klinikkita.presenter.klinik.dokter.KelolaDokterPresenter
+import id.calvintd.klinikkita.util.DialogUtil
 import id.calvintd.klinikkita.view.klinik.dokter.KelolaDokterView
 
 class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
@@ -103,5 +104,9 @@ class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
             R.string.clinic_manage_doctors_delete_doctor_deleted_toast,
             Toast.LENGTH_LONG
         ).show()
+    }
+
+    override fun error() {
+        DialogUtil.errorDialog(this, resources).show()
     }
 }

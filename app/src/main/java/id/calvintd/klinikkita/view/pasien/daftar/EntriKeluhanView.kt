@@ -1,6 +1,8 @@
 package id.calvintd.klinikkita.view.pasien.daftar
 
-interface EntriKeluhanView {
+import id.calvintd.klinikkita.view.ErrorView
+
+interface EntriKeluhanView : ErrorView {
     fun entriKeluhan()
     fun keluhanKosong()
 }

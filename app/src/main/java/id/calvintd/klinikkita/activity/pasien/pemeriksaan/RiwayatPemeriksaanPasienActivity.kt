@@ -16,6 +16,7 @@ import id.calvintd.klinikkita.itemmodel.database.Pemeriksaan
 import id.calvintd.klinikkita.itemmodel.database.Pendaftaran
 import id.calvintd.klinikkita.itemmodel.internal.PemeriksaanInternal
 import id.calvintd.klinikkita.presenter.pasien.pemeriksaan.RiwayatPemeriksaanPasienPresenter
+import id.calvintd.klinikkita.util.DialogUtil
 import id.calvintd.klinikkita.view.RiwayatPemeriksaanView
 
 class RiwayatPemeriksaanPasienActivity : AppCompatActivity(), RiwayatPemeriksaanView {
@@ -139,5 +140,9 @@ class RiwayatPemeriksaanPasienActivity : AppCompatActivity(), RiwayatPemeriksaan
 
         rvPemeriksaanPasien.layoutManager = LinearLayoutManager(this)
         rvPemeriksaanPasien.adapter = RiwayatPemeriksaanPasienAdapter(listPemeriksaanPasien)
+    }
+
+    override fun error() {
+        DialogUtil.errorDialog(this, resources).show()
     }
 }

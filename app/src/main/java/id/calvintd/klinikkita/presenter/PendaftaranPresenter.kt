@@ -1,10 +1,6 @@
-package id.calvintd.klinikkita.presenter.pendaftaran
+package id.calvintd.klinikkita.presenter
 
 import android.widget.TextView
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ValueEventListener
 import id.calvintd.klinikkita.itemmodel.internal.Kolom
 import id.calvintd.klinikkita.util.CekFormulirPendaftaran
 import id.calvintd.klinikkita.view.PendaftaranView

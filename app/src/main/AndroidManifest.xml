@@ -43,9 +43,9 @@
             android:screenOrientation="nosensor"/>
         <activity android:name=".activity.pasien.BerandaPasienActivity"
             android:screenOrientation="nosensor"/>
-        <activity android:name=".activity.pendaftaran.PendaftaranKlinikActivity"
+        <activity android:name=".activity.klinik.PendaftaranKlinikActivity"
             android:screenOrientation="nosensor"/>
-        <activity android:name=".activity.pendaftaran.PendaftaranPasienActivity"
+        <activity android:name=".activity.pasien.PendaftaranPasienActivity"
             android:screenOrientation="nosensor"/>
         <activity android:name=".activity.klinik.LoginKlinikActivity"
             android:screenOrientation="nosensor"/>

@@ -10,9 +10,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import id.calvintd.klinikkita.R
-import id.calvintd.klinikkita.activity.pendaftaran.PendaftaranPasienActivity
 import id.calvintd.klinikkita.itemmodel.database.Pasien
-import id.calvintd.klinikkita.presenter.login.LoginPasienPresenter
+import id.calvintd.klinikkita.presenter.pasien.LoginPasienPresenter
+import id.calvintd.klinikkita.util.DialogUtil
 import id.calvintd.klinikkita.view.pasien.LoginPasienView
 
 class LoginPasienActivity : AppCompatActivity(),
@@ -39,7 +39,8 @@ class LoginPasienActivity : AppCompatActivity(),
         btnMasuk = findViewById(R.id.btnLoginPasien)
         txtDaftar = findViewById(R.id.txtDaftarPasien)
 
-        val presenter = LoginPasienPresenter(this)
+        val presenter =
+            LoginPasienPresenter(this)
 
         btnMasuk.setOnClickListener {
             val nomorHP = edtNomorPonsel.text.toString()
@@ -87,5 +88,9 @@ class LoginPasienActivity : AppCompatActivity(),
             Intent(this, BerandaPasienActivity::class.java)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         )
+    }
+
+    override fun error() {
+        DialogUtil.errorDialog(this, resources).show()
     }
 }

@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import java.text.SimpleDateFormat
 import java.util.*
 
-object DateTimeConverter {
+object KonversiWaktu {
     const val utc = 7L
     @SuppressLint("SimpleDateFormat")
     private val formatter = SimpleDateFormat("EEEE, d MMMM YYYY, HH:mm")

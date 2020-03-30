@@ -1,6 +1,6 @@
 package id.calvintd.klinikkita.view
 
-interface PengaturanView {
+interface PengaturanView : ErrorView {
     fun konfirmasi(kataSandiBaru: String)
     fun ubahKataSandi(kataSandiBaru: String)
     fun cekKolomPasswordLama()

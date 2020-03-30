@@ -15,6 +15,7 @@ import id.calvintd.klinikkita.itemmodel.database.Dokter
 import id.calvintd.klinikkita.itemmodel.database.Pendaftaran
 import id.calvintd.klinikkita.itemmodel.internal.PendaftaranPasienInternal
 import id.calvintd.klinikkita.presenter.pasien.pemeriksaan.CekPendaftaranPresenter
+import id.calvintd.klinikkita.util.DialogUtil
 import id.calvintd.klinikkita.view.pasien.pemeriksaan.CekPendaftaranView
 import kotlinx.android.synthetic.main.activity_cek_pendaftaran_pasien.*
 
@@ -119,5 +120,9 @@ class CekPendaftaranActivity : AppCompatActivity(), CekPendaftaranView {
         rvCekPendaftaran.visibility = View.VISIBLE
         rvCekPendaftaran.layoutManager = LinearLayoutManager(this)
         rvCekPendaftaran.adapter = CekPendaftaranAdapter(listPendaftaranPasien)
+    }
+
+    override fun error() {
+        DialogUtil.errorDialog(this, resources).show()
     }
 }
