@@ -115,6 +115,8 @@ class CekPendaftaranActivity : AppCompatActivity(), CekPendaftaranView {
             }
         }
 
+        listPendaftaranPasien.reverse()
+
         progressBar.visibility = View.GONE
         txtDaftarKosong.visibility = View.GONE
         rvCekPendaftaran.visibility = View.VISIBLE

@@ -134,6 +134,8 @@ class RiwayatPemeriksaanPasienActivity : AppCompatActivity(), RiwayatPemeriksaan
             }
         }
 
+        listPemeriksaanPasien.reverse()
+
         progressBar.visibility = View.GONE
         txtPemeriksaanKosong.visibility = View.GONE
         rvPemeriksaanPasien.visibility = View.VISIBLE

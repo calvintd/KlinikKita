@@ -129,6 +129,8 @@ class KelolaPendaftaranActivity : AppCompatActivity(), KelolaPendaftaranView {
             }
         }
 
+        listPendaftaranKlinik.reverse()
+
         progressBar.visibility = View.GONE
         txtKosong.visibility = View.GONE
         rvPendaftaran.visibility = View.VISIBLE
