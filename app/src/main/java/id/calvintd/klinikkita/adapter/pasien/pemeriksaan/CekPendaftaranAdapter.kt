@@ -55,7 +55,7 @@ class CekPendaftaranAdapter(private val listPendaftaranPasien: List<PendaftaranP
                         txtIsiStatus?.text =
                             res.getString(R.string.patient_appointments_list_current_status_no_show)
                     } else {
-                        txtIsiStatus?.setTextColor(Color.GREEN)
+                        txtIsiStatus?.setTextColor(Color.parseColor("#0D4532"))
                         txtIsiStatus?.text =
                             res.getString(R.string.patient_appointments_list_current_status_show)
                     }
