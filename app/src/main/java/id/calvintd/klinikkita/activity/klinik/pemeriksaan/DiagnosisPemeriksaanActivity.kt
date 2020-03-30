@@ -63,7 +63,7 @@ class DiagnosisPemeriksaanActivity : AppCompatActivity(), DiagnosisPemeriksaanVi
 
         btnKonfirmasi.setOnClickListener {
             AlertDialog.Builder(this)
-                .setTitle(resources.getString(R.string.clinic_appointments_list_diagnosis_confirmation_header))
+                .setTitle(resources.getString(R.string.clinic_appointments_list_diagnosis_confirmation_title))
                 .setMessage(resources.getString(R.string.clinic_appointments_list_diagnosis_confirmation_message))
                 .setPositiveButton(resources.getString(R.string.key_yes)) { _, _ ->
                     pendaftaran?.let {

@@ -65,7 +65,7 @@ class EntriKeluhanActivity : AppCompatActivity(), EntriKeluhanView {
                     keluhanKosong()
                 } else {
                     AlertDialog.Builder(this)
-                        .setTitle(resources.getString(R.string.patient_appointments_registration_details_message_title))
+                        .setTitle(resources.getString(R.string.patient_appointments_registration_details_title))
                         .setMessage(resources.getString(R.string.patient_appointments_registration_details_message))
                         .setPositiveButton(resources.getString(R.string.key_yes)) { _, _ ->
                             presenter.entriKeluhan(idPasien, keyDokter, edtKeluhan.text.toString())

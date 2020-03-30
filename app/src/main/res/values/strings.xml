@@ -73,7 +73,7 @@
     <string name="patient_appointments_registration_details_complaints_example">Contoh: Asam lambung naik, pusing, mual-mual</string>
     <string name="patient_appointments_registration_details_complaints_empty">Keluhan harus diisi!</string>
     <string name="patient_appointments_registration_details_button">Daftar Pemeriksaan</string>
-    <string name="patient_appointments_registration_details_message_title">Konfirmasi</string>
+    <string name="patient_appointments_registration_details_title">Konfirmasi</string>
     <string name="patient_appointments_registration_details_message">Apakah Anda yakin ingin mendaftarkan diri?</string>
     <string name="patient_appointments_registration_details_registered_toast">Pendaftaran sukses! Silakan cek status pendaftaran pada halaman yang bersangkutan.</string>
 
@@ -135,7 +135,7 @@
         makan</string>
     <string name="clinic_appointments_list_diagnosis_treatment_empty">Pengobatan harus diisi!</string>
     <string name="clinic_appointments_list_diagnosis_confirmation_button">Konfirmasi</string>
-    <string name="clinic_appointments_list_diagnosis_confirmation_header">Konfirmasi Diagnosis</string>
+    <string name="clinic_appointments_list_diagnosis_confirmation_title">Konfirmasi Diagnosis</string>
     <string name="clinic_appointments_list_diagnosis_confirmation_message">Apakah Anda yakin dengan data diagnosis yang telah Anda isi?</string>
     <string name="clinic_appointments_list_diagnosis_confirmed_toast">Konfirmasi diagnosis sukses!</string>
 
@@ -158,7 +158,7 @@
     <string name="clinic_manage_doctors_add_doctor_added_toast">Dokter berhasil ditambahkan!</string>
     <string name="clinic_manage_doctors_edit_doctor_button">Ubah Data Dokter</string>
     <string name="clinic_manage_doctors_edit_doctor_edited_toast">Data dokter berhasil diubah!</string>
-    <string name="clinic_manage_doctors_delete_doctor_header">Hapus Dokter</string>
+    <string name="clinic_manage_doctors_delete_doctor_title">Hapus Dokter</string>
     <string name="clinic_manage_doctors_delete_doctor_message">Hapus dokter ini? Ini juga akan menghapus seluruh rekaman pemeriksaan yang berhubungan dengan dokter
     ini.</string>
     <string name="clinic_manage_doctors_delete_doctor_deleted_toast">Dokter telah terhapus.</string>
@@ -207,7 +207,6 @@
     <string name="key_repeat_password">Ulang kata sandi</string>
     <string name="key_empty_repeat_password">Pengulangan kata sandi harus diisi!</string>
     <string name="key_wrong_repeat_password">Kata sandi yang dimasukkan tidak sama!</string>
-    <string name="key_remember">Ingat:</string>
     <string name="key_login_button">Masuk</string>
     <string name="key_register_button">Daftar</string>
     <string name="key_login_empty">Nomor HP dan kata sandi harus terisi!</string>
@@ -216,6 +215,8 @@
     <string name="key_city_example">Contoh: Ketapang</string>
     <string name="key_phone_example">10–12 digit | Contoh: 081234567890</string>
     <string name="key_phone_wrong_formatting">Nomor HP Anda harus diawali dengan 08!</string>
+    <string name="key_registration_confirmation_title">Pendaftaran</string>
+    <string name="key_registration_confirmation_message">Apakah Anda yakin dengan detail yang telah Anda masukkan?</string>
     <string name="key_successful_registration">Pendaftaran sukses! Silahkan masuk ke dalam akun Anda melalui halaman login.</string>
     <string name="key_logout_dialog_title">Keluar</string>
     <string name="key_logout_dialog_message">Apakah Anda yakin ingin keluar dari akun Anda?</string>

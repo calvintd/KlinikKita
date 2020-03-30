@@ -85,7 +85,7 @@ class KelolaDokterActivity : AppCompatActivity(), KelolaDokterView {
                 )
             }, { key: String ->
                 AlertDialog.Builder(this)
-                    .setTitle(resources.getString(R.string.clinic_manage_doctors_delete_doctor_header))
+                    .setTitle(resources.getString(R.string.clinic_manage_doctors_delete_doctor_title))
                     .setMessage(resources.getString(R.string.clinic_manage_doctors_delete_doctor_message))
                     .setPositiveButton(resources.getString(R.string.key_yes)) { _, _ ->
                         presenter.hapusDokterKlinik(key)

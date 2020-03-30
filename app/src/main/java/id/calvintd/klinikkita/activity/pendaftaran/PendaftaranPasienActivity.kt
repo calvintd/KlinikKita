@@ -9,6 +9,7 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import id.calvintd.klinikkita.R
 import id.calvintd.klinikkita.activity.HomeActivity
 import id.calvintd.klinikkita.itemmodel.database.Pasien
@@ -120,14 +121,23 @@ class PendaftaranPasienActivity : AppCompatActivity(), PendaftaranView {
                     dataPasien
                 )
 
-            presenter.cekFormulir(
-                daftarKolom = daftarKolom,
-                txtNomorHP = txtKesalahanNomorHP,
-                kataSandiUlang = kataSandiUlang,
-                txtKataSandiUlang = txtKesalahanUlangKataSandi,
-                persetujuan = persetujuan,
-                txtPersetujuan = txtKesalahanPersetujuan
-            )
+            AlertDialog.Builder(this)
+                .setTitle(resources.getString(R.string.key_registration_confirmation_title))
+                .setMessage(resources.getString(R.string.key_registration_confirmation_message))
+                .setPositiveButton(resources.getString(R.string.key_yes)) { _, _ ->
+                    presenter.cekFormulir(
+                        daftarKolom = daftarKolom,
+                        txtNomorHP = txtKesalahanNomorHP,
+                        kataSandiUlang = kataSandiUlang,
+                        txtKataSandiUlang = txtKesalahanUlangKataSandi,
+                        persetujuan = persetujuan,
+                        txtPersetujuan = txtKesalahanPersetujuan
+                    )
+                }
+                .setNegativeButton(resources.getString(R.string.key_no)) { _, _ ->
+
+                }
+                .show()
         }
     }
 
@@ -172,7 +182,9 @@ class PendaftaranPasienActivity : AppCompatActivity(), PendaftaranView {
 
     override fun pendaftaranSukses() {
         Toast.makeText(this, R.string.key_successful_registration, Toast.LENGTH_LONG).show()
-        startActivity(Intent(this, HomeActivity::class.java)
-            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+        startActivity(
+            Intent(this, HomeActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        )
     }
 }
