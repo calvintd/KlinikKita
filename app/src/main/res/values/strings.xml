@@ -118,7 +118,7 @@
 
     <!-- kelola pemeriksaan -->
     <string name="clinic_appointments_list_pending_header">Pengelolaan Pendaftaran</string>
-    <string name="clinic_appointments_list_pending_patient_name">Nama Pasien</string>
+    <string name="clinic_appointments_list_pending_patient_name">Pasien</string>
     <string name="clinic_appointments_list_pending_patient_name_example">Calvin Tandra</string>
     <string name="clinic_appointments_list_pending_show">Hadir</string>
     <string name="clinic_appointments_list_pending_no_show">Tidak Hadir</string>

@@ -36,7 +36,8 @@
         app:layout_constraintTop_toBottomOf="@id/txtRiwayatPemeriksaanPasienHeader"
         android:indeterminate="true"
         android:indeterminateTintMode="src_atop"
-        android:indeterminateTint="@color/black" />
+        android:indeterminateTint="@color/black"
+        tools:visibility="gone"/>
 
     <ScrollView
         android:id="@+id/svRiwayatPemeriksaanPasien"
@@ -79,7 +80,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtRiwayatPemeriksaanPasienKosong"
-                tools:listitem="@layout/item_pasien_riwayat_pemeriksaan" />
+                tools:listitem="@layout/item_pasien_riwayat_pemeriksaan"
+                tools:visibility="visible"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

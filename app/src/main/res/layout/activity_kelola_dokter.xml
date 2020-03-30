@@ -36,7 +36,8 @@
         app:layout_constraintTop_toBottomOf="@id/txtKelolaDokterHeader"
         android:indeterminate="true"
         android:indeterminateTintMode="src_atop"
-        android:indeterminateTint="@color/black" />
+        android:indeterminateTint="@color/black"
+        tools:visibility="gone" />
 
     <ImageView
         android:id="@+id/imgTambahDokter"
@@ -92,7 +93,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtDaftarDokterKosong"
-                tools:listitem="@layout/item_klinik_kelola_dokter" >
+                tools:listitem="@layout/item_klinik_kelola_dokter"
+                tools:visibility="visible" >
 
             </androidx.recyclerview.widget.RecyclerView>
         </androidx.constraintlayout.widget.ConstraintLayout>

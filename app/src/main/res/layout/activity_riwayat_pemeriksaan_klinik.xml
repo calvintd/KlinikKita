@@ -30,13 +30,14 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/black"
+        android:indeterminateTintMode="src_atop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtRiwayatPemeriksaanKlinikHeader"
-        android:indeterminate="true"
-        android:indeterminateTintMode="src_atop"
-        android:indeterminateTint="@color/black" />
+        tools:visibility="gone" />
 
     <ScrollView
         android:id="@+id/svRiwayatPemeriksaanKlinik"
@@ -79,7 +80,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtRiwayatPemeriksaanKlinikKosong"
-                tools:listitem="@layout/item_klinik_riwayat_pemeriksaan" />
+                tools:listitem="@layout/item_klinik_riwayat_pemeriksaan"
+                tools:visibility="visible" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

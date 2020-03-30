@@ -36,7 +36,8 @@
         app:layout_constraintTop_toBottomOf="@id/txtKelolaPendaftaranHeader"
         android:indeterminate="true"
         android:indeterminateTintMode="src_atop"
-        android:indeterminateTint="@color/black" />
+        android:indeterminateTint="@color/black"
+        tools:visibility="gone"/>
 
     <ScrollView
         android:id="@+id/svKelolaPendaftaranKlinik"
@@ -83,7 +84,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtKelolaPendaftaranKlinikKosong"
-                tools:listitem="@layout/item_klinik_kelola_pendaftaran" />
+                tools:listitem="@layout/item_klinik_kelola_pendaftaran"
+                tools:visibility="visible"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
