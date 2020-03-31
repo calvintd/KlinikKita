@@ -159,9 +159,8 @@
     <string name="clinic_manage_doctors_edit_doctor_button">Ubah Data Dokter</string>
     <string name="clinic_manage_doctors_edit_doctor_edited_toast">Data dokter berhasil diubah!</string>
     <string name="clinic_manage_doctors_delete_doctor_title">Hapus Dokter</string>
-    <string name="clinic_manage_doctors_delete_doctor_message">Hapus dokter ini? Ini juga akan menghapus seluruh rekaman pemeriksaan yang berhubungan dengan dokter
-    ini.</string>
-    <string name="clinic_manage_doctors_delete_doctor_deleted_toast">Dokter telah terhapus.</string>
+    <string name="clinic_manage_doctors_delete_doctor_message">Hapus dokter ini?</string>
+    <string name="clinic_manage_doctors_delete_doctor_deleted_toast">Dokter telah terhapus!</string>
 
     <string name="clinic_manage_doctors_empty_name">Nama dokter tidak boleh kosong!</string>
     <string name="clinic_manage_doctors_empty_description">Deskripsi dokter tidak boleh kosong!</string>

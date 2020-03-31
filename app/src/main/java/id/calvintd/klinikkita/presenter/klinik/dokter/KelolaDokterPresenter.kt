@@ -22,7 +22,10 @@ class KelolaDokterPresenter(private val kelolaDokterView: KelolaDokterView) {
                 val listDokter = mutableListOf<Dokter>()
 
                 for (snapshot in dataSnapshot.children) {
-                    if (snapshot.child("idKlinik").getValue(String::class.java).equals(idKlinik)) {
+                    if (snapshot.child("idKlinik").getValue(String::class.java)
+                            .equals(idKlinik) && !snapshot.child("namaDokter")
+                            .getValue(String::class.java).equals("(terhapus)")
+                    ) {
                         snapshot.key?.let { listKeyDokter.add(it) }
                         snapshot.getValue(Dokter::class.java)?.let { listDokter.add(it) }
                     }
@@ -47,7 +50,7 @@ class KelolaDokterPresenter(private val kelolaDokterView: KelolaDokterView) {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for (snapshot in dataSnapshot.children) {
                     if (snapshot.key.equals(idDokter)) {
-                        dokterRef.child(idDokter).removeValue()
+                        dokterRef.child(idDokter).child("namaDokter").setValue("terhapus")
                         kelolaDokterView.dokterTerhapus()
                     }
                 }
